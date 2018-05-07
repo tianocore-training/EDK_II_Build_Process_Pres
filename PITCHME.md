@@ -40,7 +40,7 @@ Note:
 ---  
 @title[Lesson Objective]
 <br>
-##### <p align="center"<span class="gold"   >Lesson Objective </span></p><br>
+### <p align="center"<span class="gold"   >Lesson Objective </span></p><br>
 
 <!---  Add bullets using https://fontawesome.com/cheatsheet certificate
 -->
@@ -53,8 +53,8 @@ Note:
 ---?image=assets/images/binary-strings-black2.jpg
 @title[EDK II Overview Section]
 <br><br><br><br><br>
-#### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDK II Overview </span>
-<span style="font-size:0.75em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The EDK II Infrastructure </span>
+## <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDK II Overview </span>
+<span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The EDK II Infrastructure </span>
 
 ---?image=/assets/images/slides/Slide4.JPG
 <!-- .slide: data-transition="none" -->		  
@@ -234,7 +234,7 @@ Coding explains Workspace Build commands
 
 EDK II build process reflects the package structure … the build command specifies the .DSC file for a platform
 These directories are from the github edk2 project
----?image=/assets/images/slides/Slide25.JPG
+---?image=/assets/images/slides/Slide25.jpg
 <!-- .slide: data-transition="none" -->		  
 @title[Directory Structure - Real Platform]
 ####  <p align="right"><span class="gold" > Directory Structure - Real Platform</span></p>
@@ -246,21 +246,21 @@ Platform and Silicon Directory COLUMN 2
 Minnowboard MAX (Native EDK II) is the example directory structure
 
 
-+++?image=/assets/images/slides/Slide26.JPG
++++?image=/assets/images/slides/Slide26.jpg
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->		  
 @title[Directory Structure - Real Platform 02]
 ####  <p align="right"><span class="gold" > Directory Structure - Real Platform</span></p>
 
 Note:
-+++?image=/assets/images/slides/Slide27.JPG
++++?image=/assets/images/slides/Slide27.jpg
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->		  
 @title[Directory Structure - Real Platform 03]
 ####  <p align="right"><span class="gold" > Directory Structure - Real Platform</span></p>
 
 Note:
-+++?image=/assets/images/slides/Slide28.JPG
++++?image=/assets/images/slides/Slide28.jpg
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->		  
 @title[Directory Structure - Real Platform 04]
