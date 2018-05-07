@@ -57,7 +57,6 @@ Note:
 <span style="font-size:0.75em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The EDK II Infrastructure </span>
 ---
  
----
 ## START of EXAMPLE 
 The next slides show examples for templates
 ---
