@@ -327,8 +327,9 @@ Note:
 - Remove packages from projects when not required
 @ulend
 @divend
+
 <div class="right">
-<br>    
+<br>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 
 Note:
@@ -718,7 +719,7 @@ And finally, there are binary edit aspects -<br>
 <!-- .slide: data-transition="none" -->	
 @title[EDK II Infrastructure Summary]
 <br><br>
-### <p align="center"><span class="slide-title" >EDK II Infrastructure Summary</span></p>
+<p align="center"><span class="slide-title" >EDK II Infrastructure Summary</span></p>
 
 Note:
 
@@ -734,7 +735,7 @@ Summary <br>
 <!-- .slide: data-transition="none" -->	
 @title[EDK II Infrastructure Summary 02]
 <br><br>
-### <p align="center"><span class="slide-title" >EDK II Infrastructure Summary</span></p>
+<p align="center"><span class="slide-title" >EDK II Infrastructure Summary</span></p>
 
 Note:
 
@@ -750,7 +751,7 @@ Summary <br>
 <!-- .slide: data-transition="none" -->	
 @title[EDK II Infrastructure Summary 03]
 <br><br>
-### <p align="center"><span class="slide-title" >EDK II Infrastructure Summary</span></p>
+<p align="center"><span class="slide-title" >EDK II Infrastructure Summary</span></p>
 
 Note:
 
@@ -765,6 +766,11 @@ Summary <br>
 
 @title[EDK II vs. UDK]
 #### <p align="center"><span class="gold" >EDK II vs. UDK(2010|2017 .. 2018)</span></p>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
