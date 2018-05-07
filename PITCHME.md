@@ -198,7 +198,7 @@ See EDK II Build Specification Documentation:
 <!-- .slide: data-transition="none" -->		  
 
 @title[EDK II File Extensions 02]
-<p align="center"><span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font></span>
+<p align="center"><span style="font-size:1.0em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font></span>
 <span style="font-size:0.7em" ><font color="white"><br>-&nbsp;Located on <a href='http://www.tianocore.org'>tianocore.org</a> project edk2  </font> </span></p>
 
 Note:
@@ -214,10 +214,10 @@ Note:
 Note:
 
 ---?image=/assets/images/slides/Slide23.JPG
-<!-- .slide: data-transition="none" -->	
+
 @title[EDK II Directory Structure]
 ####  <p align="right"><span class="gold" > EDK II Directory Structure </span></p>		  
-@div[right-55]
+@div[right-50]
 <br>
 @ul[brighten]
 - Package concept for each EDK II sub-directory
@@ -234,6 +234,86 @@ Coding explains Workspace Build commands
 
 EDK II build process reflects the package structure … the build command specifies the .DSC file for a platform
 These directories are from the github edk2 project
+---?image=/assets/images/slides/Slide25.JPG
+<!-- .slide: data-transition="none" -->		  
+@title[Directory Structure - Real Platform]
+####  <p align="right"><span class="gold" > Directory Structure - Real Platform</span></p>
+
+Note:
+Open Source Directory COLUMN 1
+Platform and Silicon Directory COLUMN 2
+
+Minnowboard MAX (Native EDK II) is the example directory structure
+
+
++++?image=/assets/images/slides/Slide26.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->		  
+@title[Directory Structure - Real Platform 02]
+####  <p align="right"><span class="gold" > Directory Structure - Real Platform</span></p>
+
+Note:
++++?image=/assets/images/slides/Slide27.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->		  
+@title[Directory Structure - Real Platform 03]
+####  <p align="right"><span class="gold" > Directory Structure - Real Platform</span></p>
+
+Note:
++++?image=/assets/images/slides/Slide28.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->		  
+@title[Directory Structure - Real Platform 04]
+####  <p align="right"><span class="gold" > Directory Structure - Real Platform</span></p>
+
+Note:
+
+---?image=/assets/images/slides/Slide30.JPG
+<!-- .slide: data-transition="none" -->	
+@title[Modules]
+####  <p align="right"><span class="gold" > Modules</span></p>
+
+
+
+Note:
+
+Image - Creative commons https://leadinginnovation11a.wikispaces.com/Where+is+Your+Hardhat%3F+-+Leadership+in+a+21st+Century+School <br> 
+So the first thing we have in trying to break EDK II down is Modules:<br>
+ 
+A module is the smallest separate object compiled in the EDK II.  A module is a single resultant .EFI file.<br>
+Module examples:<br>
+A UEFI/DXE driver <br>
+A PEIM<br>
+A UEFI application<br>
+A Library <br>
+
+All of these could be a module.  A modules could  be one entity<br>
+
++++?image=/assets/images/slides/Slide31.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->		  
+@title[Modules 02]
+####  <p align="right"><span class="gold" > Modules</span></p>
+
+Note:
+
++++?image=/assets/images/slides/Slide32.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->		  
+@title[Modules 03]
+####  <p align="right"><span class="gold" > Modules</span></p>
+
+Note:
++++?image=/assets/images/slides/Slide33.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->		  
+@title[Modules 04]
+####  <p align="right"><span class="gold" > Modules</span></p>
+
+Note:
+
+
+
 
 
 
