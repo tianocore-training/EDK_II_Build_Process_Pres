@@ -1,6 +1,6 @@
 ---?image=assets/images/gitpitch-audience.jpg
 @title[Title-UEFI Overview]
-<br><br><br><br>
+<br><br><br><br><br>
 ## <span class="gold"   >&nbsp;UEFI & EDK II Training</span>
 
 ####  &nbsp;&nbsp;EDK II Build Process
@@ -52,7 +52,7 @@ Note:
 
 ---?image=assets/images/binary-strings-black2.jpg
 @title[EDK II Overview Section]
-<br><br><br>
+<br><br><br><br><br>
 #### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDK II Overview </span>
 <span style="font-size:0.75em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The EDK II Infrastructure </span>
 
@@ -142,6 +142,77 @@ Note:
 
 Note:
 
+---?image=/assets/images/bgpages/Slide11.JPG
+@title[Implementation of EDK II]
+#### <p align="right"><span class="gold" > Implementation of EDK II </span></p>
+
+
+
+Note:
+You’ve already learned about the UEFI/PI specification from the web-based training.  Now, let’s talk about EDK II, the implementation of UEFI/PI
+
+The primary purpose of the firmware boot loader is to initialize a platform and boot to a shell application or operating system.
+
+EDK II architecture discussions primarily focus on UEFI (OS-to-firmware interface) and PI (firmware-to-firmware interface)
+
+
+
++++?image=/assets/images/bgpages/Slide12.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->
+@title[Implementation of EDK II 02]
+#### <p align="right"><span class="gold" > Implementation of EDK II </span></p>
+
+Note:
+You’ve already learned about the UEFI/PI specification from the web-based training.  Now, let’s talk about EDK II, the implementation of UEFI/PI
+
+The primary purpose of the firmware boot loader is to initialize a platform and boot to a shell application or operating system.
+
+EDK II architecture discussions primarily focus on UEFI (OS-to-firmware interface) and PI (firmware-to-firmware interface)
+
+
+---?image=/assets/images/bgpages/Slide14.JPG
+@title[EDK II File Extensions]
+<p align="center"><span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font><font color="white">
+<br>-&nbsp;Located on <a href='http://www.tianocore.org'>tianocore.org</a> project edk2  </font> </span></p>
+
+Note:
+So for file extensions <br>
+
+-So first we have a DSC file this is for platform description. This is an extension of the existing DSC file from EDK 1.  This describes the build rules, libraries and components that are going to get Built. 
+-We have the DEC file which is the Package Declaration. Each package has a package declaration or DEC file, and it declares all the interfaces that the package has.  This is one of the new files
+Next we have INF file 	- Module Definition this is a description of one module and what it has
+Next we have a FDF file -Flash Description File – this information used to be part of the original DSC file but has been split off into a new file. This describes which module or modules weather it was built as part of the DSC or included in a binary – it describes which module gets to go where in the flash – which one is comprised – which one goes in to recover - it is a or mapping of the flash device –
+Next we have a DXS file which is a Dependency expression file -  this is used by the DXE and in PEI modules to Define what prerequisites they have before they can run
+Finally we have the FV file - Firmware Volume image file - 
+ 
+First four have a specification file located on tianocore.org.
+
+See EDK II Build Specification Documentation: 
+          http://tianocore.org/  
+		  
++++?image=/assets/images/bgpages/Slide15.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->		  
+
+@title[EDK II File Extensions 02]
+<p align="center"><span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font><font color="white">
+<br>-&nbsp;Located on <a href='http://www.tianocore.org'>tianocore.org</a> project edk2  </font> </span></p>
+
+Note:
+		  
++++?image=/assets/images/bgpages/Slide16.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->		  
+
+@title[EDK II File Extensions 03]
+<p align="center"><span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font><font color="white">
+<br>-&nbsp;Located on <a href='http://www.tianocore.org'>tianocore.org</a> project edk2  </font> </span></p>
+
+Note:
+
+		  
+
 
 ---
 <!---  END OF SLIDES
@@ -208,6 +279,7 @@ TBD get notes from PackagesORG
 Use the next slide as the last example in the slide deck.
 ---  
 @title[Summary]
+<br>
 ##### <p align="center"<span class="gold"   >Summary </span></p><br>
 
 <!---  Add bullets using https://fontawesome.com/cheatsheet certificate
@@ -234,10 +306,12 @@ Use the next slide as the last example in the slide deck.
 
 ---  
 @title[Backup]
-##### <p align="center"<span class="gold"   >Backup </span></p>
+<br><br><br><br><br>
+### <p align="center"<span class="gold"   >Backup </span></p>
 
 ---
 @title[Acknowledgements]
+<br>
 #### <p align="center"<span class="gold"   >Acknowledgements</span></p>
 
 ```c++
