@@ -324,13 +324,17 @@ Note:
 - EDK II projects are made up of packages
 - Make your own packages
 - Package contains only the necessities
-- Remove packages from projects when not required
+- Remove packages from  projects when not required
 @ulend
 @divend
-
-<div class="right">
-<br>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</div>
+@div[Right-50]
+ <br> 
+ <br> 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <br>
+ <br>
+ <br>
+@divend
 
 Note:
 
