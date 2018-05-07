@@ -1,5 +1,6 @@
 ---?image=assets/images/gitpitch-audience.jpg
 @title[Title-UEFI Overview]
+<br><br><br><br>
 ## <span class="gold"   >&nbsp;UEFI & EDK II Training</span>
 
 ####  &nbsp;&nbsp;EDK II Build Process
@@ -38,6 +39,7 @@ Note:
 
 ---  
 @title[Lesson Objective]
+<br>
 ##### <p align="center"<span class="gold"   >Lesson Objective </span></p><br>
 
 <!---  Add bullets using https://fontawesome.com/cheatsheet certificate
@@ -50,6 +52,7 @@ Note:
 
 ---?image=assets/images/binary-strings-black2.jpg
 @title[EDK II Overview Section]
+<br><br><br>
 #### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDK II Overview </span>
 <span style="font-size:0.75em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The EDK II Infrastructure </span>
 
@@ -99,6 +102,7 @@ Eliminated a lot of the Assembly
 
 +++?image=/assets/images/bgpages/Slide5.JPG
 <!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->
 @title[Philosophy of EDK II 02]
 #### <p align="right"><span class="gold" > Philosophy of EDK II </span></p>
 
@@ -110,18 +114,21 @@ Via EDK Compatibility Package (ECP)<br>
 
 +++?image=/assets/images/bgpages/Slide6.JPG
 <!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->
 @title[Philosophy of EDK II 03]
 #### <p align="right"><span class="gold" > Philosophy of EDK II </span></p>
 
 Note:
 +++?image=/assets/images/bgpages/Slide7.JPG
 <!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->
 @title[Philosophy of EDK II 04]
 #### <p align="right"><span class="gold" > Philosophy of EDK II </span></p>
 
 Note:
 +++?image=/assets/images/bgpages/Slide8.JPG
 <!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->
 @title[Philosophy of EDK II 05]
 #### <p align="right"><span class="gold" > Philosophy of EDK II </span></p>
 
@@ -129,6 +136,7 @@ Note:
 
 +++?image=/assets/images/bgpages/Slide9.JPG
 <!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->
 @title[Philosophy of EDK II 06]
 #### <p align="right"><span class="gold" > Philosophy of EDK II </span></p>
 
