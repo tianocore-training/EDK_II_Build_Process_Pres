@@ -11,7 +11,7 @@ highlight : ir-black
 logo : assets/images/TianocoreLogo.png
 background : assets/images/wallpaper.jpg
 background-opacity : 15
-transition : zoom
+transition : fade
 published : yes
 # footnote : "GitPitch [ Black Binary ] Presentation Template"
 footnote: "<a style='text-decoration:none; color: #e49436;' href='http://www.tianocore.org'>www.tianocore.org</a>"
