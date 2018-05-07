@@ -210,7 +210,48 @@ Note:
 
 Note:
 
-		  
+---?image=/assets/images/bgpages/Slide18.JPG
+<!-- .slide: data-transition="none" -->	
+@title[EDK II Directory Structure]
+####  <p align="right"><span class="gold" > EDK II Directory Structure </span></p>		  
+@div[right-50]
+<br>
+@ul[brighten]
+- Package concept for each EDK II sub-directory
+- Platforms are contained in an EDK II package
+- EDK II build process reflects the package
+- Concept of “Work Space”   <br>
+         <$HOME/src/edk2
+@ulend
+@divend
+
+Note:
+EXPLAINS WHAT IS IN THE DIRECTORY
+
+Coding explains Workspace Build commands
+
+EDK II build process reflects the package structure … the build command specifies the .DSC file for a platform
+These directories are from the github edk2 project
+
++++?image=/assets/images/bgpages/Slide23.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->		
+@title[EDK II Directory Structure 02]
+####  <p align="right"><span class="gold" > EDK II Directory Structure </span></p>
+<br>
+
+<div class="right">
+    <ul>
+        <li>Package concept for each EDK II sub-directory</li>
+        <li>Platforms are contained in an EDK II package</li>
+        <li>EDK II build process reflects the package</li>
+        <li>Concept of “Work Space”   <br>
+         <$HOME/src/edk2</li>
+        
+    </ul>
+</div>
+
+Note:
 
 
 ---
@@ -295,12 +336,13 @@ Use the next slide as the last example in the slide deck.
 
 ---?image=assets/images/gitpitch-audience.jpg
 @title[Questions]
+<BR>
 ![Questions](/assets/images/Questions.png =10x) 
 
 
 ---?image=assets/images/gitpitch-audience.jpg
 @title[Logo Slide]
-
+<BR><BR><BR>
 ![Logo Slide](/assets/images/TianocoreLogo.png =10x)
 
 ---  
