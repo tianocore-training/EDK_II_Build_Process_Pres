@@ -1,14 +1,12 @@
 ---?image=assets/images/gitpitch-audience.jpg
 @title[Title-UEFI Overview]
-## <span class="brick"   >UEFI & EDK II Training</span>
-<p><span class="slide-title"><b>Using class=slide-title </b></span></p>
+## <span class="gold"   >&nbsp;UEFI & EDK II Training</span>
 
-#### <span class="gold"> UEFI and Platform Initialization (PI) Overview </span>
-
+####  &nbsp;&nbsp;EDK II Build Process
 <br>
-<span style="font-size:0.75em" ><a href='http://www.tianocore.org'>tianocore.org</a></span>
+<span style="font-size:0.75em" >&nbsp;&nbsp;&nbsp;<a href='http://www.tianocore.org'>tianocore.org</a></span>
 Note:
-  PITCHME.md for UEFI / EDK II Training
+  PITCHME.md for UEFI / EDK II Training EDK II Build Process
 
   Copyright (c) 2018, Intel Corporation. All rights reserved.<BR>
 
@@ -44,18 +42,19 @@ Note:
 
 <!---  Add bullets using https://fontawesome.com/cheatsheet certificate
 -->
- @fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Review PI and UEFI Boot Process  </span><br><br>
- @fa[certificate gp-bullet-cyan] <span style="font-size:0.9em">&nbsp;&nbsp;Answer web-based training related questions </span><br><br>
- @fa[certificate gp-bullet-yellow] <span style="font-size:0.9em">&nbsp;&nbsp;Answer: Where does Intel® FSP Fit? </span> <br><br>
- @fa[certificate gp-bullet-magenta] <span style="font-size:0.9em">&nbsp;&nbsp;What’s new in UEFI.org</span> 
+ @fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Define EDK II </span><br><br>
+ @fa[certificate gp-bullet-cyan] <span style="font-size:0.9em">&nbsp;&nbsp;Describe EDK II’s elements including file extensions,<br> 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;directories, modules, packages, and libraries </span><br><br>
+ @fa[certificate gp-bullet-yellow] <span style="font-size:0.9em">&nbsp;&nbsp;Explain the EDK II build process </span> <br><br>
+ @fa[certificate gp-bullet-magenta] <span style="font-size:0.9em">&nbsp;&nbsp;Explain the Build tools</span> 
 
 
 
 
 ---?image=assets/images/binary-strings-black2.jpg
-@title[UEFI Boot Flow Section]
-#### <span class="gold"  >UEFI Boot Execution Flow </span>
-<span style="font-size:0.75em" > Starting at the processor reset vector </span>
+@title[EDK II Overview Section]
+#### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDK II Overview </span>
+<span style="font-size:0.75em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The EDK II Infrastructure </span>
 ---
 
 @title[UEFI Boot Flow]
@@ -366,7 +365,52 @@ http.createServer(function (request, response) {
 ### Get your presentation started!
 ### [Download this template @fa[external-link gp-download]](https://github.com/Laurie0131/GitPitchTemplate/archive/v1.0.zip)
 ---
+---
 
+@title[Packages]
+#### <p align="center"><span class="gold" > Packages</span></p>
+@div[left-50]
+     <span style="color:#9e692e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-gift fa-3x" aria-hidden="true" > </i> </span>
+	 <span style="color:#514124">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-gift fa-2x" aria-hidden="true" > </i> </span><br>
+     <span style="color:#BF5122">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-gift fa-5x" aria-hidden="true" > </i> </span>
+	 <span style="color:#FFFF99">&nbsp;&nbsp;<i class="fa fa-gift fa-2x" aria-hidden="true" > </i>
+
+@divend
+@div[right-50]
+<br><br><br>
+@ul[brighten]
+- EDK II projects are made up of packages
+- Make your own packages
+- Package contains only the necessities
+- Remove packages from projects when not required
+@ulend
+@divend
+
+
+
+
+Note:
+TBD get notes from PackagesORG
+---?color=black
+
+### @color[white](Layout text alongside images)
+
+@div[left-50]
+<br>
+![Modules](/assets/images/bgpages/bg21.png )
+@divend
+
+@div[right-50]
+<br><br><br>
+@ul[brighten]
+- EDK II projects are made up of packages
+- Make your own packages
+- Package contains only the necessities
+- Remove packages from projects when not required
+@ulend
+@divend
+
+---
 @title[lastslide]
 
 <!--- comment END OF THE SLIDE DECK
@@ -386,14 +430,15 @@ Use the next slide as the last example in the slide deck.
 @title[Summary]
 ##### <p align="center"<span class="gold"   >Summary </span></p><br>
 
- @fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Review PI and UEFI Boot Process
- </span><br><br>
- @fa[certificate gp-bullet-cyan] <span style="font-size:0.9em">&nbsp;&nbsp;Answer web-based training related questions
-</span><br><br>
- @fa[certificate gp-bullet-yellow] <span style="font-size:0.9em">&nbsp;&nbsp;Answer: Where does Intel® FSP Fit? 
-</span> <br><br>
- @fa[certificate gp-bullet-magenta] <span style="font-size:0.9em">&nbsp;&nbsp;What’s new in UEFI.org
-</span> 
+<!---  Add bullets using https://fontawesome.com/cheatsheet certificate
+-->
+ 
+ @fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Define EDK II </span><br><br>
+ @fa[certificate gp-bullet-cyan] <span style="font-size:0.9em">&nbsp;&nbsp;Describe EDK II’s elements including file extensions,<br> 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;directories, modules, packages, and libraries </span><br><br>
+ @fa[certificate gp-bullet-yellow] <span style="font-size:0.9em">&nbsp;&nbsp;Explain the EDK II build process </span> <br><br>
+ @fa[certificate gp-bullet-magenta] <span style="font-size:0.9em">&nbsp;&nbsp;Explain the Build tools</span> 
+
 
 
 
