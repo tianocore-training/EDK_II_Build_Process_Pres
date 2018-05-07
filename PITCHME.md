@@ -175,7 +175,8 @@ EDK II architecture discussions primarily focus on UEFI (OS-to-firmware interfac
 ---?image=/assets/images/slides/Slide14.JPG
 <!-- .slide: data-transition="none" -->		  
 @title[EDK II File Extensions]
-<p align="center"><span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font><font color="white">-&nbsp;Located on <a href='http://www.tianocore.org'>tianocore.org</a> project edk2  </font> </span></p>
+<p align="center"><span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font></span>
+<span style="font-size:0.7em" ><font color="white"><br>-&nbsp;Located on <a href='http://www.tianocore.org'>tianocore.org</a> project edk2  </font> </span></p>
 
 Note:
 So for file extensions <br>
@@ -197,7 +198,8 @@ See EDK II Build Specification Documentation:
 <!-- .slide: data-transition="none" -->		  
 
 @title[EDK II File Extensions 02]
-<p align="center"><span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font><font color="white">-&nbsp;Located on <a href='http://www.tianocore.org'>tianocore.org</a> project edk2  </font> </span></p>
+<p align="center"><span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font></span>
+<span style="font-size:0.7em" ><font color="white"><br>-&nbsp;Located on <a href='http://www.tianocore.org'>tianocore.org</a> project edk2  </font> </span></p>
 
 Note:
 		  
@@ -206,7 +208,8 @@ Note:
 <!-- .slide: data-transition="none" -->		  
 
 @title[EDK II File Extensions 03]
-<p align="center"><span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font><font color="white">-&nbsp;Located on <a href='http://www.tianocore.org'>tianocore.org</a> project edk2  </font> </span></p>
+<p align="center"><span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font></span>
+<span style="font-size:0.7em" ><font color="white"><br>-&nbsp;Located on <a href='http://www.tianocore.org'>tianocore.org</a> project edk2  </font> </span></p>
 
 Note:
 
