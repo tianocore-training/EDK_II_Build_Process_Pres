@@ -54,7 +54,7 @@ Note:
 @title[EDK II Overview Section]
 <br><br><br><br><br>
 ## <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDK II Overview </span>
-<span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The EDK II Infrastructure </span>
+<span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The EDK II Infrastructure </span>
 
 ---?image=/assets/images/slides/Slide4.JPG
 <!-- .slide: data-transition="none" -->		  
@@ -175,7 +175,7 @@ EDK II architecture discussions primarily focus on UEFI (OS-to-firmware interfac
 ---?image=/assets/images/slides/Slide14.JPG
 <!-- .slide: data-transition="none" -->		  
 @title[EDK II File Extensions]
-<p align="center"><span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font></span>
+<p align="center"><span style="font-size:1.0em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font></span>
 <span style="font-size:0.7em" ><font color="white"><br>-&nbsp;Located on <a href='http://www.tianocore.org'>tianocore.org</a> project edk2  </font> </span></p>
 
 Note:
@@ -208,7 +208,7 @@ Note:
 <!-- .slide: data-transition="none" -->		  
 
 @title[EDK II File Extensions 03]
-<p align="center"><span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font></span>
+<p align="center"><span style="font-size:1.0em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font></span>
 <span style="font-size:0.7em" ><font color="white"><br>-&nbsp;Located on <a href='http://www.tianocore.org'>tianocore.org</a> project edk2  </font> </span></p>
 
 Note:
@@ -313,8 +313,151 @@ Note:
 Note:
 
 
+---?image=/assets/images/slides/Slide35.JPG
+
+@title[Packages]
+####  <p align="center"><span class="gold" > Packages</span></p>
+@div[Left-50]
+<br>
+@ul[brighten]
+- EDK II projects are made up of packages
+- Make your own packages
+- Package contains only the necessities
+- Remove packages from projects when not required
+@ulend
+@divend
+
+Note:
+
+EDK II projects are made up of packages<br>
+EDK II Enable developers to make their own packages<br>
+Package contains only what is needed<br>
+Remove packages from projects when not required<br>
+<br><br><br>
+We have this Package Philosophy and what do we mean by a package?<br>
+So what we wanted to do is as we get more standards and specifications and as these standards evolve there is a need to target your development on the set of standards you care about.
+For example, maybe you need some things from the PI specification and others from the UEFI 2.x Specifications and you want to put those things together. So one of the things we wanted to do is provide a mechanism for doing this. So it allows, for instance, a platform developer to get just the things he needs off the shelf and not get the things he dosen’t need. We did this with this concept of using packages
+<br>
+Some history about EDKI :<br>
+The EDK I was kind of this monolithic block- it had this environment to build a module – it had the generic code for the  green “H” and this NT32 emulation but one thing that was not so good was you need the WHOLE thing in order to build just one thing.  Ie, like just building a driver.  It would be nice if it came in pieces instead of one big module.
+If you are developing just drivers you May not care if you have the code for the green “H” or not.
+SO instead it would be nice if the things came in packages instead of a large source tree.
+<br>
+
+Another advantage where packages will help,  is for example, if you want to add new functions/features - you could package your source together and distribute it as a package instead a monolithic tree. Then you could give this to a customer that has an EDK II build environment allowing them to build with your new functions and features.
+<br>
+Grouping the things together that you need with out the WHOLE kitchen sink Lets leave the Kitchen sink behind
+<br>
+
+EDK II Enable developers to make their own packages<br>
+Package contains only what is needed<br>
+Remove packages from projects when not required<br>
+<br>
+We have this Package Philosophy and what do we mean by a package?
+So what we wanted to do is as we get more standards and specifications and as these standards evolve there is a need to target your development on the set of standards you care about.
+For example, maybe you need some things from the PI specification and others from the UEFI 2.x Specifications and you want to put those things together. So one of the things we wanted to do is provide a mechanism for doing this. So it allows, for instance, a platform developer to get just the things he needs off the shelf and not get the things he dosen’t need. We did this with this concept of using packages
+Some history about EDKI :
+The EDK I was kind of this monolithic block- it had this environment to build a module – it had the generic code for the  green “H” and this NT32 emulation but one thing that was not so good was you need the WHOLE thing in order to build just one thing.  Ie, like just building a driver.  It would be nice if it came in pieces instead of one big module.
+If you are developing just drivers you May not care if you have the code for the green “H” or not.
+SO instead it would be nice if the things came in packages instead of a large source tree.
+
+<br>
+Another advantage where packages will help,  is for example, if you want to add new functions/features - you could package your source together and distribute it as a package instead a monolithic tree. Then you could give this to a customer that has an EDK II build environment allowing them to build with your new functions and features.
+<br>
+Grouping the things together that you need with out the WHOLE kitchen sink Lets leave the Kitchen sink behind
+<br>
 
 
+
+---?image=/assets/images/slides/Slide38.JPG
+<!-- .slide: data-transition="none" -->		  
+@title[EDK II Package Examples: Specs]
+#### <p align="right"><span class="gold" > EDK II Package Examples: Specs</span></p>
+
+
+
+Note:
+
+MdePkg<br>
+Include files and libraries for Industry Standard Specifications (i.e. UEFI, PI, PCI, USB, SMBIOS, ACPI, SMBIOS, etc)<br>
+MdeModulePkg<br>
+Modules (PEIMs + DXE Drivers + UEFI Drivers + UEFI Applications) that only definitions from the Industry Standard Specification defined in the MdePkg<br>
+IntelFrameworkPkg<br>
+Include files and libraries for those parts of the Intel Platform Innovation Framework for EFI specifications that were not adopted “as is” by the UEFI or PI specifications<br>
+IntelFrameworkModulePkg<br>
+Contains modules (PEIMs + DXE Drivers + UEFI Drivers) that make reference to one or more definitions in the IntelFrameworkPkg<br>
+
+
+
++++?image=/assets/images/slides/Slide39.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->		  
+@title[EDK II Package Examples: Specs 02]
+#### <p align="right"><span class="gold" > EDK II Package Examples: Specs</span></p>
+
+Note:
+MdeModulePkg<br>
+Modules (PEIMs + DXE Drivers + UEFI Drivers + UEFI Applications) that only definitions from the Industry Standard Specification defined in the MdePkg<br>
+
++++?image=/assets/images/slides/Slide40.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->		  
+@title[EDK II Package Examples: Specs 03]
+#### <p align="right"><span class="gold" > EDK II Package Examples: Specs</span></p>
+
+Note:
+
+
++++?image=/assets/images/slides/Slide41.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->		  
+@title[EDK II Package Examples: Specs 04]
+#### <p align="right"><span class="gold" > EDK II Package Examples: Specs</span></p>
+
+Note:
+MdePkg<br>
+Include files and libraries for Industry Standard Specifications (i.e. UEFI, PI, PCI, USB, SMBIOS, ACPI, SMBIOS, etc)<br>
+MdeModulePkg<br>
+Modules (PEIMs + DXE Drivers + UEFI Drivers + UEFI Applications) that only definitions from the Industry Standard Specification defined in the MdePkg<br>
+IntelFrameworkPkg<br>
+Include files and libraries for those parts of the Intel Platform Innovation Framework for EFI specifications that were not adopted “as is” by the UEFI or PI specifications<br>
+IntelFrameworkModulePkg<br>
+Contains modules (PEIMs + DXE Drivers + UEFI Drivers) that make reference to one or more definitions in the IntelFrameworkPkg<br>
+
+
+---?image=/assets/images/slides/Slide43.JPG
+
+<!-- .slide: data-transition="none" -->		  
+@title[Additional Package Examples: ]
+#### <p align="right"><span class="gold" >Additional EDK II Package Examples:</span></p>
+
+Note:
+Platforms <br>
+Nt32Pkg – contains drivers and applications required for running over Windows <br>
+OvmfPkg – Virtual Machine Firmware
+
++++?image=/assets/images/slides/Slide44.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+@title[Additional Package Examples: 02 ]
+#### <p align="right"><span class="gold" >Additional EDK II Package Examples:</span></p>
+
+Note:
+
+Chipset/Processor<br>
+IA32FamilyCpuPkg.- Intel Architecture <br>
+Ich9Pkg – Intel I/O controller hub (ICH9 )
+
++++?image=/assets/images/slides/Slide45.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+@title[Additional Package Examples: 03 ]
+#### <p align="right"><span class="gold" >Additional EDK II Package Examples:</span></p>
+
+Note:
+Functionality<br>
+ShellPkg – Application - command line interface<br>
+NetworkPkg – Network drivers and Applications
 
 
 ---
