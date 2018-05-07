@@ -321,10 +321,10 @@ Note:
 @div[Left-50]
 <br><br>
 @ul[brighten]
-- EDK II projects are made up of packages
+- EDK II projects are made<BR> up of packages
 - Make your own packages
-- Package contains only the necessities
-- Remove packages from  projects when not required
+- Package contains only the <BR>necessities
+- Remove packages from  <BR>projects when not required
 @ulend
 @divend
 @div[Right-50]
