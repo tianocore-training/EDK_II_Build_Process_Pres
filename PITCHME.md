@@ -56,7 +56,7 @@ Note:
 #### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDK II Overview </span>
 <span style="font-size:0.75em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The EDK II Infrastructure </span>
 
----?image=/assets/images/bgpages/Slide4.JPG
+---?image=/assets/images/slides/Slide4.JPG
 <!-- .slide: data-transition="none" -->		  
 @title[Philosophy of EDK II]
 #### <p align="right"><span class="gold" > Philosophy of EDK II </span></p>
@@ -101,7 +101,7 @@ Eliminated a lot of the java
 Eliminated a lot of the Assembly
 
 
-+++?image=/assets/images/bgpages/Slide5.JPG
++++?image=/assets/images/slides/Slide5.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Philosophy of EDK II 02]
@@ -113,21 +113,21 @@ Separate tool code from source code<br>
            Build existing EDK modules<br>
 Via EDK Compatibility Package (ECP)<br>
 
-+++?image=/assets/images/bgpages/Slide6.JPG
++++?image=/assets/images/slides/Slide6.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Philosophy of EDK II 03]
 #### <p align="right"><span class="gold" > Philosophy of EDK II </span></p>
 
 Note:
-+++?image=/assets/images/bgpages/Slide7.JPG
++++?image=/assets/images/slides/Slide7.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Philosophy of EDK II 04]
 #### <p align="right"><span class="gold" > Philosophy of EDK II </span></p>
 
 Note:
-+++?image=/assets/images/bgpages/Slide8.JPG
++++?image=/assets/images/slides/Slide8.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Philosophy of EDK II 05]
@@ -135,7 +135,7 @@ Note:
 
 Note:
 
-+++?image=/assets/images/bgpages/Slide9.JPG
++++?image=/assets/images/slides/Slide9.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Philosophy of EDK II 06]
@@ -143,7 +143,7 @@ Note:
 
 Note:
 
----?image=/assets/images/bgpages/Slide11.JPG
+---?image=/assets/images/slides/Slide11.JPG
 @title[Implementation of EDK II]
 #### <p align="right"><span class="gold" > Implementation of EDK II </span></p>
 
@@ -158,7 +158,7 @@ EDK II architecture discussions primarily focus on UEFI (OS-to-firmware interfac
 
 
 
-+++?image=/assets/images/bgpages/Slide12.JPG
++++?image=/assets/images/slides/Slide12.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Implementation of EDK II 02]
@@ -172,7 +172,7 @@ The primary purpose of the firmware boot loader is to initialize a platform and 
 EDK II architecture discussions primarily focus on UEFI (OS-to-firmware interface) and PI (firmware-to-firmware interface)
 
 
----?image=/assets/images/bgpages/Slide14.JPG
+---?image=/assets/images/slides/Slide14.JPG
 <!-- .slide: data-transition="none" -->		  
 @title[EDK II File Extensions]
 <p align="center"><span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;<font color="#e49436">EDK II File Extensions</font><font color="white">-&nbsp;Located on <a href='http://www.tianocore.org'>tianocore.org</a> project edk2  </font> </span></p>
@@ -192,7 +192,7 @@ First four have a specification file located on tianocore.org.
 See EDK II Build Specification Documentation: 
           http://tianocore.org/  
 		  
-+++?image=/assets/images/bgpages/Slide15.JPG
++++?image=/assets/images/slides/Slide15.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->		  
 
@@ -201,7 +201,7 @@ See EDK II Build Specification Documentation:
 
 Note:
 		  
-+++?image=/assets/images/bgpages/Slide16.JPG
++++?image=/assets/images/slides/Slide16.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->		  
 
@@ -210,7 +210,7 @@ Note:
 
 Note:
 
----?image=/assets/images/bgpages/Slide23.JPG
+---?image=/assets/images/slides/Slide23.JPG
 <!-- .slide: data-transition="none" -->	
 @title[EDK II Directory Structure]
 ####  <p align="right"><span class="gold" > EDK II Directory Structure </span></p>		  
@@ -268,7 +268,7 @@ TBD get notes from PackagesORG
 
 @div[left-50]
 <br>
-![Modules](/assets/images/bgpages/bg21.png )
+![Modules](/assets/images/slides/bg21.png )
 @divend
 
 @div[right-50]
