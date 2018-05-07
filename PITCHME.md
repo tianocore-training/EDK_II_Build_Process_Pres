@@ -316,9 +316,10 @@ Note:
 ---?image=/assets/images/slides/Slide35.JPG
 
 @title[Packages]
+<br>
 ####  <p align="center"><span class="gold" > Packages</span></p>
 @div[Left-50]
-<br>
+<br><br>
 @ul[brighten]
 - EDK II projects are made up of packages
 - Make your own packages
@@ -326,6 +327,9 @@ Note:
 - Remove packages from projects when not required
 @ulend
 @divend
+<div class="right">
+<br>    
+</div>
 
 Note:
 
@@ -369,7 +373,7 @@ Grouping the things together that you need with out the WHOLE kitchen sink Lets 
 
 
 
----?image=/assets/images/slides/Slide38.JPG
+---?image=/assets/images/slides/Slide38_1.JPG
 <!-- .slide: data-transition="none" -->		  
 @title[EDK II Package Examples: Specs]
 #### <p align="right"><span class="gold" > EDK II Package Examples: Specs</span></p>
@@ -389,7 +393,7 @@ Contains modules (PEIMs + DXE Drivers + UEFI Drivers) that make reference to one
 
 
 
-+++?image=/assets/images/slides/Slide39.JPG
++++?image=/assets/images/slides/Slide39_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->		  
 @title[EDK II Package Examples: Specs 02]
@@ -399,7 +403,7 @@ Note:
 MdeModulePkg<br>
 Modules (PEIMs + DXE Drivers + UEFI Drivers + UEFI Applications) that only definitions from the Industry Standard Specification defined in the MdePkg<br>
 
-+++?image=/assets/images/slides/Slide40.JPG
++++?image=/assets/images/slides/Slide40_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->		  
 @title[EDK II Package Examples: Specs 03]
@@ -408,7 +412,7 @@ Modules (PEIMs + DXE Drivers + UEFI Drivers + UEFI Applications) that only defin
 Note:
 
 
-+++?image=/assets/images/slides/Slide41.JPG
++++?image=/assets/images/slides/Slide41_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->		  
 @title[EDK II Package Examples: Specs 04]
@@ -458,6 +462,340 @@ Note:
 Functionality<br>
 ShellPkg – Application - command line interface<br>
 NetworkPkg – Network drivers and Applications
+
+---?image=/assets/images/slides/Slide47.JPG
+<!-- .slide: data-transition="none" -->	
+
+@title[Libraries ]
+#### <p align="right"><span class="gold" >Libraries </span></p>
+
+
+Note:
+
+Famous Time line picture <br>
+SEC –Platform code to Turn on the Cache so  having libraries would be useful<br>
+PEI – Executing from the Flash device - No memory – constrained environment – turn on memory control – Set libraries to help write code in this environment  <br>
+DXE – Main phase of Firmware – Platform interfaces – DXE Drivers, UEFI 2.x interfaces – Run EFI option roms – So we have libraries that are common between these environments <br>
+<br>
+Base Libraries – generic libraries that can run anywhere – not only in the EDK II but anywhere – generic environment for writing stand alone C code <br>
+<br>
+BDS – Policy happens – Screen turns – boot policy <br>
+“Same lib classes exist across multiple phases but can have different lib instances”<br>
+
++++?image=/assets/images/slides/Slide48.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+@title[Libraries 02]
+#### <p align="right"><span class="gold" >Libraries </span></p>
+
+
+Note:
+Famous Time line picture <br>
+SEC –Platform code to Turn on the Cache so  having libraries would be useful<br>
+PEI – Executing from the Flash device - No memory – constrained environment – turn on memory control – Set libraries to help write code in this environment  <br>
+DXE – Main phase of Firmware – Platform interfaces – DXE Drivers, UEFI 2.x interfaces – Run EFI option roms – So we have libraries that are common between these environments <br>
+<br>
+Base Libraries – generic libraries that can run anywhere – not only in the EDK II but anywhere – generic environment for writing stand alone C code <br>
+<br>
+BDS – Policy happens – Screen turns – boot policy <br>
+“Same lib classes exist across multiple phases but can have different lib instances”<br>
+
++++?image=/assets/images/slides/Slide49.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+@title[Libraries 03]
+#### <p align="right"><span class="gold" >Libraries </span></p>
+
+
+Note:
+Famous Time line picture <br>
+SEC –Platform code to Turn on the Cache so  having libraries would be useful<br>
+PEI – Executing from the Flash device - No memory – constrained environment – turn on memory control – Set libraries to help write code in this environment  <br>
+DXE – Main phase of Firmware – Platform interfaces – DXE Drivers, UEFI 2.x interfaces – Run EFI option roms – So we have libraries that are common between these environments <br>
+<br>
+Base Libraries – generic libraries that can run anywhere – not only in the EDK II but anywhere – generic environment for writing stand alone C code <br>
+<br>
+BDS – Policy happens – Screen turns – boot policy <br>
+“Same lib classes exist across multiple phases but can have different lib instances”<br>
+
++++?image=/assets/images/slides/Slide50.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+@title[Libraries 04]
+#### <p align="right"><span class="gold" >Libraries </span></p>
+
+
+Note:
+Famous Time line picture <br>
+SEC –Platform code to Turn on the Cache so  having libraries would be useful<br>
+PEI – Executing from the Flash device - No memory – constrained environment – turn on memory control – Set libraries to help write code in this environment  <br>
+DXE – Main phase of Firmware – Platform interfaces – DXE Drivers, UEFI 2.x interfaces – Run EFI option roms – So we have libraries that are common between these environments <br>
+<br>
+Base Libraries – generic libraries that can run anywhere – not only in the EDK II but anywhere – generic environment for writing stand alone C code <br>
+<br>
+BDS – Policy happens – Screen turns – boot policy <br>
+“Same lib classes exist across multiple phases but can have different lib instances”<br>
+
+
+---?image=/assets/images/slides/Slide52.JPG
+
+<!-- .slide: data-transition="none" -->	
+@title[Example-Library-Debuglib]
+#### <p align="right"><span class="gold"  >Example - Library</span><span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>Debuglib</b> </font></span></p>
+
+
+Note:
+DebugLib library class name <br>
+The debugging characteristics might be different during the different boot up phases.<br>
+SEC – Null or no code<br>
+PEI-DXE-BDS – Code to output to serial port/ port 80 codes<br>
+Library Class names can be linked with different Processor resolutions (IA32/ x64) & different boot phases<br>
+
++++?image=/assets/images/slides/Slide53.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+@title[Example-Library-Debuglib 02]
+#### <p align="right"><span class="gold"  >Example - Library</span><span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>Debuglib</b> </font></span></p>
+
+
+Note:
+DebugLib library class name <br>
+The debugging characteristics might be different during the different boot up phases.<br>
+SEC – Null or no code<br>
+PEI-DXE-BDS – Code to output to serial port/ port 80 codes<br>
+Library Class names can be linked with different Processor resolutions (IA32/ x64) & different boot phases<br>
+
++++?image=/assets/images/slides/Slide54.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+@title[Example-Library-Debuglib 03]
+#### <p align="right"><span class="gold"  >Example - Library</span><span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>Debuglib</b> </font></span></p>
+
+
+Note:
+DebugLib library class name <br>
+The debugging characteristics might be different during the different boot up phases.<br>
+SEC – Null or no code<br>
+PEI-DXE-BDS – Code to output to serial port/ port 80 codes<br>
+Library Class names can be linked with different Processor resolutions (IA32/ x64) & different boot phases<br>
+
+---?image=/assets/images/slides/Slide56.JPG
+
+@title[PCD Title page]
+#### <p align="right"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+
+
+
+Note:
+Defining database - like global variables <br>
+
+Many components of a database to help fine tune the BIOS or Firmware - build & runtime
+
+
+---?image=/assets/images/slides/Slide57.JPG
+<!-- .slide: data-transition="none" -->	
+
+@title[Platform Configuration Database]
+<p align="center"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+
+
+Note:
+So what is the platform configuration database goal? <br>
+
+First off, PDC entries are used for module parameterization. Examples are define statements, variables etc.<br>
+
+What are the benefits, we want to reduce the need to edit the source code. <br>
+Also there is no need for searching for a magic #define  statement, for example like base address registers. These can all be PCD values.<br>
+Purporting we want to maximize the module reuse across platforms and 
+also will have APIs for accessing the PCD entries<br><br>
+
+What the PCD store, the store platform information like the vital product data serial number, we can use variable PCBs for setup options etc.<br>
+
++++?image=/assets/images/slides/Slide58.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+
+@title[Platform Configuration Database 02]
+<p align="center"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+
+
+Note:
+So what is the platform configuration database goal? <br>
+
++++?image=/assets/images/slides/Slide59.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+
+@title[Platform Configuration Database 03]
+<p align="center"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+
+
+Note:
+So what is the platform configuration database goal? <br>
+
+
++++?image=/assets/images/slides/Slide60.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+
+@title[Platform Configuration Database 04]
+<p align="center"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+
+
+Note:
+So what is the platform configuration database goal? <br>
+
+First off, PDC entries are used for module parameterization. Examples are define statements, variables etc.<br>
+
+What are the benefits, we want to reduce the need to edit the source code. <br>
+Also there is no need for searching for a magic #define  statement, for example like base address registers. These can all be PCD values.<br>
+Purporting we want to maximize the module reuse across platforms and 
+also will have APIs for accessing the PCD entries<br><br>
+
+What the PCD store, the store platform information like the vital product data serial number, we can use variable PCBs for setup options etc.<br>
+
+
+
+---?image=/assets/images/slides/Slide62.JPG
+<!-- .slide: data-transition="none" -->	
+
+@title[Platform Configuration Database - Advantages]
+<p align="center"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+
+
+Note:
+
+What are the Advantages and the purpose of the platform configuration database?<br><br>
+
+It has common definitions that are established for platform component settings in the database. The contents of this database are intended to standardize the exposure of platform and module settings which can in-turn facilitate platform porting. One of the goals is to help us with platform porting.<br>
+
+There are some build time aspects – <br>
+	A collection of component information is established from the PCD  component definitions that will be associated with a given module.<br>
+
+There are run time aspects – <br>
+	by providing APIs which allow common access to component settings during the operation of the platform, we can allow for binary distribution models which are PCD compliant. In other words, Not everyone has the source!<br>
+
+And finally, there are binary edit aspects -<br>
+	One of the stated goals is that a module can carry their own PCD data in their binary image and have it exposed so that they can be edited in the flash image.<br>
+
+
++++?image=/assets/images/slides/Slide63.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+@title[Platform Configuration Database - Advantages 02]
+<p align="center"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+
+
+Note:
+
+
++++?image=/assets/images/slides/Slide64.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+@title[Platform Configuration Database - Advantages 03]
+<p align="center"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+
+
+Note:
+
+What are the Advantages and the purpose of the platform configuration database?<br><br>
+
+It has common definitions that are established for platform component settings in the database. The contents of this database are intended to standardize the exposure of platform and module settings which can in-turn facilitate platform porting. One of the goals is to help us with platform porting.<br>
+
+There are some build time aspects – <br>
+	A collection of component information is established from the PCD  component definitions that will be associated with a given module.<br>
+
+There are run time aspects – <br>
+	by providing APIs which allow common access to component settings during the operation of the platform, we can allow for binary distribution models which are PCD compliant. In other words, Not everyone has the source!<br>
+
+And finally, there are binary edit aspects -<br>
+	One of the stated goals is that a module can carry their own PCD data in their binary image and have it exposed so that they can be edited in the flash image.<br>
+
+
+
+---?image=/assets/images/slides/Slide66.JPG
+
+<!-- .slide: data-transition="none" -->	
+@title[EDK II Infrastructure Summary]
+<br><br>
+### <p align="center"><span class="slide-title" >EDK II Infrastructure Summary</span></p>
+
+Note:
+
+Summary <br>
+- Packages<br>
+  - list of modules<br>
+- Libraries<br>
+   - Names with different implimentation<br>
+- PCD
+	
++++?image=/assets/images/slides/Slide67.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+@title[EDK II Infrastructure Summary 02]
+<br><br>
+### <p align="center"><span class="slide-title" >EDK II Infrastructure Summary</span></p>
+
+Note:
+
+Summary <br>
+- Packages<br>
+  - list of modules<br>
+- Libraries<br>
+   - Names with different implimentation<br>
+- PCD
+
++++?image=/assets/images/slides/Slide68.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+@title[EDK II Infrastructure Summary 03]
+<br><br>
+### <p align="center"><span class="slide-title" >EDK II Infrastructure Summary</span></p>
+
+Note:
+
+Summary <br>
+- Packages<br>
+  - list of modules<br>
+- Libraries<br>
+   - Names with different implimentation<br>
+- PCD
+
+---?image=/assets/images/slides/Slide70.JPG
+
+@title[EDK II vs. UDK]
+#### <p align="center"><span class="gold" >EDK II vs. UDK(2010|2017 .. 2018)</span></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<span style="font-size:0.75em" >&nbsp;&nbsp;&nbsp;&nbsp;wiki on tianocore.org
+<a href='https://github.com/tianocore/tianocore.github.io/wiki/Differences-between-UDK-and-EDK-II'>Differences between UDK - EDK II</a></span>	
+
+Note:
+
+The UEFI Developer's Kit 2010 (UDK2010) is an open-source driver & application development kit built on validated EDK II code <br>
+UDK2018 is a stable build of the EDK II project<br>
+Based on a snapshot of the EDK II project<br>
+Validated on a variety of Intel platforms<br>
+Validated with different OS & application software<br>
+The open-source EDK II & UDK2010 do not contain code for Intel silicon or platforms<br>
+
+Explain differences here so references later in the presentation make more sense.<br>
+
+UEFI Developer's Kit 2010 (UDK2018) = open-source driver & application development kit containing EDK II (second generation EFI development kit) validated common-core sample code. The open-source UDK2010 is a stable build of the EDK II project, and has been validated on a variety of Intel platforms, operating systems, and application software.<br>
+
+Intel® UEFI Developer’s Kit 2018 (Intel® UDK 2018, also called the Intel® UDK2018), Intel Corporation, 2018. 
+
+
+
+---?image=assets/images/binary-strings-black2.jpg
+@title[EDK II Overview Section]
+<br><br><br><br><br>
+## <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Build Tools </span>
+<span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDK Build Tools and Configuration Files </span>
 
 
 ---
