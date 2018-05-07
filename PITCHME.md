@@ -210,18 +210,17 @@ Note:
 
 Note:
 
----?image=/assets/images/bgpages/Slide18.JPG
+---?image=/assets/images/bgpages/Slide23.JPG
 <!-- .slide: data-transition="none" -->	
 @title[EDK II Directory Structure]
 ####  <p align="right"><span class="gold" > EDK II Directory Structure </span></p>		  
-@div[right-50]
+@div[right-55]
 <br>
 @ul[brighten]
 - Package concept for each EDK II sub-directory
 - Platforms are contained in an EDK II package
 - EDK II build process reflects the package
-- Concept of “Work Space”   <br>
-         <$HOME/src/edk2
+- Concept of “Work Space” - <font face="Courier New"><b>$HOME/src/edk2</b></font>
 @ulend
 @divend
 
@@ -233,25 +232,6 @@ Coding explains Workspace Build commands
 EDK II build process reflects the package structure … the build command specifies the .DSC file for a platform
 These directories are from the github edk2 project
 
-+++?image=/assets/images/bgpages/Slide23.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->		
-@title[EDK II Directory Structure 02]
-####  <p align="right"><span class="gold" > EDK II Directory Structure </span></p>
-<br>
-
-<div class="right">
-    <ul>
-        <li>Package concept for each EDK II sub-directory</li>
-        <li>Platforms are contained in an EDK II package</li>
-        <li>EDK II build process reflects the package</li>
-        <li>Concept of “Work Space”   <br>
-         <$HOME/src/edk2</li>
-        
-    </ul>
-</div>
-
-Note:
 
 
 ---
