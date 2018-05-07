@@ -48,11 +48,96 @@ Note:
  @fa[certificate gp-bullet-yellow] <span style="font-size:0.9em">&nbsp;&nbsp;Explain the EDK II build process </span> <br><br>
  @fa[certificate gp-bullet-magenta] <span style="font-size:0.9em">&nbsp;&nbsp;Explain the Build tools</span> 
 
+---?image=assets/images/binary-strings-black2.jpg
+@title[EDK II Overview Section]
+#### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDK II Overview </span>
+<span style="font-size:0.75em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The EDK II Infrastructure </span>
+
+---?image=/assets/images/bgpages/Slide4.JPG
+@title[Philosophy of EDK II]
+#### <p align="right"><span class="gold" > Philosophy of EDK II </span></p>
 
 
+Note:
+Support all UEFI and PI development needs <br>
+Separate tool code from source code<br>
+  - 	note : only older Intel Platforms:<br>
+           Build existing EDK modules<br>
+Via EDK Compatibility Package (ECP)<br>
+Package Definition File: DEC<br>
+DEC defines package of modules<br>
+FLASH Mapping Tool <br>
+Move as much code as possible to C<br>
+Open source EDK II on http://tianocore.org<br>
+
+
+
+EDK II Goals <br>
+
+- so the main goal for EDK II to make it easer in porting  of platforms and building  UEFI Drivers<br>
+-  First off EDK II is open source on tianocore.org<br>
+
+One goal is to Support all UEFI and PI development needs<br>
+UEFI Stands Unified Extensible Firmware Interface and UEFI and PI are making references to the Specifications that are managed by the UEFI Form on www.UEFI.org. 
+The goal of EDK II is to support the implementations of these specs, and to make the implementation useful in a way to support one stand alone Driver or stand alone application or to build one Platform.
+We wanted to Separate tool code from product code
+On tianocore there is one storage for the Tools and a separate one for the Product code 
+Because there are a lot of people using the EDK and there is a lot investment in EDK 1, (ie 1117) we wanted to make sure EDK II would build existing EDK modules
+Via EDK Compatibility Package (ECP)<br>
+
+We have a new Package Definition File: DEC<br>
+One level between a platform and a single piece of code or a module
+DEC defines package of modules 
+Example – 3 drivers all related to the same piece of hardware they would go inside a logical package i.e. the NIC driver  a NIC.DEC
+
+We have a FLASH Mapping Tool – we made improvements on this from the previous EDK build process.  There is more emphasis on what the flash device layout will look like.
+
+We waned to Move as much as possible to C code
+Eliminated a lot of the java
+Eliminated a lot of the Assembly
+
+
++++?image=/assets/images/bgpages/Slide5.JPG
+<!-- .slide: data-background-transition="none" -->
+@title[Philosophy of EDK II 02]
+#### <p align="right"><span class="gold" > Philosophy of EDK II </span></p>
+
+Note:
+Separate tool code from source code<br>
+  - 	note : only older Intel Platforms:<br>
+           Build existing EDK modules<br>
+Via EDK Compatibility Package (ECP)<br>
+
++++?image=/assets/images/bgpages/Slide6.JPG
+<!-- .slide: data-background-transition="none" -->
+@title[Philosophy of EDK II 03]
+#### <p align="right"><span class="gold" > Philosophy of EDK II </span></p>
+
+Note:
++++?image=/assets/images/bgpages/Slide7.JPG
+<!-- .slide: data-background-transition="none" -->
+@title[Philosophy of EDK II 04]
+#### <p align="right"><span class="gold" > Philosophy of EDK II </span></p>
+
+Note:
++++?image=/assets/images/bgpages/Slide8.JPG
+<!-- .slide: data-background-transition="none" -->
+@title[Philosophy of EDK II 05]
+#### <p align="right"><span class="gold" > Philosophy of EDK II </span></p>
+
+Note:
+
++++?image=/assets/images/bgpages/Slide9.JPG
+<!-- .slide: data-background-transition="none" -->
+@title[Philosophy of EDK II 06]
+#### <p align="right"><span class="gold" > Philosophy of EDK II </span></p>
+
+Note:
 
 
 ---
+<!---  END OF SLIDES
+-->
 
 @title[Packages]
 #### <p align="center"><span class="gold" > Packages</span></p>
