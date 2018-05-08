@@ -260,7 +260,7 @@ Note:
 ####  <p align="right"><span class="gold" > Directory Structure - Real Platform</span></p>
 
 Note:
-+++?image=/assets/images/slides/Slide28.jpg
++++?image=/assets/images/slides/Slide28_1.jpg
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->		  
 @title[Directory Structure - Real Platform 04]
@@ -910,7 +910,7 @@ When you run these scripts, the files set up your workspace and some configurati
 If you run this script file and those files are already there, it won’t do anything.  But if it doesn’t find these three files—
  target.txt, tools_def.txt, build_rule.txt—it will create them from templates.
 
----?image=/assets/images/slides/Slide82.JPG
+---?image=/assets/images/slides/Slide82_1.JPG
 <!-- .slide: data-transition="none" -->	
 
 @title[Multiple Workspace Environment Variable]
@@ -931,7 +931,7 @@ In this case WORKSPACE is the container for two trees as well as the location of
 
 When the build tools are run with this configuration the directories will be scanned in the following order to find packages listed in the DSC and FDF files.
  
-+++?image=/assets/images/slides/Slide83.JPG
++++?image=/assets/images/slides/Slide83_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Multiple Workspace Environment Variable 02]
@@ -942,7 +942,7 @@ Note:
 
 Package_Path<br>
 
-+++?image=/assets/images/slides/Slide84.JPG
++++?image=/assets/images/slides/Slide84_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Multiple Workspace Environment Variable 03]
@@ -963,7 +963,52 @@ In this case WORKSPACE is the container for two trees as well as the location of
 
 When the build tools are run with this configuration the directories will be scanned in the following order to find packages listed in the DSC and FDF files.
 
----?image=/assets/images/slides/Slide86.JPG
++++?image=/assets/images/slides/Slide84_2.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Multiple Workspace Environment Variable 04]
+<p align="right"><span class="gold" >Multiple Workspace Environment Variable </span></p>
+
+
+Note:
+
+Package_Path<br>
+ 
+An update to the EDKII build tools now allows the setting of multiple paths that will be searched when attempting to resolve the location of packages. This new feature allows for more flexibility when designing a tree layout or combining sources from different sources. The new functionality is enabled through the addition of a new environment variable (PACKAGES_PATH).
+The PACKAGES_PATH variable is an ordered list of additional search paths using the default path separator of the host OS between each entry. The first path in the list has the highest priority and the last path has the lowest priority. The path specified by the WORKSPACE variable always has the highest search priority over any PACKAGE_PATH entries.
+To use this feature, the PACKAGES_PATH environment variable must be set prior to running the edksetup script. The reason for this is that the edksetup script determines the location of the Conf and BaseTools directory location based on the values of the WORKSPACE and PACKAGES_PATH environment variables.
+The use of the PACKAGES_PATH environment variable is optional and if it is not defined the build will function like it has in the past.
+
+Why and when:
+In this case WORKSPACE is the container for two trees as well as the location of the Build directory. The example assumes the set of code packages for a given platform are contained in the platform directory. While the code packages from the open source repository are contained in the edk2 directory.
+
+When the build tools are run with this configuration the directories will be scanned in the following order to find packages listed in the DSC and FDF files.
+
++++?image=/assets/images/slides/Slide84_3.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Multiple Workspace Environment Variable 05]
+<p align="right"><span class="gold" >Multiple Workspace Environment Variable </span></p>
+
+
+Note:
+
+Package_Path<br>
+ 
+An update to the EDKII build tools now allows the setting of multiple paths that will be searched when attempting to resolve the location of packages. This new feature allows for more flexibility when designing a tree layout or combining sources from different sources. The new functionality is enabled through the addition of a new environment variable (PACKAGES_PATH).
+The PACKAGES_PATH variable is an ordered list of additional search paths using the default path separator of the host OS between each entry. The first path in the list has the highest priority and the last path has the lowest priority. The path specified by the WORKSPACE variable always has the highest search priority over any PACKAGE_PATH entries.
+To use this feature, the PACKAGES_PATH environment variable must be set prior to running the edksetup script. The reason for this is that the edksetup script determines the location of the Conf and BaseTools directory location based on the values of the WORKSPACE and PACKAGES_PATH environment variables.
+The use of the PACKAGES_PATH environment variable is optional and if it is not defined the build will function like it has in the past.
+
+Why and when:
+In this case WORKSPACE is the container for two trees as well as the location of the Build directory. The example assumes the set of code packages for a given platform are contained in the platform directory. While the code packages from the open source repository are contained in the edk2 directory.
+
+When the build tools are run with this configuration the directories will be scanned in the following order to find packages listed in the DSC and FDF files.
+
+
+
+
+---?image=/assets/images/slides/Slide86_1.JPG
 <!-- .slide: data-transition="none" -->	 
 @title[Using target.txt]
 #### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
@@ -972,7 +1017,7 @@ Note:
 
 Scroll to last slide
 
-+++?image=/assets/images/slides/Slide87.JPG
++++?image=/assets/images/slides/Slide86_2.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Using target.txt 02]
@@ -982,7 +1027,7 @@ Note:
 
 Scroll to last slide
 
-+++?image=/assets/images/slides/Slide88.JPG
++++?image=/assets/images/slides/Slide87_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Using target.txt 03]
@@ -992,7 +1037,7 @@ Note:
 
 Scroll to last slide
 
-+++?image=/assets/images/slides/Slide89.JPG
++++?image=/assets/images/slides/Slide88_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Using target.txt 04]
@@ -1002,7 +1047,7 @@ Note:
 
 Scroll to last slide
 
-+++?image=/assets/images/slides/Slide90.JPG
++++?image=/assets/images/slides/Slide89_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Using target.txt 05]
@@ -1012,10 +1057,20 @@ Note:
 
 Scroll to last slide
 
-+++?image=/assets/images/slides/Slide91.JPG
++++?image=/assets/images/slides/Slide90_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Using target.txt 06]
+#### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
+
+Note:
+
+Scroll to last slide
+
++++?image=/assets/images/slides/Slide91_1.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Using target.txt 07]
 #### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
 
 Note:
@@ -1376,7 +1431,7 @@ Note:
 Note:
 ---
 @title[Build Command]
-#### <span class="gold" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Build Command</span>
+####  <p align="right"><span class="gold" >The Build Command</span></p>
 
 - Accepts command line arguments to support scripted builds 
 - Overrides most settings found in target.txt |
@@ -1426,7 +1481,7 @@ Note:
 This is not the complete list … run build --help from the command prompt to see all of the build options
 
 ---?image=/assets/images/slides/Slide138.JPG
-title[Using Build-Y Reports]
+@title[Using Build-Y Reports]
 #### <p align="right"><span class="gold"  >Using </span> <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>build -Y</b></font></span><span class="gold"  >&nbsp;&nbsp;for Reports </span></p>
 
 Note:
