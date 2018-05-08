@@ -1476,7 +1476,7 @@ This is not the complete list … run build --help from the command prompt to se
 <!-- .slide: data-transition="none" -->	 
  
 @title[Using EDK II build Command 02]
-#### <p align="right"><span class="gold"  >Using EDK II</span> <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>build</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
+#### <p align="right"><span class="gold"  >Using EDK II</span> <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>build -h</b></font></span></p>
 
 Note:
 
