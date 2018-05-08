@@ -968,8 +968,6 @@ When the build tools are run with this configuration the directories will be sca
 @title[Using target.txt]
 #### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
 
-![Using target.txt](/assets/images/bgpages/bg51.png )
-
 Note:
 
 Scroll to last slide
@@ -979,8 +977,6 @@ Scroll to last slide
 <!-- .slide: data-transition="none" -->	 
 @title[Using target.txt 02]
 #### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
-
-![Using target.txt](/assets/images/bgpages/bg51.png )
 
 Note:
 
@@ -992,8 +988,6 @@ Scroll to last slide
 @title[Using target.txt 03]
 #### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
 
-![Using target.txt](/assets/images/bgpages/bg51.png )
-
 Note:
 
 Scroll to last slide
@@ -1003,8 +997,6 @@ Scroll to last slide
 <!-- .slide: data-transition="none" -->	 
 @title[Using target.txt 04]
 #### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
-
-![Using target.txt](/assets/images/bgpages/bg51.png )
 
 Note:
 
@@ -1016,8 +1008,6 @@ Scroll to last slide
 @title[Using target.txt 05]
 #### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
 
-![Using target.txt](/assets/images/bgpages/bg51.png )
-
 Note:
 
 Scroll to last slide
@@ -1027,8 +1017,6 @@ Scroll to last slide
 <!-- .slide: data-transition="none" -->	 
 @title[Using target.txt 06]
 #### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
-
-![Using target.txt](/assets/images/bgpages/bg51.png )
 
 Note:
 
@@ -1348,14 +1336,14 @@ This last stage is also configurable.<BR>
 #### <p align="right"><span class="gold" >EDK II Build: ImageGen Stage</span></p>
 
 @div[left-50]
-<br><br><br>
-@ul[brighten]
-- Builds one image for each specified firmware volume (FV)
+<br><br>
+<ul>
+- Builds one image for each specified firmware volume (FV) <br> <br>
 - The FDF file supports all syntax available in the PI Specification Vol. 3
-@ulend
+</ul>
 @divend
 @div[right-50]
-   ![EDK II Image Gen Stage](/assets/images/Slides/Imagegen.jpg )
+![EDK II Image Gen Stage](/assets/images/slides/Imagegen.jpg )
 @divend
 
 
