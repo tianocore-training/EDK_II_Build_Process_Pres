@@ -260,7 +260,7 @@ Note:
 ####  <p align="right"><span class="gold" > Directory Structure - Real Platform</span></p>
 
 Note:
-+++?image=/assets/images/slides/Slide28_1.jpg
++++?image=/assets/images/slides/Slide28_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->		  
 @title[Directory Structure - Real Platform 04]
@@ -1431,13 +1431,13 @@ Note:
 Note:
 ---
 @title[Build Command]
-####  <p align="right"><span class="gold" >The Build Command</span></p>
+####  <p align="center"><span class="gold" >&nbsp;&nbsp;The Build Command</span></p>
 
-- Accepts command line arguments to support scripted builds 
-- Overrides most settings found in target.txt |
-- Overrides DSC with a minimal INF build |
-- Overrides some settings in DSC file (.FDF) |
-- Choose settings from the FDF file (ROMIMAGE, FVIMAGE) |
+- Accepts command line arguments to support scripted builds <br>
+- Overrides most settings found in target.txt |<br>
+- Overrides DSC with a minimal INF build |<br>
+- Overrides some settings in DSC file (.FDF) |<br>
+- Choose settings from the FDF file (ROMIMAGE, FVIMAGE) |<br>
 - Choose $(make) options (silent, verbose, quiet) |
 
 
