@@ -1434,10 +1434,10 @@ Note:
 ####  <p align="center"><span class="gold" >&nbsp;&nbsp;The Build Command</span></p>
 
 - Accepts command line arguments to support scripted builds <br>
-- Overrides most settings found in target.txt |<br>
-- Overrides DSC with a minimal INF build |<br>
-- Overrides some settings in DSC file (.FDF) |<br>
-- Choose settings from the FDF file (ROMIMAGE, FVIMAGE) |<br>
+- Overrides most settings found in target.txt <br>|
+- Overrides DSC with a minimal INF build <br>|
+- Overrides some settings in DSC file (.FDF) <br>|
+- Choose settings from the FDF file (ROMIMAGE, FVIMAGE)<br> |
 - Choose $(make) options (silent, verbose, quiet) |
 
 
@@ -1526,66 +1526,6 @@ Other tools run as part of these 4
 <!---  END OF SLIDES
 -->
 
-@title[Packages]
-#### <p align="center"><span class="gold" > Packages</span></p>
-@div[left-50]
-     <span style="color:#9e692e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-gift fa-3x" aria-hidden="true" > </i> </span>
-	 <span style="color:#514124">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-gift fa-2x" aria-hidden="true" > </i> </span><br>
-     <span style="color:#BF5122">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-gift fa-5x" aria-hidden="true" > </i> </span>
-	 <span style="color:#FFFF99">&nbsp;&nbsp;<i class="fa fa-gift fa-2x" aria-hidden="true" > </i>
-
-@divend
-@div[right-50]
-<br><br><br>
-@ul[brighten]
-- EDK II projects are made up of packages
-- Make your own packages
-- Package contains only the necessities
-- Remove packages from projects when not required
-@ulend
-@divend
-
-
-
-
-Note:
-TBD get notes from PackagesORG
----?color=black
-
-### @color[white](Layout text alongside images)
-
-@div[left-50]
-<br>
-![Modules](/assets/images/slides/bg21.png )
-@divend
-
-@div[right-50]
-<br><br><br>
-@ul[brighten]
-- EDK II projects are made up of packages
-- Make your own packages
-- Package contains only the necessities
-- Remove packages from projects when not required
-@ulend
-@divend
-
----
-@title[lastslide]
-
-<!--- comment END OF THE SLIDE DECK
--->
-
-## <span class="gold"   >Last Slide to use</span>
-
-##### END OF SLIDES 
-- Summary
-- Q & A
-- Tianocore Logo
-- Acknowledgements
-<br>
-
-Use the next slide as the last example in the slide deck.
----  
 @title[Summary]
 <br>
 ##### <p align="center"<span class="gold"   >Summary </span></p><br>
