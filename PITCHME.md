@@ -1287,7 +1287,7 @@ Note:
 
 Note:
 
-+++?image=/assets/images/slides/Slide117.JPG
++++?image=/assets/images/slides/Slide117_1.jpg
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 
@@ -1431,8 +1431,10 @@ Note:
 Note:
 ---
 @title[Build Command]
+<br>
+<br>
 ####  <p align="center"><span class="gold" >&nbsp;&nbsp;The Build Command</span></p>
-
+<br>
 - Accepts command line arguments to support scripted builds <br>
 - Overrides most settings found in target.txt <br>|
 - Overrides DSC with a minimal INF build <br>|
@@ -1479,6 +1481,11 @@ This is not the complete list … run build --help from the command prompt to se
 Note:
 
 This is not the complete list … run build --help from the command prompt to see all of the build options
++++?code=sample/buildoutput.txt&lang=shell&title=Output Build -h
+
+Note:
+output from 
+Build -h command
 
 ---?image=/assets/images/slides/Slide138.JPG
 @title[Using Build-Y Reports]
