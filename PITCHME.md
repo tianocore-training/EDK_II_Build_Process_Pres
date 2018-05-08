@@ -317,13 +317,13 @@ Note:
 
 @title[Packages]
 <br>
-####  <p align="center"><span class="gold" > Packages</span></p>
+###  <p align="center"><span class="gold" > Packages</span></p>
 @div[Left-50]
-<br><br>
+
 @ul[brighten]
-- EDK II projects are made<BR> up of packages
-- Make your own packages
-- Package contains only the <BR>necessities
+- EDK II projects are made<BR> up of packages<br>
+- Make your own packages<br>
+- Package contains only the <BR>necessities<br>
 - Remove packages from  <BR>projects when not required
 @ulend
 @divend
@@ -583,7 +583,7 @@ Library Class names can be linked with different Processor resolutions (IA32/ x6
 ---?image=/assets/images/slides/Slide56.JPG
 
 @title[PCD Title page]
-#### <p align="right"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+#### <p align="right"><span class="gold" >Platform Configuration Database (PCD)</span></p>
 
 
 
@@ -597,7 +597,7 @@ Many components of a database to help fine tune the BIOS or Firmware - build & r
 <!-- .slide: data-transition="none" -->	
 
 @title[Platform Configuration Database]
-<p align="center"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+#### <p align="right"><span class="gold" >Platform Configuration Database (PCD)</span></p>
 
 
 Note:
@@ -617,7 +617,7 @@ What the PCD store, the store platform information like the vital product data s
 <!-- .slide: data-transition="none" -->	
 
 @title[Platform Configuration Database 02]
-<p align="center"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+#### <p align="right"><span class="gold" >Platform Configuration Database (PCD)</span></p>
 
 
 Note:
@@ -628,7 +628,7 @@ So what is the platform configuration database goal? <br>
 <!-- .slide: data-transition="none" -->	
 
 @title[Platform Configuration Database 03]
-<p align="center"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+#### <p align="right"><span class="gold" >Platform Configuration Database (PCD)</span></p>
 
 
 Note:
@@ -640,7 +640,7 @@ So what is the platform configuration database goal? <br>
 <!-- .slide: data-transition="none" -->	
 
 @title[Platform Configuration Database 04]
-<p align="center"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+#### <p align="right"><span class="gold" >Platform Configuration Database (PCD)</span></p>
 
 
 Note:
@@ -661,7 +661,7 @@ What the PCD store, the store platform information like the vital product data s
 <!-- .slide: data-transition="none" -->	
 
 @title[Platform Configuration Database - Advantages]
-<p align="center"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+#### <p align="right"><span class="gold" >Platform Configuration Database (PCD)</span></p>
 
 
 Note:
@@ -684,7 +684,7 @@ And finally, there are binary edit aspects -<br>
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	
 @title[Platform Configuration Database - Advantages 02]
-<p align="center"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+#### <p align="right"><span class="gold" >Platform Configuration Database (PCD)</span></p>
 
 
 Note:
@@ -694,7 +694,7 @@ Note:
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	
 @title[Platform Configuration Database - Advantages 03]
-<p align="center"><span class="slide-title75" >Platform Configuration Database (PCD)</span></p>
+#### <p align="right"><span class="gold" >Platform Configuration Database (PCD)</span></p>
 
 
 Note:
@@ -719,7 +719,7 @@ And finally, there are binary edit aspects -<br>
 <!-- .slide: data-transition="none" -->	
 @title[EDK II Infrastructure Summary]
 <br><br>
-<p align="center"><span class="slide-title" >EDK II Infrastructure Summary</span></p>
+#### <p align="center"><span class="gold" >EDK II Infrastructure Summary</span></p>
 
 Note:
 
@@ -735,7 +735,7 @@ Summary <br>
 <!-- .slide: data-transition="none" -->	
 @title[EDK II Infrastructure Summary 02]
 <br><br>
-<p align="center"><span class="slide-title" >EDK II Infrastructure Summary</span></p>
+#### <p align="center"><span class="gold" >EDK II Infrastructure Summary</span></p>
 
 Note:
 
@@ -751,7 +751,7 @@ Summary <br>
 <!-- .slide: data-transition="none" -->	
 @title[EDK II Infrastructure Summary 03]
 <br><br>
-<p align="center"><span class="slide-title" >EDK II Infrastructure Summary</span></p>
+#### <p align="center"><span class="gold" >EDK II Infrastructure Summary</span></p>
 
 Note:
 
@@ -778,8 +778,7 @@ Summary <br>
 <br>
 <br>
 <br>
-<br>
-<span style="font-size:0.75em" >&nbsp;&nbsp;&nbsp;&nbsp;wiki on tianocore.org
+<span style="font-size:0.8em" >&nbsp;&nbsp;&nbsp;&nbsp;wiki on tianocore.org
 <a href='https://github.com/tianocore/tianocore.github.io/wiki/Differences-between-UDK-and-EDK-II'>Differences between UDK - EDK II</a></span>	
 
 Note:
