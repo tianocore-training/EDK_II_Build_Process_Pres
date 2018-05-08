@@ -1476,14 +1476,14 @@ This is not the complete list … run build --help from the command prompt to se
 <!-- .slide: data-transition="none" -->	 
  
 @title[Using EDK II build Command 02]
-#### <p align="right"><span class="gold"  >Using EDK II</span> <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>build -h</b></font></span></p>
+#### <p align="right"><span class="gold"  >Using EDK II</span> <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>build</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
 
 Note:
 
 This is not the complete list … run build --help from the command prompt to see all of the build options
 
 
-+++?code=sample/buildoutput.txt&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>"build"</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/buildoutput.txt&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -h</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
 
 @[1,5-25](options to overide .DSC, .INF and .FDF and Target.txt settings)
 @[60,65-74](Using the -Y and -y options for Reports)
