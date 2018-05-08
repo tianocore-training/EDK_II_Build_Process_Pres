@@ -1084,14 +1084,14 @@ Default values are set by edksetup script<br>
 ## <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Build Process</span>
 <span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDK Build Process and Build Text Files</span>
  
----?image=/assets/images/slides/Slide98.JPG
+---?image=/assets/images/slides/Slide98_1.JPG
 <!-- .slide: data-transition="none" -->	
 @title[Build Process Overview]
 #### <p align="right"><span class="gold" >Build Process Overview </span></p>
 
 Note:
 
-+++?image=/assets/images/slides/Slide99.JPG
++++?image=/assets/images/slides/Slide99_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Build Process Overview 02]
@@ -1099,7 +1099,7 @@ Note:
 
 Note:
 
-+++?image=/assets/images/slides/Slide100.JPG
++++?image=/assets/images/slides/Slide100_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Build Process Overview 03]
@@ -1107,35 +1107,35 @@ Note:
 
 Note:
 
-+++?image=/assets/images/slides/Slide101.JPG
++++?image=/assets/images/slides/Slide101_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Build Process Overview 04]
 #### <p align="right"><span class="gold" >Build Process Overview </span></p>
 
 Note:
-+++?image=/assets/images/slides/Slide102.JPG
++++?image=/assets/images/slides/Slide102_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Build Process Overview 05]
 #### <p align="right"><span class="gold" >Build Process Overview </span></p>
 
 Note:
-+++?image=/assets/images/slides/Slide103.JPG
++++?image=/assets/images/slides/Slide103_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Build Process Overview 06]
 #### <p align="right"><span class="gold" >Build Process Overview </span></p>
 
 Note:
-+++?image=/assets/images/slides/Slide104.JPG
++++?image=/assets/images/slides/Slide104_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Build Process Overview 07]
 #### <p align="right"><span class="gold" >Build Process Overview </span></p>
 
 Note:
-+++?image=/assets/images/slides/Slide105.JPG
++++?image=/assets/images/slides/Slide105_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Build Process Overview 08]
@@ -1358,8 +1358,115 @@ Example: how to combine a UEFI Driver & Legacy PCI OpROM into a single binary im
 third and final stage, the ImageGen stage, we take these UEFI formatted files and create the flash image, or leave them as UEFI applications, or perhaps make UEFI-compliant PCI option ROMs. <BR>
 This last stage is also configurable.<BR>
 
+---?image=/assets/images/slides/Slide131_1.JPG
+<!-- .slide: data-transition="none" -->	 
+@title[Build Flow For OpROM]
+#### <p align="right"><span class="gold" >Build Flow For OpROM</span></p>
 
+Note:
+
+
++++?image=/assets/images/slides/Slide132_1.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+
+@title[Build Flow For OpROM 02]
+#### <p align="right"><span class="gold" >Build Flow For OpROM</span></p>
+
+Note:
+---
+@title[Build Command]
+#### <span class="gold" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Build Command</span>
+
+- Accepts command line arguments to support scripted builds 
+- Overrides most settings found in target.txt |
+- Overrides DSC with a minimal INF build |
+- Overrides some settings in DSC file (.FDF) |
+- Choose settings from the FDF file (ROMIMAGE, FVIMAGE) |
+- Choose $(make) options (silent, verbose, quiet) |
+
+
+
+Note:
+
+THIS IS A BUILD SLIDE - Press Right arrow <br>
+Advanced building usage The build tool is the main interface to the complete build process. This is a compiled tool downloaded as part of EDK II, or built if you are running on a non-Windows system. <br>
+It runs the rest of the build tools for you<br>
+There are command-line tools that are designed for the scripting of the build.  For example, in our group, we scripted it to run the build every night and send out a report. This way so we can see if something has been checked in that could cause the build to break<br>
+The goal is to enable enough features to script the build successfully, not to enable absolutely every feature. You can override most of the settings of the target.txt file. For example, you can change the architecture from high x64 to IA64. <br>
+<br>
+You can change which DSC file you are building. <br>
+You can change the target.txt for the toolchain. <br>
+You can change the thread count to build with four threads, not one thread, etc.<br>
+You can override the DSC and Say “please only build my INF file”.<br>
+You can change which FDF file you want for the build.<br>
+From inside the FDS file you can change the ROMIMAGE or FVIMAGE settings<br>
+You can change the messaging output from the make settings for instance,  making it silent, or verbose, or quiet.<br>
+Outside of changing the number of the threads used – if you are building the same code—unlike EDK, we don’t see a dramatic increase in the amount of time required.  For example, if you are letting it output to the screen, the text outputting does not have the same level of impact as an EDK text output.<br>
+In advanced build usage you can type build –h, or build –help, and it will give you this information. Although there are more options that you can list, they are used less frequently.<br>
+
+---?image=/assets/images/slides/Slide135.JPG
+<!-- .slide: data-transition="none" -->	 
+@title[Using EDK II build Command]
+#### <p align="right"><span class="gold"  >Using EDK II</span> <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>build</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
+
+Note:
+
+This is not the complete list … run build --help from the command prompt to see all of the build options
+
++++?image=/assets/images/slides/Slide136.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
  
+@title[Using EDK II build Command 02]
+#### <p align="right"><span class="gold"  >Using EDK II</span> <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>build</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
+
+Note:
+
+This is not the complete list … run build --help from the command prompt to see all of the build options
+
+---?image=/assets/images/slides/Slide138.JPG
+title[Using Build-Y Reports]
+#### <p align="right"><span class="gold"  >Using </span> <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>build -Y</b></font></span><span class="gold"  >&nbsp;&nbsp;for Reports </span></p>
+
+Note:
+build  –Y  PCD,  LIBRARY, FLASH, DEPEX, BUILD_FLAGS, FIXED_ADDRESS <Br>
+
+-Y REPORTTYPE<Br>
+--report-type=REPORTTYPE<Br>
+
+Flags that control the type of build report to generate.  Must be one of: [PCD, LIBRARY, FLASH, DEPEX, BUILD_FLAGS, FIXED_ADDRESS, EXECUTION_ORDER].<Br>
+
+To specify more than one flag, repeat this option on the command line and the default flag set is [PCD, LIBRARY, FLASH, DEPEX, BUILD_FLAGS, FIXED_ADDRESS]<Br>
++++
+@title[Using Build-Y Reports Example]
+#### <p align="right"><span class="gold"  >Using </span> <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>build -Y</b></font></span><span class="gold"  >&nbsp;&nbsp;for Reports </span></p>
+
+- TBD  add examples from Ovmfpkg build on GCC5
+
+Note:
+TBD
+
+---?image=/assets/images/slides/Slide140.JPG
+@title[Build Tool Binaries]
+#### <p align="center"><span class="gold"  >Build Tool Binaries</span></p>
+
+Note:
+The build tool binary files <br>
+There are four main build tools that we expect people to use frequently<br>
+Everybody will use Build.exe. This is the tool that runs the entire build. <br>
+EfiRom.exe is good for building EFI ROM images. It is possible to configure build.exe to call EfiRom.exe, but this is not required.<br>
+The patch programs PatchModule and PatchPlatform are used for changing PCD values that were defined as patchable. <br>
+When you make a PCD it is possible to make it patchable. <br>
+The following instructions show you how to do the patching.<br>
+
+<br>
+ All of the tools listed here can be run manually.<br>
+
+<br>
+Other tools run as part of these 4
+
+
 ---
 <!---  END OF SLIDES
 -->
