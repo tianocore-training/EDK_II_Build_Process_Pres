@@ -799,12 +799,579 @@ Intel® UEFI Developer’s Kit 2018 (Intel® UDK 2018, also called the Intel® U
 
 
 ---?image=assets/images/binary-strings-black2.jpg
-@title[EDK II Overview Section]
+@title[Build Tools Section]
 <br><br><br><br><br>
 ## <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Build Tools </span>
 <span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDK Build Tools and Configuration Files </span>
 
+---?image=/assets/images/slides/Slide73.JPG
+@title[Development Environment]
+#### <p align="center"><span class="gold" >Development Environment</span></p>
 
+
+Note:
+The development environment is one of the primary changes to EDK II.<br>
+We wanted a change, build wood work dramatically <br>
+We have Compiler tool chains:<br>
+    we still support Microsoft C compiler and WDK and Intel C/C++ compiler<br>
+      now we also support GCC<br>
+We still support Intel C UEFI Byte code compiler<br>
+You  can build across multiple Operating Systems –Windows, Mac, Linux flavors<br>
+All of these are supported across all the modules in the write.<br>
+  NOTE: this does not mean someone can write some assembly language code that was specific to the Microsoft compiler or assembler that in turn does not work on GCC. The standards we set for the core components are that they will work across everything. It is up to you as a developer to make sure the code you write meets the requirements of what ever compiler you use. <br>
+For example, the byte code compiler does not do floating point.  So if you add code that does floating point, be aware that you cannot compile that into byte code. 
+
+---?image=/assets/images/slides/Slide75.JPG
+
+@title[Environment Variables]
+#### <p align="center"><span class="gold" >Environment Variables</span></p>
+
+Note:
+EDK II depends on Environment variables – <br>
+The EDK_TOOLS_PATH –tells the build system the location of the binary tools directory. By default they will be in the build tools directory. However, there may be a difference if you are on a server and you share build tools.  Or, for example, if you compile build tools for Linux and another for windows, and you want to set your build path based on which OS you are building from.<br>
+
+The PATH is the directory location for any binary tools needed for the operating system.<br>
+
+The WORKSPACE –tells EDK II your workspace . You would want to set it to the location where you downloaded the source code.<br>
+
+EFI_SOURCE and EDK_SOURCE are used for the EDK compatibility package ECP when you are building an old module from EDK 1.<br>
+The last two are not used for native EDK II at all.<br>
+
+
+---?image=/assets/images/slides/Slide77.JPG
+<!-- .slide: data-transition="none" -->	
+@title[Configuration Files - Scripts]
+#### <p align="right"><span class="gold" >Configuration Files - Scripts</span></p>
+
+Note:
+edksetup.bat or edksetup.sh
+<br>
+This slide describes some script files<br>
+edksetup  (.bat or .sh)— used to setup and verify your workspace<br>
+These also set the environment variables  like the WORKSPACE and EDK_TOOLS_PATH, etc.<br>
+When you run these scripts, the files set up your workspace and some configuration files (if they are not already there). <br>
+If you run this script file and those files are already there, it won’t do anything.  But if it doesn’t find these three files—
+ target.txt, tools_def.txt, build_rule.txt—it will create them from templates.
+
+ 
++++?image=/assets/images/slides/Slide78.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+@title[Configuration Files - Scripts 02]
+#### <p align="right"><span class="gold" >Configuration Files - Scripts</span></p>
+
+Note:
+
+2.  First time use will set up configuration files<br>
+Conf/build_rule.txt (SIMPLE NOTHING TO SAY)<br>
+Conf/target.txt   (WILL GO INTO DETAIL NEXT SLIDE)<br>
+Conf/tools_def.txt  (WILL GO INTO DETAIL TWO SLIDES)<br>
+
+This slide describes some script files<br>
+edksetup  (.bat or .sh)— used to setup and verify your workspace<br>
+These also set the environment variables  like the WORKSPACE and EDK_TOOLS_PATH, etc.<br>
+When you run these scripts, the files set up your workspace and some configuration files (if they are not already there). <br>
+If you run this script file and those files are already there, it won’t do anything.  But if it doesn’t find these three files—
+ target.txt, tools_def.txt, build_rule.txt—it will create them from templates.
+
++++?image=/assets/images/slides/Slide79.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+@title[Configuration Files - Scripts 03]
+#### <p align="right"><span class="gold" >Configuration Files - Scripts</span></p>
+
+Note:
+
+3.Setup & verify a developer’s workspace
+
+<br>
+This slide describes some script files<br>
+edksetup  (.bat or .sh)— used to setup and verify your workspace<br>
+These also set the environment variables  like the WORKSPACE and EDK_TOOLS_PATH, etc.<br>
+When you run these scripts, the files set up your workspace and some configuration files (if they are not already there). <br>
+If you run this script file and those files are already there, it won’t do anything.  But if it doesn’t find these three files—
+ target.txt, tools_def.txt, build_rule.txt—it will create them from templates.
+
++++?image=/assets/images/slides/Slide80.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	
+@title[Configuration Files - Scripts 04]
+#### <p align="right"><span class="gold" >Configuration Files - Scripts</span></p>
+
+Note:
+4. Ensure environment variables are set correctly
+WORKSPACE, EDK_TOOLS_PATH, …
+
+<br>
+This slide describes some script files<br>
+edksetup  (.bat or .sh)— used to setup and verify your workspace<br>
+These also set the environment variables  like the WORKSPACE and EDK_TOOLS_PATH, etc.<br>
+When you run these scripts, the files set up your workspace and some configuration files (if they are not already there). <br>
+If you run this script file and those files are already there, it won’t do anything.  But if it doesn’t find these three files—
+ target.txt, tools_def.txt, build_rule.txt—it will create them from templates.
+
+---?image=/assets/images/slides/Slide82.JPG
+<!-- .slide: data-transition="none" -->	
+
+@title[Multiple Workspace Environment Variable]
+<p align="right"><span class="gold" >Multiple Workspace Environment Variable </span></p>
+
+
+Note:
+
+Package_Path<br>
+
+An update to the EDKII build tools now allows the setting of multiple paths that will be searched when attempting to resolve the location of packages. This new feature allows for more flexibility when designing a tree layout or combining sources from different sources. The new functionality is enabled through the addition of a new environment variable (PACKAGES_PATH).
+The PACKAGES_PATH variable is an ordered list of additional search paths using the default path separator of the host OS between each entry. The first path in the list has the highest priority and the last path has the lowest priority. The path specified by the WORKSPACE variable always has the highest search priority over any PACKAGE_PATH entries.
+To use this feature, the PACKAGES_PATH environment variable must be set prior to running the edksetup script. The reason for this is that the edksetup script determines the location of the Conf and BaseTools directory location based on the values of the WORKSPACE and PACKAGES_PATH environment variables.
+The use of the PACKAGES_PATH environment variable is optional and if it is not defined the build will function like it has in the past.
+
+Why and when:
+In this case WORKSPACE is the container for two trees as well as the location of the Build directory. The example assumes the set of code packages for a given platform are contained in the platform directory. While the code packages from the open source repository are contained in the edk2 directory.
+
+When the build tools are run with this configuration the directories will be scanned in the following order to find packages listed in the DSC and FDF files.
+ 
++++?image=/assets/images/slides/Slide83.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Multiple Workspace Environment Variable 02]
+<p align="right"><span class="gold" >Multiple Workspace Environment Variable </span></p>
+
+
+Note:
+
+Package_Path<br>
+
++++?image=/assets/images/slides/Slide84.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Multiple Workspace Environment Variable 03]
+<p align="right"><span class="gold" >Multiple Workspace Environment Variable </span></p>
+
+
+Note:
+
+Package_Path<br>
+ 
+An update to the EDKII build tools now allows the setting of multiple paths that will be searched when attempting to resolve the location of packages. This new feature allows for more flexibility when designing a tree layout or combining sources from different sources. The new functionality is enabled through the addition of a new environment variable (PACKAGES_PATH).
+The PACKAGES_PATH variable is an ordered list of additional search paths using the default path separator of the host OS between each entry. The first path in the list has the highest priority and the last path has the lowest priority. The path specified by the WORKSPACE variable always has the highest search priority over any PACKAGE_PATH entries.
+To use this feature, the PACKAGES_PATH environment variable must be set prior to running the edksetup script. The reason for this is that the edksetup script determines the location of the Conf and BaseTools directory location based on the values of the WORKSPACE and PACKAGES_PATH environment variables.
+The use of the PACKAGES_PATH environment variable is optional and if it is not defined the build will function like it has in the past.
+
+Why and when:
+In this case WORKSPACE is the container for two trees as well as the location of the Build directory. The example assumes the set of code packages for a given platform are contained in the platform directory. While the code packages from the open source repository are contained in the edk2 directory.
+
+When the build tools are run with this configuration the directories will be scanned in the following order to find packages listed in the DSC and FDF files.
+
+---?image=/assets/images/slides/Slide86.JPG
+<!-- .slide: data-transition="none" -->	 
+@title[Using target.txt]
+#### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
+
+![Using target.txt](/assets/images/bgpages/bg51.png )
+
+Note:
+
+Scroll to last slide
+
++++?image=/assets/images/slides/Slide87.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Using target.txt 02]
+#### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
+
+![Using target.txt](/assets/images/bgpages/bg51.png )
+
+Note:
+
+Scroll to last slide
+
++++?image=/assets/images/slides/Slide88.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Using target.txt 03]
+#### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
+
+![Using target.txt](/assets/images/bgpages/bg51.png )
+
+Note:
+
+Scroll to last slide
+
++++?image=/assets/images/slides/Slide89.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Using target.txt 04]
+#### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
+
+![Using target.txt](/assets/images/bgpages/bg51.png )
+
+Note:
+
+Scroll to last slide
+
++++?image=/assets/images/slides/Slide90.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Using target.txt 05]
+#### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
+
+![Using target.txt](/assets/images/bgpages/bg51.png )
+
+Note:
+
+Scroll to last slide
+
++++?image=/assets/images/slides/Slide91.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Using target.txt 06]
+#### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
+
+![Using target.txt](/assets/images/bgpages/bg51.png )
+
+Note:
+
+You may considering changing these based on your compiler and platform<br>
+
+
+So let’s go over each of these files, starting with target.txt<br>
+
+target.txt contains six pieces of information that are important for your entire workspace<br>
+One - What DSC file represents the platform that you are building? <br>
+	So are you trying to build by default a particular platform? For example,  a Lakeport? Or the NT32 emulation. When you type build you do not have to do anything else. You can type build and go on. <br>
+
+Two, the Target – are you trying to build a release build or a debug build?<br>
+
+Three, the Target architecture- are you trying to build IA32, Itanium, X64? We have this in the target.txt file is so you do not have to type in a long build command line. <br>
+Most of these have the option on the build command line to give it a target architecture or target, but having it in the target.txt file it allows you to type in minimal on the command line. <br>
+
+The next three are less commonly changed:<br>
+  Four, the Path to the tools_def  or tools default file – so if you want to move that to the tools default to a shared location<br>
+   Five, the TOOL_CHAIN_TAG – says in the tools default file which section or compiler tools we are using<br>
+Six, is how many threads to use to do the build – so if you have a brand-new Core i7 processor to do the build you set this to the number of processors, and that’s how you can get the build down to less than 30 seconds<br>
+
+---?image=/assets/images/slides/Slide93.JPG
+<!-- .slide: data-transition="none" -->	 
+@title[Using Tools_Def.txt]
+#### <p align="right"> <span class="gold" >&nbsp;&nbsp;&nbsp;&nbsp;Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>Tools_Def.txt</b></font></span></font></span></p>
+
+Note:
+Paths for compilers, assemblers, and linkers <br>
+  Comes with definitions for all compilers <br>
+
++++?image=/assets/images/slides/Slide94.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Using Tools_Def.txt 02]
+#### <p align="right"> <span class="gold" >&nbsp;&nbsp;&nbsp;&nbsp;Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>Tools_Def.txt</b></font></span></font></span></p>
+
+Note:
+
+Only modify this file when …<br>
+   Tools are installed in a non-default location<br>
+   Different compilers/tools need to be added<br>
+
+   
++++?image=/assets/images/slides/Slide95.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Using Tools_Def.txt 03]
+#### <p align="right"> <span class="gold" >&nbsp;&nbsp;&nbsp;&nbsp;Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>Tools_Def.txt</b></font></span></font></span></p>
+
+Note:
+Paths for compilers, assemblers, and linkers <br>
+  Comes with definitions for all compilers <br>
+Only modify this file when …<br>
+   Tools are installed in a non-default location<br>
+   Different compilers/tools need to be added<br>
+Default values are set by edksetup script<br>
+   Default values will cover most compiler needs<br>
+   If there are problems with the file after editing, just delete and re-run edksetup (restores default)<br>
+
+
+---?image=assets/images/binary-strings-black2.jpg
+@title[Build Process Section]
+<br><br><br><br><br>
+## <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Build Process</span>
+<span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDK Build Process and Build Text Files</span>
+ 
+---?image=/assets/images/slides/Slide98.JPG
+<!-- .slide: data-transition="none" -->	
+@title[Build Process Overview]
+#### <p align="right"><span class="gold" >Build Process Overview </span></p>
+
+Note:
+
++++?image=/assets/images/slides/Slide99.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Build Process Overview 02]
+#### <p align="right"><span class="gold" >Build Process Overview </span></p>
+
+Note:
+
++++?image=/assets/images/slides/Slide100.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Build Process Overview 03]
+#### <p align="right"><span class="gold" >Build Process Overview </span></p>
+
+Note:
+
++++?image=/assets/images/slides/Slide101.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Build Process Overview 04]
+#### <p align="right"><span class="gold" >Build Process Overview </span></p>
+
+Note:
++++?image=/assets/images/slides/Slide102.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Build Process Overview 05]
+#### <p align="right"><span class="gold" >Build Process Overview </span></p>
+
+Note:
++++?image=/assets/images/slides/Slide103.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Build Process Overview 06]
+#### <p align="right"><span class="gold" >Build Process Overview </span></p>
+
+Note:
++++?image=/assets/images/slides/Slide104.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Build Process Overview 07]
+#### <p align="right"><span class="gold" >Build Process Overview </span></p>
+
+Note:
++++?image=/assets/images/slides/Slide105.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Build Process Overview 08]
+#### <p align="right"><span class="gold" >Build Process Overview </span></p>
+
+Note:
+
+---?image=/assets/images/slides/Slide107.JPG
+
+@title[Basic Build Steps]
+#### <p align="right"><span class="gold" >Basic Build Steps </span></p>
+
+Note:
+
+Platform:<br>
+- Open Terminal prompt
+- Navigate to root of EDK II workspace
+- Run edksetup
+- Edit Conf/target.txt
+- Run build
+- Output:  firmware image (FD) file under Build directory
+<br>
+Module:<br>
+SAME except - Change to a directory with the proper INF
+also NOTE the inf file MUST be a in the components section of the .DSC file
+
+---?image=/assets/images/slides/Slide109.JPG
+<!-- .slide: data-transition="none" -->	 
+@title[Build Output Location]
+#### <p align="right"><span class="gold" >Build Output Location</span></p>
+
+Note:
+
++++?image=/assets/images/slides/Slide110.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+
+@title[Build Output Location 02]
+#### <p align="right"><span class="gold" >Build Output Location</span></p>
+
+Note:
+
++++?image=/assets/images/slides/Slide111.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+
+@title[Build Output Location 03]
+#### <p align="right"><span class="gold" >Build Output Location</span></p>
+
+Note:
+
++++?image=/assets/images/slides/Slide112.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+
+@title[Build Output Location 04]
+#### <p align="right"><span class="gold" >Build Output Location</span></p>
+
+Note:
+
++++?image=/assets/images/slides/Slide113.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+
+@title[Build Output Location 05]
+#### <p align="right"><span class="gold" >Build Output Location</span></p>
+
+Note:
+
++++?image=/assets/images/slides/Slide114.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+
+@title[Build Output Location 06]
+#### <p align="right"><span class="gold" >Build Output Location</span></p>
+
+Note:
+
++++?image=/assets/images/slides/Slide115.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+
+@title[Build Output Location 07]
+#### <p align="right"><span class="gold" >Build Output Location</span></p>
+
+Note:
+
++++?image=/assets/images/slides/Slide116.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+
+@title[Build Output Location 08]
+#### <p align="right"><span class="gold" >Build Output Location</span></p>
+
+Note:
+
++++?image=/assets/images/slides/Slide117.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+
+@title[Build Output Location 09]
+#### <p align="right"><span class="gold" >Build Output Location</span></p>
+
+Note:
+
+---?image=/assets/images/slides/Slide119.JPG
+<!-- .slide: data-transition="none" -->	 
+@title[EDK II Build Process Stages]
+#### <p align="right"><span class="gold" >EDK II Build Process Stages</span></p>
+
+Note:
+Parse meta-data files to generate some C source code files and the make files <Br>
+
++++?image=/assets/images/slides/Slide120.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+
+@title[EDK II Build Process Stages 02]
+#### <p align="right"><span class="gold" >EDK II Build Process Stages</span></p>
+
+Note:
+
+Process source code files to create PE32/PE32+/COFF images processed to UEFI format using $(MAKE) tool<Br>
+
++++?image=/assets/images/slides/Slide121.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+
+@title[EDK II Build Process Stages 03]
+#### <p align="right"><span class="gold" >EDK II Build Process Stages</span></p>
+
+Note:
+Parse meta-data files to generate some C source code files and the make files <Br>
+
+Process source code files to create PE32/PE32+/COFF images processed to UEFI format using $(MAKE) tool<Br>
+
+Takes the UEFI format files, creates UEFI “FLASH” images, UEFI apps, or UEFI PCI option ROMs <Br>
+
+---?image=/assets/images/slides/Slide123.JPG
+<!-- .slide: data-transition="none" -->	 
+
+@title[EDK II Build AutoGen Stage]
+#### <p align="right"><span class="gold" >EDK II Build: AutoGen Stage</span></p>
+
+Note:
+Build –p OvmfPkg/OvmfX64Pkg.dsc<br>
+Parse – .DSC, .DEC, .FDF, .INF<br>
+DSC File … <br>
+Points to own .DEC & .FDF & .INF<br>
+Points to other packages (.DEC) and Modules (.INF)<br>
+
+ONE DSC per Build command<br>
+
+DSC points to all the components, Libraries, PCDs, etc needed to build a PACKAGE<br>
+
++++?image=/assets/images/slides/Slide124.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[EDK II Build AutoGen Stage 02]
+#### <p align="right"><span class="gold" >EDK II Build: AutoGen Stage</span></p>
+
+Note:
+Build –p OvmfPkg/OvmfX64Pkg.dsc<br>
+Parse – .DSC, .DEC, .FDF, .INF<br>
+DSC File … <br>
+Points to own .DEC & .FDF & .INF<br>
+Points to other packages (.DEC) and Modules (.INF)<br>
+
+ONE DSC per Build command<br>
+
+DSC points to all the components, Libraries, PCDs, etc needed to build a PACKAGE<br>
+
+
+
+---?image=/assets/images/slides/Slide126.JPG
+@title[EDK II Build Make Stage]
+#### <p align="right"><span class="gold" >EDK II Build: Make Stage</span></p>
+
+Note:
+Uses assemblers, compilers and linkers commonly available to generate a PE32/PE32+/COFF image file <BR>
+Uses the ImageGen tools modify the PE32/PE32+/COFF image file to create an UEFI file (EFI_IMAGE_SECTION_HEADER structure)<BR>
+GenFw tool must specify the component type derived from the INF meta-data’s Module Type statement <BR>
+GenFds application initiates the third stage of the EDK II build <BR><BR>
+
+
+The build process stages<BR>
+The first stage is the autogen stage,which parses the meta-data files: the DEC DSC and INF files. It parses the meta-data files to generate your autogen.C and autogen.h files. <BR>
+Additionally we generate the makefiles.  There will be one makefile for each INF file we to be compiled and an additional makefile for the overall process. (The whole build itself gets one makefile.)<BR>
+
+The second stage, the binary makes stage, processes the source code. Now we use the makefiles and your source code to generate the images which are then processed into UEFI format images using the make tool. We end up with .EFI files. <BR>
+
+third and final stage, the ImageGen stage, we take these UEFI formatted files and create the flash image, or leave them as UEFI applications, or perhaps make UEFI-compliant PCI option ROMs. <BR>
+This last stage is also configurable.<BR>
+
+
+---
+@title[EDK II Build Image GEN Stage]
+#### <p align="right"><span class="gold" >EDK II Build: ImageGen Stage</span></p>
+
+@div[left-50]
+<br><br><br>
+@ul[brighten]
+- Builds one image for each specified firmware volume (FV)
+- The FDF file supports all syntax available in the PI Specification Vol. 3
+@ulend
+@divend
+@div[right-50]
+   ![EDK II Image Gen Stage](/assets/images/Slides/Imagegen.jpg )
+@divend
+
+
+Note:
+Builds one image for each specified firmware volume (FV) <BR>
+
+The FDF file supports all syntax available in the PI Specification Vol. 3 <BR>
+<BR>
+the modular build process allows this stage to be changed for different outputs<BR>
+Example: how to combine a UEFI Driver & Legacy PCI OpROM into a single binary image for a PCIe card? See next slide …<BR>
+
+third and final stage, the ImageGen stage, we take these UEFI formatted files and create the flash image, or leave them as UEFI applications, or perhaps make UEFI-compliant PCI option ROMs. <BR>
+This last stage is also configurable.<BR>
+
+
+ 
 ---
 <!---  END OF SLIDES
 -->
