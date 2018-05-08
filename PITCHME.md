@@ -1338,8 +1338,8 @@ This last stage is also configurable.<BR>
 @div[left-50]
 <br><br>
 <ul>
-- Builds one image for each specified firmware volume (FV) <br> <br>
-- The FDF file supports all syntax available in the PI Specification Vol. 3
+  <li>Builds one image for each specified firmware volume (FV) <br> <br></li>
+  <li>The FDF file supports all syntax available in the PI Specification Vol. 3</li>
 </ul>
 @divend
 @div[right-50]
