@@ -1505,14 +1505,55 @@ build  –Y  PCD,  LIBRARY, FLASH, DEPEX, BUILD_FLAGS, FIXED_ADDRESS <Br>
 Flags that control the type of build report to generate.  Must be one of: [PCD, LIBRARY, FLASH, DEPEX, BUILD_FLAGS, FIXED_ADDRESS, EXECUTION_ORDER].<Br>
 
 To specify more than one flag, repeat this option on the command line and the default flag set is [PCD, LIBRARY, FLASH, DEPEX, BUILD_FLAGS, FIXED_ADDRESS]<Br>
+
+EXEC ORDER is  best done on the Host build machine
+
 +++
 @title[Using Build-Y Reports Example]
 #### <p align="right"><span class="gold"  >Using </span> <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>build -Y</b></font></span><span class="gold"  >&nbsp;&nbsp;for Reports </span></p>
 
-- TBD  add examples from Ovmfpkg build on GCC5
+- Scroll through examples of reports from the `Build -Y` commands
 
 Note:
 TBD
+
+
++++?code=sample/Reports/depex.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y DEPEX</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
+
+Note:
+
++++?code=sample/Reports/pcd.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y PCD</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
+
+Note:
+
+
++++?code=sample/Reports/library.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y LIBRARY</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
+
+Note:
+
++++?code=sample/Reports/flash.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y FLASH</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
+
+Note:
+
++++?code=sample/Reports/build_flag.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y BUILD_FLAGS</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
+
+Note:
+
++++?code=sample/Reports/fixed_address.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y FIXED_ADDRESS</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
+
+Note:
+
++++?code=sample/Reports/Log_DispatchOrder.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y EXECUTION_ORDER</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
+- Report.html is generated on the host build machine - pop up this in the Browser window.
+
+Note:
+This is best done on the Host build machine
+
+
+
+
+
+
 
 ---?image=/assets/images/slides/Slide140.JPG
 @title[Build Tool Binaries]
