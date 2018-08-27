@@ -1385,7 +1385,7 @@ The second stage, the binary makes stage, processes the source code. Now we use 
 third and final stage, the ImageGen stage, we take these UEFI formatted files and create the flash image, or leave them as UEFI applications, or perhaps make UEFI-compliant PCI option ROMs. <BR>
 This last stage is also configurable.<BR>
 
----?image=/assets/images/slides/imagegen.png
+---?image=/assets/images/slides/Slide98.jpg
 
 @title[EDK II Build Image GEN Stage]
 #### <p align="center"><span class="gold" >EDK II Build: ImageGen Stage</span></p>
@@ -1598,7 +1598,7 @@ Other tools run as part of these 4
 ---?image=assets/images/gitpitch-audience.jpg
 @title[Questions]
 <BR>
-![Questions](/assets/images/Questions.png =10x) 
+![Questions](/assets/images/questions.JPG =10x) 
 
 
 ---?image=assets/images/gitpitch-audience.jpg
