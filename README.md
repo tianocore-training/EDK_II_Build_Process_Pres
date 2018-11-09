@@ -31,5 +31,5 @@
 
 # EDK_II_Build_Process_Pres
 ### EDK II Build Process and Environment
-To see the Slides goto  https://gitpitch.com/tianocore-training/EDK__II_Build_Process_Pres_2/master#/
+To see the Slides goto  https://gitpitch.com/tianocore-training/EDK_II_Build_Process_Pres/master#/
 
