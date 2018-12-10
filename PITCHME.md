@@ -60,31 +60,45 @@ Note:
 
 ---
 @title[Philosophy of EDK II]
-<br>
 #### <p align="center"><span class="gold" > Philosophy of EDK II </span></p>
 
-@snap[west span-35]
-@box[bg-blue text-white  waved  fragment](<b>Support UEFI & PI needs</b><br><br>)
+@snap[north-west span-35]
+<br>
+<br>
+<br>
+@box[bg-royal text-white  waved  fragment](<b>Support UEFI & PI needs</b><br><br>)
 @snapend
 
-@snap[midpoint span-35]
-@box[bg-gray text-white waved fragment](<b>Separate tool & source code</b><br><br>)
+@snap[north span-35]
+<br>
+<br>
+<br>
+@box[bg-green text-white waved fragment](<b>Separate tool & source code</b><br><br>)
 @snapend
 
-@snap[east span-35]
-@box[bg-green text-white waved fragment](<b>Package Definition file: DEC</b><br>)
+@snap[north-east span-35]
+<br>
+<br>
+<br>
+@box[bg-blue text-white waved fragment](<b>Package Definition file: DEC</b><br>)
 @snapend
 
 @snap[south-west span-35]
 @box[bg-yellow text-blue  waved fragment](<b>Flash Mapping Tool</b><br><br>)
+<br>
+<br>
 @snapend
 
 @snap[south span-35]
-@box[bg-orange text-white waved fragment](<b>Move as much code to C</b><br><br>)
+@box[bg-lt-orange text-white waved fragment](<b>Move as much code to C</b><br><br>)
+<br>
+<br>
 @snapend
 
 @snap[south-east span-35]
-@box[bg-purple text-white waved fragment](<b>Open source <br>EDK II on tianocore.org</b><br>)
+@box[bg-purple-pp text-white waved fragment](<b>Open source <br>EDK II on tianocore.org</b><br>)
+<br>
+<br>
 @snapend
 
 Note:
@@ -133,7 +147,7 @@ Eliminated a lot of the Assembly
 
 
 @snap[west span-90]
-@box[bg-blue text-white  rounded  fragment](<Br><span style="font-size:01.25em" ><b>EDK II == UEFI / PI Implementation</b></span><br><br>)
+@box[bg-blue-trans text-white  rounded  fragment](<Br><span style="font-size:01.25em" ><b>EDK II == UEFI / PI Implementation</b></span><br><br>)
 @snapend
 
 
@@ -452,6 +466,7 @@ ShellPkg – Application - command line interface<br>
 NetworkPkg – Network drivers and Applications
 
 
+
 ---?image=/assets/images/slides/Slide47.JPG
 <!-- .slide: data-transition="none" -->	
 
@@ -526,47 +541,35 @@ BDS – Policy happens – Screen turns – boot policy <br>
 “Same lib classes exist across multiple phases but can have different lib instances”<br>
 
 
----?image=/assets/images/slides/Slide52.JPG
 
-<!-- .slide: data-transition="none" -->	
+---?image=/assets/images/slides/Slide_Libraries.jpg
 @title[Example-Library-Debuglib]
 #### <p align="right"><span class="gold"  >Example - Library</span><span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>Debuglib</b> </font></span></p>
 
 
-Note:
-DebugLib library class name <br>
-The debugging characteristics might be different during the different boot up phases.<br>
-SEC – Null or no code<br>
-PEI-DXE-BDS – Code to output to serial port/ port 80 codes<br>
-Library Class names can be linked with different Processor resolutions (IA32/ x64) & different boot phases<br>
+@snap[north-west span-25 fragment]
+<br>
+<br>
+<br>
+@box[bg-lt-orange-trans text-black ](<b>`NULL`</b> <br><br><br><br><br><br><br><br><br>)
+@snapend
 
-+++?image=/assets/images/slides/Slide53.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->	
-@title[Example-Library-Debuglib 02]
-#### <p align="right"><span class="gold"  >Example - Library</span><span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>Debuglib</b> </font></span></p>
+@snap[north span-40 fragment]
+<br>
+<br>
+<br>
+@box[bg-blue-trans text-black ](<b>Robust Functions </b><br>Port 80<br>Serial Output<br>Data Hub<br>etc. . .<br><br><br><br><br>)
+@snapend
 
-
-Note:
-DebugLib library class name <br>
-The debugging characteristics might be different during the different boot up phases.<br>
-SEC – Null or no code<br>
-PEI-DXE-BDS – Code to output to serial port/ port 80 codes<br>
-Library Class names can be linked with different Processor resolutions (IA32/ x64) & different boot phases<br>
-
-+++?image=/assets/images/slides/Slide54.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->	
-@title[Example-Library-Debuglib 03]
-#### <p align="right"><span class="gold"  >Example - Library</span><span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>Debuglib</b> </font></span></p>
 
 
 Note:
 DebugLib library class name <br>
 The debugging characteristics might be different during the different boot up phases.<br>
-SEC – Null or no code<br>
-PEI-DXE-BDS – Code to output to serial port/ port 80 codes<br>
+SEC PEI – Null or no code but all reffernces will be resolved with the BaseDebugLibNull Implementation of the DebugLib<br>
+DXE-BDS – Code to output to serial port/ port 80 codes<br>
 Library Class names can be linked with different Processor resolutions (IA32/ x64) & different boot phases<br>
+
 
 ---?image=/assets/images/slides/Slide56.JPG
 
@@ -579,27 +582,29 @@ Note:
 Defining database - like global variables <br>
 
 Many components of a database to help fine tune the BIOS or Firmware - build & runtime
+
+
 ---
 @title[Platform Configuration Database-Goals]
 #### <p align="right"><span class="gold" >Platform Configuration Database (PCD)</span></p>
-@box[bg-blue text-white rounded](<span style="font-size:02.0em" >`Goals`</span>)
+@box[bg-royal text-white rounded](<span style="font-size:02.0em" >Goals</span>)
 
 
 
 @snap[west span-45 ]
-@box[bg-orange text-white rounded fragment](<span style="font-size:01.5em" >Define module parameters</span># Store module / platform configurations)
+@box[bg-brick text-white rounded fragment](<span style="font-size:01.5em" >Define module parameters</span># Store module / platform configurations)
 @snapend
 
 @snap[east span-45 ]
-@box[bg-orange text-white rounded fragment](<span style="font-size:01.5em" >Reduce source edits</span># Maximize module reuse across platforms)
+@box[bg-brick text-white rounded fragment](<span style="font-size:01.5em" >Reduce source edits</span># Maximize module reuse across platforms)
 @snapend
 
 @snap[south-west span-45]
-@box[bg-orange text-white rounded fragment](<span style="font-size:01.5em" >Remove &num;`define` </span># No searching for “<i>magic</i>” &num;`define` statements )
+@box[bg-brick text-white rounded fragment](<span style="font-size:01.5em" >Remove &num;`define` </span># No searching for “<i>magic</i>” &num;`define` statements )
 @snapend
 
 @snap[south-east span-45 ]
-@box[bg-orange text-white rounded fragment](<span style="font-size:01.5em" >API functions</span># Get and Set functions for access to PCD variable DB)
+@box[bg-brick text-white rounded fragment](<span style="font-size:01.5em" >API functions</span># Get and Set functions for access to PCD variable DB)
 @snapend
 
 Note:
@@ -618,20 +623,20 @@ What the PCD store, the store platform information like the vital product data s
 ---
 @title[Platform Configuration Database - Advantages]
 #### <p align="right"><span class="gold" >Platform Configuration Database (PCD)</span></p>
-@box[bg-yellow text-blue rounded](<span style="font-size:02.0em" >`Advantages`</span>)
+@box[bg-yellow text-blue rounded](<span style="font-size:02.0em" >Advantages</span>)
 
 
 
 @snap[west span-45 ]
-@box[bg-purple text-white rounded fragment](<span style="font-size:01.5em" >Binary Modularity</span># Configure firmware settings in binaries without building )
+@box[bg-purple-pp text-white rounded fragment](<span style="font-size:01.5em" >Binary Modularity</span># Configure firmware settings in binaries without building )
 @snapend
 
 @snap[east span-45 ]
-@box[bg-purple text-white rounded fragment](<span style="font-size:01.5em" >Configure</span># Provide for options to configure firmware features)
+@box[bg-purple-pp text-white rounded fragment](<span style="font-size:01.5em" >Configure</span># Provide for options to configure firmware features)
 @snapend
 
 @snap[south span-45]
-@box[bg-purple text-white rounded fragment](<span style="font-size:01.5em" >Patching </span># Simplify the binary patching process )
+@box[bg-purple-pp text-white rounded fragment](<span style="font-size:01.5em" >Patching </span># Simplify the binary patching process )
 @snapend
 
 
@@ -659,7 +664,7 @@ And finally, there are binary edit aspects -<br>
 
 
 @snap[west span-30 ]
-@box[bg-blue text-white waved fragment](<span style="font-size:01.25em" >@color[yellow](<b>Packages</b>)</span><br>List of related modules )
+@box[bg-royal text-white waved fragment](<span style="font-size:01.25em" >@color[yellow](<b>Packages</b>)</span><br>List of related modules )
 @snapend
 
 
@@ -669,7 +674,7 @@ And finally, there are binary edit aspects -<br>
 
 	
 @snap[midpoint span-30 ]
-@box[bg-blue text-white waved fragment](<span style="font-size:01.25em" >@color[yellow](<b>Libraries</b>)</span> Same name & interface)
+@box[bg-royal text-white waved fragment](<span style="font-size:01.25em" >@color[yellow](<b>Libraries</b>)</span> Same name & interface)
 @snapend
 
 @snap[north span-45 fragment]
@@ -677,7 +682,7 @@ And finally, there are binary edit aspects -<br>
 @snapend
 
 @snap[east span-30]
-@box[bg-blue text-white waved fragment](<span style="font-size:01.25em" >@color[yellow](<b>PCDs</b>) </span><br> Platform Config. DB )
+@box[bg-royal text-white waved fragment](<span style="font-size:01.25em" >@color[yellow](<b>PCDs</b>) </span><br> Platform Config. DB )
 @snapend
 
 
@@ -699,9 +704,9 @@ Summary <br>
 <br>
 @box[bg-blue  text-white rounded](<span style="font-size:01.1em" ><b>UEFI Developer's Kit 2018 &lpar;UDK2018&rpar;</b> </span>)
 <br>
-@box[bg-purple text-white rounded](<span style="font-size:01.1em" ><b>Stable build of the EDK II project</b> </span>)
+@box[bg-purple-pp text-white rounded](<span style="font-size:01.1em" ><b>Stable build of the EDK II project</b> </span>)
 <br>
-@box[bg-green text-white rounded](<span style="font-size:01.1em" ><b>Neither contain Intel silicon or platform code</b></span>)
+@box[bg-brick text-white rounded](<span style="font-size:01.1em" ><b>Neither contain Intel silicon or platform code</b></span>)
 
 <br>
 <span style="font-size:0.75em" >&nbsp;&nbsp;&nbsp;&nbsp;wiki on tianocore.org: <a href='https://github.com/tianocore/tianocore.github.io/wiki/Differences-between-UDK-and-EDK-II'>Differences between UDK - EDK II</a></span>	
@@ -735,12 +740,12 @@ Intel® UEFI Developer’s Kit 2018 (Intel® UDK 2018, also called the Intel® U
 #### <p align="center"><span class="gold" >Development Environment</span></p>
 
 @snap[west span-45 ]
-@box[bg-orange text-white](<span style="font-size:01.125em" ><b>Compiler Tool Chains</b></span>)
+@box[bg-brick text-white](<span style="font-size:01.125em" ><b>Compiler Tool Chains</b></span>)
 <span style="font-size:0.8em" >&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br&nbsp;><br>&nbsp;<br></span>  
 @snapend
 
 @snap[east span-45 ]
-@box[bg-green text-white](<span style="font-size:01.125em" ><b>Operating Systems</b>)</span>    
+@box[bg-green-pp text-white](<span style="font-size:01.125em" ><b>Operating Systems</b>)</span>    
 <span style="font-size:0.8em" >&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br&nbsp;><br>&nbsp;<br></span>  
 @snapend
 <span style="font-size:0.8em" ><br><br></span>
@@ -858,85 +863,55 @@ If you run this script file and those files are already there, it won’t do any
 
 
 
----?image=/assets/images/slides/Slide82_1.JPG
-<!-- .slide: data-transition="none" -->	
-
+---
 @title[Multiple Workspace Environment Variable]
 <p align="right"><span class="gold" ><b>Multiple Workspace Environment Variable </b></span></p>
 
-
-Note:
-
-Package_Path<br>
-
-An update to the EDKII build tools now allows the setting of multiple paths that will be searched when attempting to resolve the location of packages. This new feature allows for more flexibility when designing a tree layout or combining sources from different sources. The new functionality is enabled through the addition of a new environment variable (PACKAGES_PATH).
-The PACKAGES_PATH variable is an ordered list of additional search paths using the default path separator of the host OS between each entry. The first path in the list has the highest priority and the last path has the lowest priority. The path specified by the WORKSPACE variable always has the highest search priority over any PACKAGE_PATH entries.
-To use this feature, the PACKAGES_PATH environment variable must be set prior to running the edksetup script. The reason for this is that the edksetup script determines the location of the Conf and BaseTools directory location based on the values of the WORKSPACE and PACKAGES_PATH environment variables.
-The use of the PACKAGES_PATH environment variable is optional and if it is not defined the build will function like it has in the past.
-
-Why and when:
-In this case WORKSPACE is the container for two trees as well as the location of the Build directory. The example assumes the set of code packages for a given platform are contained in the platform directory. While the code packages from the open source repository are contained in the edk2 directory.
-
-When the build tools are run with this configuration the directories will be scanned in the following order to find packages listed in the DSC and FDF files.
- 
-+++?image=/assets/images/slides/Slide83_1.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->	 
-@title[Multiple Workspace Environment Variable 02]
-<p align="right"><span class="gold" >Multiple Workspace Environment Variable </span></p>
+@snap[north span-35 ]
+<br>
+<br>
+@box[bg-green-pp text-white rounded]( <span style="font-size:01.2em"><b>`PACKAGE_PATH`</b></span>)
+@snapend
+@snap[north-west span-50 fragment]
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:80%"><span style="font-size:0.8em">@color[#c0f0c0](`WORKSPACE`)<br>@color[#c0f0c0](`PACKAGES_PATH` )- <i>Optional</i><br></span><span style="font-size:0.7em">Multiple paths that will be searched when attempting to resolve the location of packages. </span></p>
+@snapend
 
 
-Note:
+@snap[north-east span-50 fragment]
+<br>
+<br>
+<br>
+<br>
+<br>
+<ul style="line-height:0.7;">
+  <li><span style="font-size:0.7em">Highest search Priority / Build Directory  </span></li>
+  <li><span style="font-size:0.7em">Additional Paths in Priority order. Must be set before @color[#c0f0c0](`edksetup`)  and @color[red](NOT) set by @color[#c0f0c0](`edksetup`) </span></li>
+</ul>
+@snapend 
 
-Package_Path<br>
+@snap[south-west span-75 fragment]
+<span style="font-size:0.8em">@color[yellow](Example:)</span>
+<pre>
+```
 
-+++?image=/assets/images/slides/Slide84_1.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->	 
-@title[Multiple Workspace Environment Variable 03]
-<p align="right"><span class="gold" >Multiple Workspace Environment Variable </span></p>
+bash$> set WORKSPACE=%CWD%/MyWorkspace
+bash$> set PACKAGES_PATH = %WORKSPACE%/edk2;%WORKSPACE%/Platform;\
+      %WORKSPACE%/Silicon
 
+```
+</pre>
+<br>
+@snapend
 
-Note:
-
-Package_Path<br>
- 
-An update to the EDKII build tools now allows the setting of multiple paths that will be searched when attempting to resolve the location of packages. This new feature allows for more flexibility when designing a tree layout or combining sources from different sources. The new functionality is enabled through the addition of a new environment variable (PACKAGES_PATH).
-The PACKAGES_PATH variable is an ordered list of additional search paths using the default path separator of the host OS between each entry. The first path in the list has the highest priority and the last path has the lowest priority. The path specified by the WORKSPACE variable always has the highest search priority over any PACKAGE_PATH entries.
-To use this feature, the PACKAGES_PATH environment variable must be set prior to running the edksetup script. The reason for this is that the edksetup script determines the location of the Conf and BaseTools directory location based on the values of the WORKSPACE and PACKAGES_PATH environment variables.
-The use of the PACKAGES_PATH environment variable is optional and if it is not defined the build will function like it has in the past.
-
-Why and when:
-In this case WORKSPACE is the container for two trees as well as the location of the Build directory. The example assumes the set of code packages for a given platform are contained in the platform directory. While the code packages from the open source repository are contained in the edk2 directory.
-
-When the build tools are run with this configuration the directories will be scanned in the following order to find packages listed in the DSC and FDF files.
-
-+++?image=/assets/images/slides/Slide84_2.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->	 
-@title[Multiple Workspace Environment Variable 04]
-<p align="right"><span class="gold" >Multiple Workspace Environment Variable </span></p>
-
-
-Note:
-
-Package_Path<br>
- 
-An update to the EDKII build tools now allows the setting of multiple paths that will be searched when attempting to resolve the location of packages. This new feature allows for more flexibility when designing a tree layout or combining sources from different sources. The new functionality is enabled through the addition of a new environment variable (PACKAGES_PATH).
-The PACKAGES_PATH variable is an ordered list of additional search paths using the default path separator of the host OS between each entry. The first path in the list has the highest priority and the last path has the lowest priority. The path specified by the WORKSPACE variable always has the highest search priority over any PACKAGE_PATH entries.
-To use this feature, the PACKAGES_PATH environment variable must be set prior to running the edksetup script. The reason for this is that the edksetup script determines the location of the Conf and BaseTools directory location based on the values of the WORKSPACE and PACKAGES_PATH environment variables.
-The use of the PACKAGES_PATH environment variable is optional and if it is not defined the build will function like it has in the past.
-
-Why and when:
-In this case WORKSPACE is the container for two trees as well as the location of the Build directory. The example assumes the set of code packages for a given platform are contained in the platform directory. While the code packages from the open source repository are contained in the edk2 directory.
-
-When the build tools are run with this configuration the directories will be scanned in the following order to find packages listed in the DSC and FDF files.
-
-+++?image=/assets/images/slides/Slide84_3.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->	 
-@title[Multiple Workspace Environment Variable 05]
-<p align="right"><span class="gold" >Multiple Workspace Environment Variable </span></p>
+@snap[south-east span-30 fragment]
+![Package_Path](/assets/images/Package_Path_Max.png)
+<br>
+<br>
+@snapend
 
 
 Note:
@@ -1072,19 +1047,19 @@ Default values are set by edksetup script<br>
 
 @snap[north span-35 ]
 @css[text-yellow]( <br>&nbsp;)
-@box[bg-blue text-white rounded](<span style="font-size:01.2em" > @color[yellow](`BaseTools`) </span> )
+@box[bg-royal text-white rounded](<span style="font-size:01.2em" > @color[yellow](<b>`BaseTools`</b>) </span> )
 @snapend
 <br>
 <br>
-<p style="line-height:90%">The first step is to make / '`nmake`' the '`BaseTools`' with the host OS & compiler environment.</p>
+<p style="line-height:90%">The first step is to make / "`nmake`" the "`BaseTools`" with the host OS & compiler environment.</p>
 
-<span style="font-size:0.8em" >For Linux GCC the command is: </span>
+<span style="font-size:0.8em" >For @fa[linux gp-bullet-gold] Linux GCC5 the command is: </span>
 
 ```
   bash$> make -C BaseTools
 ```
 <br>
-<span style="font-size:0.8em" >For Windows VS the command is: </span>
+<span style="font-size:0.8em" >For @fa[windows gp-bullet-cyan] Windows Visual Studio the command is: </span>
 ```
    > set PYTHON_HOME=C:\Python27
    > edksetup.bat Rebuild
@@ -1172,12 +1147,12 @@ Note:
 
 
 @snap[west span-45 ]
-@box[bg-blue text-white](<span style="font-size:01.125em" ><b>Platform</b></span>)
+@box[bg-royal text-white](<span style="font-size:01.125em" ><b>Platform</b></span>)
 <span style="font-size:0.8em" >&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br&nbsp;><br>&nbsp;<br></span>  
 @snapend
 
 @snap[east span-45 ]
-@box[bg-orange text-white](<span style="font-size:01.125em" ><b>Module</b>)</span>    
+@box[bg-brick text-white](<span style="font-size:01.125em" ><b>Module</b>)</span>    
 <span style="font-size:0.8em" >&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br&nbsp;><br>&nbsp;<br></span>  
 @snapend
 <span style="font-size:0.8em" ><br><br></span>
@@ -1380,7 +1355,7 @@ DSC points to all the components, Libraries, PCDs, etc needed to build a PACKAGE
 
 @snap[north span-65 ]
 @css[text-yellow](<br>&nbsp;)
-@box[ bg-green text-white rounded](<span style="font-size:0.9em" >Uses assemblers/compilers/linkers to generate PE32/PE32+ COFF image file<br></span>)
+@box[ bg-green-pp text-white rounded](<span style="font-size:0.9em" >Uses assemblers/compilers/linkers to generate PE32/PE32+ COFF image file<br></span>)
 @snapend
 
 @snap[midpoint span-90 ]
@@ -1480,7 +1455,6 @@ Note:
 @title[Build Command]
 <br>
 ####  <p align="center"><span class="gold" >&nbsp;&nbsp;The Build Command</span></p>
-<br>
 - Accepts command line arguments to support scripted builds <br>
 - Overrides most settings found in target.txt <br>|
 - Overrides DSC with a minimal INF build <br>|
@@ -1590,7 +1564,7 @@ Note:
 Note:
 
 +++?code=sample/Reports/Log_DispatchOrder.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y EXECUTION_ORDER</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
-- Report.html is generated on the host build machine - pop up this in the Browser window.
+<span style="font-size:0.75em" > Report.html is generated on the host build machine - pop up this in the Browser window.</span>
 
 Note:
 This is best done on the Host build machine
@@ -1605,24 +1579,24 @@ This is best done on the Host build machine
 
 <table id="recTable">
 	<tr>
-		<td bgcolor="#0071c5"><p align="center"><span style="font-size:0.85em" >&nbsp;<b>Utility</b></span></p></td>
-		<td bgcolor="#0071c5"><p align="center"><span style="font-size:0.85em" >&nbsp;<b>Description</b></span></p></td>
+		<td bgcolor="#002060" height=".025"><p align="center" style="line-height:20%"><span style="font-size:0.85em" >&nbsp;<b>Utility</b></span></p></td>
+		<td bgcolor="#002060" height=".025"><p align="center" style="line-height:20%"><span style="font-size:0.85em" >&nbsp;<b>Description</b></span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#00b0f0"><p style="line-height:70%"><span style="font-size:0.75em" >`Build.exe`</span></p></td>
-		<td bgcolor="#00b0f0"><p style="line-height:50%"><span style="font-size:0.65em" >Tool is written in Python and calls `AutoGen.exe`, then it calls `$(MAKE) –f  Makefile.out`, and finally, it calls `GenFds.exe`</span></p></td>
+		<td bgcolor="#00b0f0" height=".025"><p style="line-height:20%"><span style="font-size:0.75em" >`Build.exe`</span></p></td>
+		<td bgcolor="#00b0f0" height=".025"><p style="line-height:70%"><span style="font-size:0.65em" >Tool is written in Python and calls `AutoGen.exe`, then it calls `$(MAKE) –f  Makefile.out`, and finally, it calls `GenFds.exe`</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#fdb813"><p style="line-height:50%"><span style="font-size:0.75em" >`EfiRom.exe`&nbsp;</span></p></td>
-		<td bgcolor="#fdb813"><p style="line-height:50%"><span style="font-size:0.65em" >used to build an option ROM image&nbsp;</span></p></td>
+		<td bgcolor="#fdb813" height=".025"><p style="line-height:20%"><span style="font-size:0.75em" >`EfiRom.exe`&nbsp;</span></p></td>
+		<td bgcolor="#fdb813" height=".025"><p style="line-height:20%"><span style="font-size:0.65em" >used to build an option ROM image&nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#00b0f0"><p style="line-height:50%"><span style="font-size:0.75em" >`PatchModule.exe`&nbsp;</span></p></td>
-		<td bgcolor="#00b0f0"><p style="line-height:50%"><span style="font-size:0.65em" >used to patch a binary module that has a PCD of type PATCHABLE_IN_MODULE&nbsp;</span></p></td>
+		<td bgcolor="#00b0f0" height=".025"><p style="line-height:20%"><span style="font-size:0.75em" >`PatchModule.exe`&nbsp;</span></p></td>
+		<td bgcolor="#00b0f0" height=".025"><p style="line-height:70%"><span style="font-size:0.65em" >used to patch a binary module that has a PCD of type PATCHABLE_IN_MODULE&nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#fdb813"><p style="line-height:50%"><span style="font-size:0.75em" >`PatchPlatform.exe`&nbsp;</span></p></td>
-		<td bgcolor="#fdb813"><p style="line-height:50%"><span style="font-size:0.65em" >used to modify either the PCD Database or the VPD settings in a flash device image&nbsp;</span></p></td>
+		<td bgcolor="#fdb813" height=".025"><p style="line-height:20%"><span style="font-size:0.75em" >`PatchPlatform.exe`&nbsp;</span></p></td>
+		<td bgcolor="#fdb813" height=".025"><p style="line-height:70%"><span style="font-size:0.65em" >used to modify either the PCD Database or the VPD settings in a flash device image&nbsp;</span></p></td>
 	</tr>
 
 </table>
