@@ -592,19 +592,21 @@ Many components of a database to help fine tune the BIOS or Firmware - build & r
 
 
 @snap[west span-45 ]
-@box[bg-brick text-white rounded fragment](<span style="font-size:01.5em" >Define module parameters</span># Store module / platform configurations)
+@box[bg-brick text-white rounded fragment](<span style="font-size:01.125em "><font color="yellow"><b>Define module parameters</b></font></span><br> Store module / platform configurations)
+<br>
 @snapend
 
 @snap[east span-45 ]
-@box[bg-brick text-white rounded fragment](<span style="font-size:01.5em" >Reduce source edits</span># Maximize module reuse across platforms)
+@box[bg-brick text-white rounded fragment](<span style="font-size:01.125em " ><font color="yellow"><b>Reduce source edits</b></font></span><Br><br> Maximize module reuse across platforms)
+<br>
 @snapend
 
 @snap[south-west span-45]
-@box[bg-brick text-white rounded fragment](<span style="font-size:01.5em" >Remove &num;`define` </span># No searching for “<i>magic</i>” &num;`define` statements )
+@box[bg-brick text-white rounded fragment](<span style="font-size:01.125em " ><font color="yellow"><b>Remove </b> &nbsp;&num;`define` </font></span><br> No searching for “<i>magic</i>” &num;`define` statements )
 @snapend
 
 @snap[south-east span-45 ]
-@box[bg-brick text-white rounded fragment](<span style="font-size:01.5em" >API functions</span># Get and Set functions for access to PCD variable DB)
+@box[bg-brick text-white rounded fragment](<span style="font-size:01.125em " ><font color="yellow"><b>API functions</b></font></span><br> Get and Set functions for access to PCD variable DB)
 @snapend
 
 Note:
@@ -623,20 +625,20 @@ What the PCD store, the store platform information like the vital product data s
 ---
 @title[Platform Configuration Database - Advantages]
 #### <p align="right"><span class="gold" >Platform Configuration Database (PCD)</span></p>
-@box[bg-yellow text-blue rounded](<span style="font-size:02.0em" >Advantages</span>)
+@box[bg-yellow text-blue rounded](<span style="font-size:02.0em" ><b>Advantages</b></span>)
 
 
 
 @snap[west span-45 ]
-@box[bg-purple-pp text-white rounded fragment](<span style="font-size:01.5em" >Binary Modularity</span># Configure firmware settings in binaries without building )
+@box[bg-purple-pp text-white rounded fragment](<span style="font-size:01.125em " ><font color="yellow"><b>Binary Modularity</b></font></span><br> Configure firmware settings in binaries without building )
 @snapend
 
 @snap[east span-45 ]
-@box[bg-purple-pp text-white rounded fragment](<span style="font-size:01.5em" >Configure</span># Provide for options to configure firmware features)
+@box[bg-purple-pp text-white rounded fragment](<span style="font-size:01.125em " ><font color="yellow"><b>Configure</b></font></span><br> Provide for options to configure firmware features)
 @snapend
 
 @snap[south span-45]
-@box[bg-purple-pp text-white rounded fragment](<span style="font-size:01.5em" >Patching </span># Simplify the binary patching process )
+@box[bg-purple-pp text-white rounded fragment](<span style="font-size:01.125em " ><font color="yellow"><b>Patching </b></font></span><br> Simplify the binary patching process )
 @snapend
 
 
