@@ -872,14 +872,15 @@ If you run this script file and those files are already there, it won’t do any
 @snap[north span-35 ]
 <br>
 <br>
-@box[bg-green-pp text-white rounded]( <span style="font-size:01.2em"><b>`PACKAGE_PATH`</b></span>)
+@box[bg-green-pp text-white rounded my-box-pad2]( <span style="font-size:01.2em"><b>`PACKAGE_PATH`</b></span>)
 @snapend
+
 @snap[north-west span-50 fragment]
 <br>
 <br>
 <br>
 <br>
-<p style="line-height:80%"><span style="font-size:0.8em">@color[#c0f0c0](`WORKSPACE`)<br>@color[#c0f0c0](`PACKAGES_PATH` )- <i>Optional</i><br></span><span style="font-size:0.7em">Multiple paths that will be searched when attempting to resolve the location of packages. </span></p>
+<p style="line-height:80%"><span style="font-size:0.8em">@color[#A8ff60](`WORKSPACE`)<br>@color[#A8ff60](`PACKAGES_PATH` )- <i>Optional</i><br></span><span style="font-size:0.7em">Multiple paths that will be searched when attempting to resolve the location of packages. </span></p>
 @snapend
 
 
@@ -891,7 +892,7 @@ If you run this script file and those files are already there, it won’t do any
 <br>
 <ul style="line-height:0.7;">
   <li><span style="font-size:0.7em">Highest search Priority / Build Directory  </span></li>
-  <li><span style="font-size:0.7em">Additional Paths in Priority order. Must be set before @color[#c0f0c0](`edksetup`)  and @color[red](NOT) set by @color[#c0f0c0](`edksetup`) </span></li>
+  <li><span style="font-size:0.7em">Additional Paths in Priority order. Must be set before @color[#87E2A9](`edksetup`)  and @color[red](NOT) set by @color[#87E2A9](`edksetup`) </span></li>
 </ul>
 @snapend 
 
@@ -1043,31 +1044,32 @@ Default values are set by edksetup script<br>
    Default values will cover most compiler needs<br>
    If there are problems with the file after editing, just delete and re-run edksetup (restores default)<br>
 
+
 ---
 @title[BaseTools]
 #### <p align="right"> <span class="gold" >&nbsp;&nbsp;&nbsp;&nbsp;First Make <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>BaseTools</b></font></span></font></span></p>
 
 @snap[north span-35 ]
 @css[text-yellow]( <br>&nbsp;)
-@box[bg-royal text-white rounded](<span style="font-size:01.2em" > @color[yellow](<b>`BaseTools`</b>) </span> )
+@box[bg-royal text-white rounded my-box-pad2](<span style="font-size:01.2em" > @color[yellow](<b>`BaseTools`</b>) </span> )
 @snapend
-<br>
 <br>
 <p style="line-height:90%">The first step is to make / "`nmake`" the "`BaseTools`" with the host OS & compiler environment.</p>
 
-<span style="font-size:0.8em" >For @fa[linux gp-bullet-gold] Linux GCC5 the command is: </span>
+<p style="line-height:90%"><span style="font-size:0.8em" >For @fa[linux gp-bullet-gold] Linux GCC5 the command is: </span>
+@box[bg-grey-05 text-white rounded my-box-pad2](<p align="left"><span style="font-size:0.6em" >&nbsp;  `bash$> make -C BaseTools` </span></p>)
+<hr>
+<span style="font-size:0.8em" >For @fa[windows gp-bullet-cyan] Windows Visual Studio with  Python 3.7 the command is: </span>
 
-```
-  bash$> make -C BaseTools
-```
+@box[bg-grey-05 text-white rounded my-box-pad2](<p align="left"><span style="font-size:0.6em" >&nbsp;    `> edksetup.bat Rebuild` </span></p>)
 <br>
-<span style="font-size:0.8em" >For @fa[windows gp-bullet-cyan] Windows Visual Studio the command is: </span>
-```
-   > set PYTHON_HOME=C:\Python27
-   > edksetup.bat Rebuild
-```
    
-<br>
+@snap[south-west span-100 ]
+<p style="line-height:90%" align="right"><span style="font-size:0.50em;  " >
+@color[white](Building `BaseTools` only needs to be done once )
+</span></p>
+@snapend
+
 Note:
 the first step is to make / nmake the BaseTools with the host OS / compiler environment.
 
@@ -1163,7 +1165,7 @@ Note:
 <ul style="list-style-type:none" style="line-height:0.8;">
   <li><span style="font-size:0.7em" >1.&nbsp;&nbsp; Navigate (CD) to root of EDK II workspace </span></li>
   <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; Make the `BaseTools`  </span></li>
-  <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; Run @color[#c0f0c0]('`edksetup`')  </span></li>
+  <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; Run @color[#87E2A9]('`edksetup`')  </span></li>
   <li><span style="font-size:0.7em" >4.&nbsp;&nbsp; Run `build`  </span></li>
   <li><span style="font-size:0.7em" >5.&nbsp;&nbsp; Output:  firmware image (FD) file under `Build` directory </span></li>
 </ul>
@@ -1173,7 +1175,7 @@ Note:
 <ul style="list-style-type:none" style="line-height:0.8;">
   <li><span style="font-size:0.7em" >1.&nbsp;&nbsp; Navigate (CD) to root of EDK II workspace </span></li>
   <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; Make the `BaseTools`  </span></li>
-  <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; Run @color[#c0f0c0]('`edksetup`')  </span></li>
+  <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; Run @color[#87E2A9]('`edksetup`')  </span></li>
   <li><span style="font-size:0.7em" >4.&nbsp;&nbsp; @color[yellow](<b>Change to directory with desired `INF` file</b> ) </span></li>
   <li><span style="font-size:0.7em" >5.&nbsp;&nbsp; Run `build`  </span></li>
   <li><span style="font-size:0.7em" >6.&nbsp;&nbsp; Output:  `.EFI` file under `Build` directory </span></li>
@@ -1648,6 +1650,24 @@ Other tools run as part of these 4
 <BR>
 ![Questions](/assets/images/questions.JPG =10x) 
 
+---
+@title[return to main]
+<p align="center"><span class="gold"   >@size[1.2em](<b>Return to Main Training Page</b>)</span></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p align="center"><span style="font-size:0.9em">Return to Training Table of contents for next presentation <a href="https://github.com/tianocore-training/Tianocore_Training_Contents/wiki#schedule--outline">link</a></span></p>
+
+@snap[north span-30 ]
+<br>
+<br>
+<br>
+<a href="https://github.com/tianocore-training/Tianocore_Training_Contents/wiki#schedule--outline">
+![trainingLogo](/assets/images/returnTrainingLogo.png)</a>
+@snapend
+
 
 ---?image=assets/images/gitpitch-audience.jpg
 @title[Logo Slide]
@@ -1689,7 +1709,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWIS
 ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY 
 OF SUCH DAMAGE.
 
-Copyright (c) 2018, Intel Corporation. All rights reserved.
+Copyright (c) 2019, Intel Corporation. All rights reserved.
 **/
 
 ```
