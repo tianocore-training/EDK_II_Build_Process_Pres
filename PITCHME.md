@@ -1,6 +1,7 @@
 ---?image=assets/images/gitpitch-audience.jpg
 @title[Title-UEFI Overview]
-<br><br><br><br><br>
+<br><br><br>
+<br><br>
 ## <span class="gold"   >&nbsp;UEFI & EDK II Training</span>
 
 ####  &nbsp;&nbsp;EDK II Build Process
@@ -143,13 +144,13 @@ Eliminated a lot of the Assembly
 
 
 
----?image=/assets/images/slides/Slide11.JPG
+---?image=/assets/images/slides/Slide5.JPG
 @title[Implementation of EDK II]
 #### <p align="right"><span class="gold" > Implementation of EDK II </span></p>
 
 
 @snap[west span-90]
-@box[bg-blue-trans text-white  rounded  fragment](<Br><span style="font-size:01.25em" ><b>EDK II == UEFI / PI Implementation</b></span><br><br>)
+@box[bg-blue-trans text-white  rounded  fragment](<Br><span style="font-size:01.25em" >@color[yellow](<b>EDK II == UEFI / PI Implementation</b>)</span><br><br>)
 @snapend
 
 
@@ -186,7 +187,7 @@ EDK II architecture discussions primarily focus on UEFI (OS-to-firmware interfac
 
 +++
 <!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->
+<!-- .slide: data-transition="none" -->		  
 @title[EDK II File Extensions]
 <p align="center"><span style="font-size:1.0em" > &nbsp;&nbsp;&nbsp;<font color="#e49436"><b>EDK II File Extensions</b></font></span>
 <span style="font-size:0.7em" ><font color="white"><br>-&nbsp;Located on <a href='http://www.tianocore.org'>tianocore.org</a> project edk2  </font> </span></p>
@@ -211,8 +212,8 @@ EDK II architecture discussions primarily focus on UEFI (OS-to-firmware interfac
 @snap[north-east span-30]
 @css[ text-yellow fragment](<span style="font-size:01.45em" ><b><i><br><br>&nbsp;@color[yellow](EDK II Spec)<br><br><br>&nbsp;@color[yellow](Source)<br><br>&nbsp;@color[yellow](Output)</i></b> </span>)
 @snapend
-
-
+  
+ 
 
 Note:
 So for file extensions <br>
@@ -230,33 +231,276 @@ See EDK II Build Specification Documentation:
           http://tianocore.org/  
 		  
 
----?image=/assets/images/slides/Slide23.JPG
+---?image=/assets/images/slides/Slide8.JPG
 
 @title[EDK II Directory Structure]
-####  <p align="right"><span class="gold" > EDK II Directory Structure </span></p>		  
-@div[right-50]
+<p align="right"><span class="gold" >@size[1.1em](<b> EDK II Directory Structure  </b>)</span><span style="font-size:0.75em;" >  </span></p>
+
+@snap[north-east span-65]
 <br>
-@ul[brighten]
-- Package concept for each EDK II sub-directory
-- Platforms are contained in an EDK II package
-- EDK II build process reflects the package
-- Concept of “Work Space” - <font face="Courier New"><b>$HOME/src/edk2</b></font>
-@ulend
-@divend
+<br>
+<br>
+<br>
+<ul style="list-style-type:disc; line-height:0.75;">
+ <li class="fragment"><span style="font-size:0.75em;" >Package concept for each EDK II sub-directory  </span></li>
+ <li class="fragment"><span style="font-size:0.75em;" >Platforms are contained in an EDK II package  </span></li>
+ <li class="fragment"><span style="font-size:0.75em;" >EDK II build process reflects the package  </span></li>
+ <li class="fragment"><span style="font-size:0.75em;" >Concept of "Work Space" :<br>&nbsp;&nbsp; <font face="Consolas">$HOME/src/edk2-ws/edk2</font>  </span></li>
+</ul>
+@snapend
+
+
+@snap[south-east span-39 fragment]
+@box[bg-grey-15 text-white  my-box-pad2  ](<p style="line-height:35%" align="left" ><span style="font-size:0.45em; font-family:Consolas;" >&nbsp;bash$&nbsp;  cd $HOME/src/edk2-ws/edk2<br>&nbsp;bash$&nbsp;  . edksetup.sh<br>&nbsp;bash$&nbsp;  make –C BaseTools/<br>&nbsp;Bash$&nbsp;  build<br>&nbsp;</span></p>)
+<br>
+@snapend
 
 Note:
 EXPLAINS WHAT IS IN THE DIRECTORY
 
 Coding explains Workspace Build commands
 
-EDK II build process reflects the package structure … the build command specifies the .DSC file for a platform
-These directories are from the github edk2 project
+- EDK II build process reflects the package structure … the build command specifies the .DSC file for a platform
+- These directories are from the github edk2 project
+
+---
+@title[Organization Directory Structure]
+<p align="right"><span class="gold" >@size[1.1em](<b>Organization Directory Structure</b>)</span></span></p>
 
 
----?image=/assets/images/slides/Slide25.jpg
-<!-- .slide: data-transition="none" -->		  
+@snap[north span-50 ]
+<br>
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-west span-30 ]
+<br>
+<br>
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Common</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Platform</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Board</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Silicon</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-east span-67 ]
+<br>
+<br>
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; No direct HW requirements<br><br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Enable a specific <br>&nbsp;&nbsp;&nbsp;platform's capabilities <br><br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Board specific code <br><br><br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Hardware specific code </span></p>)
+@snapend
+
+
+Note:
+The architecture makes use of four primary classifications of code that are generally instantiated in different EDK II packages.
+- Common (EDK II) is code that does not have any direct HW requirements other than the basics required to execute machine code on the processor (stack, memory, IA registers, etc).
+   - Producer(s): TianoCore.org
+
+
+- Platform defines the actions needed to enable a specific platform's capabilities. In this architecture, capabilities are divided into mandatory and advanced features. Mandatory features are enabled in stages prior to Stage VI. Advanced features are enabled in Stage VI and later.
+  - Minimum Platform Producer(s): TianoCore.org
+  - Advance Feature Producer(s): TianoCore.org, OEM, BIOS vendor
+  - Board packages contains board specific code for one or more motherboards.
+  - Producer(s): Device manufacturer, BIOS vendor, Board user
+
+- Silicon, also often called hardware code, has some tie to a specific class of physical hardware. Sometimes governed by industry standards, sometimes proprietary. Silicon or hardware code is usually not intended to have multiple implementations for the same hardware.
+  - Producer(s): Silicon vendor
+
+
+---
+@title[Open Source EDK II Workspace - directories]
+<p align="right"><span class="gold" >@size[1.1em](<b>Open Source EDK II Workspace<br> - directories</b>)</span></span></p>
+
+@snap[north-west span-50 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north span-30 ]
+<br>
+<br>
+@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Common</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Platform</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Board</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Silicon</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-west span-60 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+&nbsp;MyWorkSpace/<br>&nbsp;&nbsp;
+@color[yellow](edk2)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  - "@color[#FFC000](<font face="Arial">edk2 Common</font>)"<br>&nbsp;&nbsp;
+@color[yellow](edk2-platforms)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Platform/ "@color[#FFC000](<font face="Arial">Platform</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          BoardX/ “@color[#FFC000](<font face="Arial">Board</font>)”<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/ "@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/<br>&nbsp;&nbsp;
+@color[yellow](edk2-non-osi)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;
+@color[yellow](FSP)/"@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   . . ./<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+Note:
+The build process creates
+   this directory -> Build/
+MyWorkSpace – directory from the “git” of repositories
+
+Build –p .dsc from the BOARD Directory
+
+The architecture is designed to support a maintainer ownership model. For example, board developers should not directly modify (fork) the platform, silicon, or common code. More details on conventional usage of the package classifications can be found in supplemental literature from UEFI Forum, TianoCore.org, and others.
+
+
+---
+@title[ EDK II Open Board Tree Structure]
+<p align="right"><span class="gold" >@size[1.1em](<b>EDK II Open Board Tree Structure  </b>)</span><br>
+<span style="font-size:0.75em;" > - KabyLake w/ FSP </span></p>
+
+@snap[north-west span-70 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-west span-70 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+&nbsp;&nbsp;
+@color[yellow](edk2)/  <a href="https://github.com/tianocore/edk2"> github.com/edk2</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
+. . .<br>&nbsp;&nbsp;
+@color[yellow](edk2-platforms)/  <a href="https://github.com/tianocore/edk2-platforms"> github.com/edk2-platforms</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Platform/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       AdvancedFeaturePkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          KabylakeRvp3/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       Vlv2TbltDevicePkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       KabylakeSiliconPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;. &nbsp;. &nbsp;./<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       Vlv2DeviceRefCodePkg/<br>&nbsp;&nbsp;
+@color[yellow](edk2-non-osi)/<a href="https://github.com/tianocore/edk2-non-osi/tree/devel-MinPlatform">github.com/edk2-non-osi</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/<br>&nbsp;&nbsp;
+@color[yellow](FSP)/<a href="https://github.com/IntelFsp/FSP">github.com/Intel/FSP</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
+   KabylakeFspBinPkg/<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+
+@snap[north-east span-60 fragment ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Common</font>)<br><br>
+<br>
+<br>
+<br>
+<br>
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Platform</font>)<br>
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Board</font>) <br>
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Common</font>)<br>
+<br>
+<br>
+<br>
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Silicon</font>)<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Silicon</font>)<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+Note:
+This is an example of the MinPlatform for the Intel Architecture (IA)
+With Kabylake and  Vlv2TbltDevicePkg (Minnowboard MAX) as examples
+
+
+Notice the 3 different repositories for the different sources align similarly to the COMMON, PLATFORM, BOARD & SILICON layout
+
+Not shown is the edk2 repository since this should always be considered as common
+
+
+
+---?image=/assets/images/slides/Slide12.JPG
 @title[Directory Structure - Real Platform]
-####  <p align="right"><span class="gold" > Directory Structure - Real Platform</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Directory Structure - Real Platform   </b>)</span><span style="font-size:0.75em;" >  </span></p>
+
+@snap[north-east span-20 ]
+<br>
+<br>
+<br>
+@box[bg-grey-15 text-white  my-box-pad2  ](<p style="line-height:30% "><span style="font-size:0.5em;" ><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-18 ]
+<br>
+<br>
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;@color[yellow](<b><u>Key</u></b>)<br>
+@color[#75deFF](slicon/Chipset)<br>
+@color[cyan](Platform)<br>
+@color[yellow](Repository)<br>
+</span></p>
+@snapend
+
+@snap[north-west span-70 ]
+<br>
+<br>
+<p style="line-height:80%"><span style="font-size:0.9em" >@color[#87E2A9](Open Source Directories)</span></p>
+
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+MyWorkSpace /<br>&nbsp;&nbsp;
+Build /<br>&nbsp;&nbsp;
+@color[yellow](edk2)/  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+<font face="Arial"><i>- "edk2 common Source"</i></font><br>&nbsp;&nbsp;
+@color[yellow](edk2-platforms)/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Platform/ Intel <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       AdvancedFeaturePkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       @color[cyan](Vlv2TbltDevicePkg) /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font face="Arial"><i>- "All platform modules"</i></font><br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/ Intel <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       @color[#75deFF](Vlv2DeviceRefCodePkg)/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	     @color[#75deFF](ValleyView2Soc) / <br>&nbsp;&nbsp;
+@color[yellow](edk2-non-osi)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/ Intel <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    @color[#75deFF](Vlv2SocBinPkg)<br>
+<br>
+<font face="Arial">
+@size[1.1em](Non- MinPlatformPkg &  Non - FSP)
+</font><br>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
 
 Note:
 Open Source Directory COLUMN 1
@@ -265,29 +509,7 @@ Platform and Silicon Directory COLUMN 2
 Minnowboard MAX (Native EDK II) is the example directory structure
 
 
-+++?image=/assets/images/slides/Slide26.jpg
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->		  
-@title[Directory Structure - Real Platform 02]
-####  <p align="right"><span class="gold" > Directory Structure - Real Platform</span></p>
-
-Note:
-+++?image=/assets/images/slides/Slide27.jpg
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->		  
-@title[Directory Structure - Real Platform 03]
-####  <p align="right"><span class="gold" > Directory Structure - Real Platform</span></p>
-
-Note:
-+++?image=/assets/images/slides/Slide28_1.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->		  
-@title[Directory Structure - Real Platform 04]
-####  <p align="right"><span class="gold" > Directory Structure - Real Platform</span></p>
-
-Note:
-
----?image=/assets/images/slides/Slide30.JPG
+---?image=/assets/images/slides/Slide13.JPG
 @title[Modules]
 ####  <p align="right"><span class="gold" > Modules</span></p>
 @css[text-white fragment](<b> Smallest separate object compiled in EDK II</b>)
@@ -295,7 +517,7 @@ Note:
 <br>
 <br>
 <br>
-@css[text-yellow fragment](<b>@color[yellow](Compiles to)<br>@color[yellow](`.EFI` File)</b>)
+@css[text-yellow fragment](<b>@color[yellow](Compiles to)<br>@color[yellow](<font face="Consolas">.EFI</font> File)</b>)
 
 
 @snap[east span-35]
@@ -317,7 +539,7 @@ A Library <br>
 All of these could be a module.  A modules could  be one entity<br>
 
 
----?image=/assets/images/slides/Slide35.JPG
+---?image=/assets/images/slides/Slide14.JPG
 
 @title[Packages]
 <br>
@@ -378,17 +600,17 @@ Grouping the things together that you need with out the WHOLE kitchen sink Lets 
 
 
 ---
-
+ 
 @title[EDK II Package Examples: Specs]
 #### <p align="right"><span class="gold" > EDK II Package Examples: Specs</span></p>
 
 
 @snap[west span-45 fragment]
-@box[bg-blue text-white rounded](<span style="font-size:02.5em" >`MdePkg`</span>#Includes files and libraries for Industry Standard Specifications<br><br>)
+@box[bg-blue text-white rounded](<span style="font-size:02.5em" ><font face="Consolas">MdePkg</font></span>#Includes files and libraries for Industry Standard Specifications<br><br>)
 @snapend
 
 @snap[east span-45 fragment]
-@box[bg-orange text-white rounded ](<span style="font-size:02.5em" >`MdeModulePkg`</span>#Modules only definitions from the Industry Standard Specification defined in the MdePkg)
+@box[bg-orange text-white rounded ](<span style="font-size:02.5em" ><font face="Consolas">MdeModulePkg</font></span>#Modules only definitions from the Industry Standard Specification defined in the MdePkg)
 @snapend
 
 
@@ -404,53 +626,16 @@ Include files and libraries for those parts of the Intel Platform Innovation Fra
 IntelFrameworkModulePkg<br>
 Contains modules (PEIMs + DXE Drivers + UEFI Drivers) that make reference to one or more definitions in the IntelFrameworkPkg<br>
 
-+++
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->		  
-
-
-@title[EDK II Package Examples: Specs]
-#### <p align="right"><span class="gold" > EDK II Package Examples: Specs</span></p>
-
-
-@snap[west span-45 ]
-@box[bg-blue text-white rounded](<span style="font-size:02.5em" >`MdePkg`</span>#Includes files and libraries for Industry Standard Specifications<br><br>)
-@snapend
-
-@snap[east span-45 ]
-@box[bg-orange text-white rounded ](<span style="font-size:02.5em" >`MdeModulePkg`</span>#Modules only definitions from the Industry Standard Specification defined in the MdePkg)
-@snapend
-
-@snap[south-west span-45]
-@box[bg-gray text-white rounded ](<span style="font-size:02.5em" >`IntelFrameworkPkg`</span>#Include files and libraries for those parts of the specifications that were not adopted “as is” by the UEFI or PI specifications)
-@snapend
-
-@snap[south-east span-45 fragment]
-@box[bg-gray text-white rounded ](<span style="font-size:01.75em" >`IntelFrameworkModulePkg`</span>#Contains modules such as PEIMs + DXE Drivers + UEFI Drivers from definitions in the IntelFrameworkPkg <br>)
-@snapend
-
-
-Note:
-
-MdePkg<br>
-Include files and libraries for Industry Standard Specifications (i.e. UEFI, PI, PCI, USB, SMBIOS, ACPI, SMBIOS, etc)<br>
-MdeModulePkg<br>
-Modules (PEIMs + DXE Drivers + UEFI Drivers + UEFI Applications) that only definitions from the Industry Standard Specification defined in the MdePkg<br>
-IntelFrameworkPkg<br>
-Include files and libraries for those parts of the Intel Platform Innovation Framework for EFI specifications that were not adopted “as is” by the UEFI or PI specifications<br>
-IntelFrameworkModulePkg<br>
-Contains modules (PEIMs + DXE Drivers + UEFI Drivers) that make reference to one or more definitions in the IntelFrameworkPkg<br>
 
 
 ---
-<!-- .slide: data-transition="none" -->		  
 @title[Additional Package Examples: ]
 #### <p align="right"><span class="gold" >Additional EDK II Package Examples:</span></p>
 <br>
 @ul[no-bullet]
-- @fa[certificate gp-bullet-gold]&nbsp;&nbsp;<span style="font-size:01.2em"><b>Platforms</b></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@color[#00ffff](`Nt32Pkg`) &nbsp;&nbsp;&nbsp; & &nbsp;&nbsp;&nbsp; @color[#00ffff](`OvmfPkg`)</span><br><br><br>
-- @fa[certificate gp-bullet-magenta]&nbsp;&nbsp;<span style="font-size:01.2em"><b>Chipset/Processor</b></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@color[#00ffff](`Ia32FamilyCpuPkg`) &nbsp;&nbsp;&nbsp;& &nbsp;&nbsp;&nbsp;@color[#00ffff](`BroxtonSiPkg`)</span><br><br><br>
-- @fa[certificate gp-bullet-green]&nbsp;&nbsp;<span style="font-size:01.2em"><b>Functionality</b></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@color[#00ffff](`ShellPkg`)&nbsp;&nbsp;&nbsp; & &nbsp;&nbsp;&nbsp; @color[#00ffff](`NetworkPkg`)</span><br>
+- @fa[certificate gp-bullet-gold]&nbsp;&nbsp;<span style="font-size:01.2em"><b>Platforms</b></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@color[#00ffff](<font face="Consolas">EmulatorPkg</font>) &nbsp;&nbsp;&nbsp; & &nbsp;&nbsp;&nbsp; @color[#00ffff](<font face="Consolas">OvmfPkg</font>)</span><br><br><br>
+- @fa[certificate gp-bullet-magenta]&nbsp;&nbsp;<span style="font-size:01.2em"><b>Chipset/Processor</b></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@color[#00ffff](<font face="Consolas">IntelSiliconPkg</font>) &nbsp;&nbsp;&nbsp;& &nbsp;&nbsp;&nbsp;@color[#00ffff](<font face="Consolas">KabylakeSiliconPkg</font>)</span><br><br><br>
+- @fa[certificate gp-bullet-green]&nbsp;&nbsp;<span style="font-size:01.2em"><b>Functionality</b></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@color[#00ffff](<font face="Consolas">ShellPkg</font>)&nbsp;&nbsp;&nbsp; & &nbsp;&nbsp;&nbsp; @color[#00ffff](<font face="Consolas">NetworkPkg</font>)</span><br>
 @ulend
 
 
@@ -469,7 +654,7 @@ NetworkPkg – Network drivers and Applications
 
 
 
----?image=/assets/images/slides/Slide47.JPG
+---?image=/assets/images/slides/Slide17.JPG
 <!-- .slide: data-transition="none" -->	
 
 @title[Libraries ]
@@ -488,7 +673,7 @@ Base Libraries – generic libraries that can run anywhere – not only in the E
 BDS – Policy happens – Screen turns – boot policy <br>
 “Same lib classes exist across multiple phases but can have different lib instances”<br>
 
-+++?image=/assets/images/slides/Slide48.JPG
++++?image=/assets/images/slides/Slide18.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	
 @title[Libraries 02]
@@ -506,7 +691,7 @@ Base Libraries – generic libraries that can run anywhere – not only in the E
 BDS – Policy happens – Screen turns – boot policy <br>
 “Same lib classes exist across multiple phases but can have different lib instances”<br>
 
-+++?image=/assets/images/slides/Slide49.JPG
++++?image=/assets/images/slides/Slide19.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	
 @title[Libraries 03]
@@ -524,7 +709,7 @@ Base Libraries – generic libraries that can run anywhere – not only in the E
 BDS – Policy happens – Screen turns – boot policy <br>
 “Same lib classes exist across multiple phases but can have different lib instances”<br>
 
-+++?image=/assets/images/slides/Slide50.JPG
++++?image=/assets/images/slides/Slide20.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	
 @title[Libraries 04]
@@ -546,14 +731,14 @@ BDS – Policy happens – Screen turns – boot policy <br>
 
 ---?image=/assets/images/slides/Slide_Libraries.jpg
 @title[Example-Library-Debuglib]
-#### <p align="right"><span class="gold"  >Example - Library</span><span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>Debuglib</b> </font></span></p>
+#### <p align="right"><span class="gold"  >Example - Library</span><span style="color:white;">&nbsp;&nbsp;<font face="Consolas"><b>Debuglib</b> </font></span></p>
 
 
 @snap[north-west span-25 fragment]
 <br>
 <br>
 <br>
-@box[bg-lt-orange-trans text-black ](<b>`NULL`</b> <br><br><br><br><br><br><br><br><br>)
+@box[bg-lt-orange-trans text-black ](<b><font face="Consolas">NULL</font></b> <br><br><br><br><br><br><br><br><br>)
 @snapend
 
 @snap[north span-40 fragment]
@@ -573,7 +758,7 @@ DXE-BDS – Code to output to serial port/ port 80 codes<br>
 Library Class names can be linked with different Processor resolutions (IA32/ x64) & different boot phases<br>
 
 
----?image=/assets/images/slides/Slide56.JPG
+---?image=/assets/images/slides/Slide22.JPG
 
 @title[PCD Title page]
 #### <p align="right"><span class="gold" >Platform Configuration Database (PCD)</span></p>
@@ -589,7 +774,7 @@ Many components of a database to help fine tune the BIOS or Firmware - build & r
 ---
 @title[Platform Configuration Database-Goals]
 #### <p align="right"><span class="gold" >Platform Configuration Database (PCD)</span></p>
-@box[bg-royal text-white rounded](<span style="font-size:02.0em" >Goals</span>)
+@box[bg-royal text-white rounded my-box-pad2 ](<span style="font-size:01.5em" >Goals</span>)
 
 
 
@@ -604,7 +789,7 @@ Many components of a database to help fine tune the BIOS or Firmware - build & r
 @snapend
 
 @snap[south-west span-45]
-@box[bg-brick text-white rounded fragment](<span style="font-size:01.125em " ><font color="yellow"><b>Remove </b> &nbsp;&num;`define` </font></span><br> No searching for “<i>magic</i>” &num;`define` statements )
+@box[bg-brick text-white rounded fragment](<span style="font-size:01.125em " ><font color="yellow"><b>Remove  &nbsp;&num;define </b></font></span><br> No searching for "<i>magic</i>" &num;define statements )
 @snapend
 
 @snap[south-east span-45 ]
@@ -627,7 +812,7 @@ What the PCD store, the store platform information like the vital product data s
 ---
 @title[Platform Configuration Database - Advantages]
 #### <p align="right"><span class="gold" >Platform Configuration Database (PCD)</span></p>
-@box[bg-yellow text-blue rounded](<span style="font-size:02.0em" ><b>Advantages</b></span>)
+@box[bg-yellow text-blue rounded my-box-pad2 ](<span style="font-size:01.5em" ><b>Advantages</b></span>)
 
 
 
@@ -676,7 +861,7 @@ And finally, there are binary edit aspects -<br>
 @css[text-yellow]( <br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:03.25em" >+</span>)
 @snapend
 
-	
+
 @snap[midpoint span-30 ]
 @box[bg-royal text-white waved fragment](<span style="font-size:01.25em" >@color[yellow](<b>Libraries</b>)</span> Same name & interface)
 @snapend
@@ -713,19 +898,19 @@ Summary <br>
 #### <p align="center"><span class="gold" >Development Environment</span></p>
 
 @snap[west span-45 ]
-@box[bg-brick text-white](<span style="font-size:01.125em" ><b>Compiler Tool Chains</b></span>)
+@box[bg-brick text-white rounded](<span style="font-size:01.125em" ><b>Compiler Tool Chains</b></span>)
 <span style="font-size:0.8em" >&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br&nbsp;><br>&nbsp;<br></span>  
 @snapend
 
 @snap[east span-45 ]
-@box[bg-green-pp text-white](<span style="font-size:01.125em" ><b>Operating Systems</b>)</span>    
+@box[bg-green-pp text-white rounded](<span style="font-size:01.125em" ><b>Operating Systems</b>)</span>    
 <span style="font-size:0.8em" >&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br&nbsp;><br>&nbsp;<br></span>  
 @snapend
 <span style="font-size:0.8em" ><br><br></span>
 
 <div class="left">
 <ul style="line-height:0.8;"><font color=#fcb813>
-  <li><span style="font-size:0.8em" >@color[#fcb813](Microsoft Visual Studio &lpar;VS2015, VS2013, VS2012, VS2010, etc.&rpar; ) </span></li>
+  <li><span style="font-size:0.8em" >@color[#fcb813](Microsoft Visual Studio &lpar;VS2017, VS2015, VS2013, VS2012, VS2010, etc.&rpar; ) </span></li>
   <li><span style="font-size:0.8em" >@color[#fcb813]( Microsoft WDK) </span></li>
   <li><span style="font-size:0.8em" >@color[#fcb813]( Intel C/C++ compiler) </span></li>
   <li><span style="font-size:0.8em" >@color[#fcb813](Intel C EFI Byte Code &lpar;EBC&rpar; compiler ) </span></li>
@@ -740,12 +925,13 @@ Summary <br>
   <li><span style="font-size:0.8em" >@color[#A6ce39](RedHat Enterprise Linux) </span></li>
   <li><span style="font-size:0.8em" >@color[#A6ce39](Novell SuSE Linux) </span></li>
   <li><span style="font-size:0.8em" >@color[#A6ce39](Ubuntu 16.04 ) </span></li>
+  <li><span style="font-size:0.8em" >@color[#A6ce39](Clear Linux* Project ) </span></li>
 </ul>
 
 </div>
 
 @snap[south-west span-45 ]
-<p align="left"><span style="font-size:0.8em" ><br>@color[white](&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Python 3.7.<i>n</i>)</span><br><br></p>
+<p align="left"><span style="font-size:0.8em" ><br>@color[white](&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Python 3.7.<i>n</i>  & Nasm)</span><br><br></p>
 @snapend
 
 Note:
@@ -771,9 +957,8 @@ For example, the byte code compiler does not do floating point.  So if you add c
 
 @snap[north span-35 ]
 @css[text-yellow]( <br>&nbsp;)
-@box[bg-blue text-white rounded](Set by <span style="font-size:01.2em" > @color[yellow](`edksetup`) </span><br>Window = `.bat`<br>Linux = `.sh` )
+@box[bg-blue text-white rounded my-box-pad2 ](Set by <span style="font-size:01.2em; font-family:Consolas; " > @color[yellow](edksetup) </span><br>Window = .bat<br>Linux = .sh )
 @snapend
-<br>
 <br>
 <br>
 <br>
@@ -782,13 +967,13 @@ For example, the byte code compiler does not do floating point.  So if you add c
   <span style="font-size:0.8em" >&nbsp;  </span>
 </div>
 <div class="right-2">
-<ul style="list-style-type:none" style="line-height:0.8;">
-  <li><span style="font-size:0.9em" >1.&nbsp;&nbsp; EDK_TOOLS_PATH  </span></li>
-  <li><span style="font-size:0.9em" >2.&nbsp;&nbsp; PATH  </span></li>
-  <li><span style="font-size:0.9em" >3.&nbsp;&nbsp; WORKSPACE  </span></li>
-  <li><span style="font-size:0.9em" >4.&nbsp;&nbsp; EFI_SOURCE / EDK_SOURCE  </span></li>
-  <li><span style="font-size:0.7em" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Outside</i>  @color[yellow](`edksetup` )</span></li>
-  <li><span style="font-size:0.9em" >&nbsp;@color[orange](* )&nbsp;&nbsp;PACKAGES_PATH @color[black]((<i>optional</i> &rpar;)  </span></li>
+<ul style="list-style-type:none" style="line-height:0.7;">
+  <li><span style="font-size:0.8em" >1.&nbsp;&nbsp; EDK_TOOLS_PATH  </span></li>
+  <li><span style="font-size:0.8em" >2.&nbsp;&nbsp; PATH  </span></li>
+  <li><span style="font-size:0.8em" >3.&nbsp;&nbsp; WORKSPACE  </span></li>
+  <li><span style="font-size:0.8em" >4.&nbsp;&nbsp; EFI_SOURCE / EDK_SOURCE  </span></li>
+  <li><span style="font-size:0.8em" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Outside</i> <font face="Consolas"> @color[yellow](edksetup )</font></span></li>
+  <li><span style="font-size:0.8em" >&nbsp;@color[orange](* )&nbsp;&nbsp;PACKAGES_PATH @color[black]((<i>optional</i> &rpar;)  </span></li>
 </ul>
 </div>
   
@@ -809,16 +994,17 @@ The last two are not used for native EDK II at all.<br>
 ---
 @title[Configuration Files - Scripts]
 #### <p align="right"><span class="gold" >Configuration Files - Scripts</span></p>
-@snap[north span-50 ]
-@css[text-yellow]( <br><br><br><br>&nbsp;)
+
+<ul style="list-style-type:none; line-height:0.7;">
+<li class="fragment">@fa[circle gp-bullet-gold]&nbsp;&nbsp;<span style="font-size:01.02em"><font face="Consolas">edksetup.bat or edksetup.sh</font></span><br><br><br><br><br></li>
+<li class="fragment">@fa[circle gp-bullet-magenta]&nbsp;&nbsp;<span style="font-size:01.02em">First time use will set up the configuration files:</span> <span style="font-size:0.550em"><font face="Consolas"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conf/@color[#87E2A9](build_rule).txt <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conf/@color[#00ffff](target).txt  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conf/@color[yellow](tools_def).txt </font></span><br><br></li>
+<li class="fragment">@fa[circle gp-bullet-green]&nbsp;&nbsp;<span style="font-size:01.02em">Setup & verify a developer's workspace</span></li>
+</ul>
+
+@snap[north span-50 fragment]
+@css[text-yellow]( <br><br><br>&nbsp;)
 ![ubuntu](/assets/images/ubuntu-edksetup.png)
 @snapend
-
-@ul[no-bullet]
-- @fa[circle gp-bullet-gold]&nbsp;&nbsp;<span style="font-size:01.02em">`edksetup.bat` or `edksetup.sh`</span><br><br><br><br>
-- @fa[circle gp-bullet-magenta]&nbsp;&nbsp;<span style="font-size:01.02em">First time use will set up the configuration files:</span> <span style="font-size:0.80em"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Conf/`@color[green](`build_rule`)`.txt` <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Conf/`@color[#00ffff](`target`)`.txt`  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Conf/`@color[yellow](`tools_def`)`.txt` </span><br><br><br>
-- @fa[circle gp-bullet-green]&nbsp;&nbsp;<span style="font-size:01.02em">Setup & verify a developer's workspace</span>
-@ulend
 
 Note:
 edksetup.bat or edksetup.sh
@@ -840,14 +1026,15 @@ If you run this script file and those files are already there, it won’t do any
 
 
 
+
 ---
 @title[Multiple Workspace Environment Variable]
 <p align="right"><span class="gold" ><b>Multiple Workspace Environment Variable </b></span></p>
 
-@snap[north span-35 ]
+@snap[north span-40 ]
 <br>
 <br>
-@box[bg-green-pp text-white rounded my-box-pad2]( <span style="font-size:01.2em"><b>`PACKAGE_PATH`</b></span>)
+@box[bg-green-pp text-white rounded my-box-pad2]( <span style="font-size:01.2em; ; font-family:Consolas;">PACKAGES_PATH</span>)
 @snapend
 
 @snap[north-west span-50 fragment]
@@ -855,47 +1042,46 @@ If you run this script file and those files are already there, it won’t do any
 <br>
 <br>
 <br>
-<p style="line-height:80%"><span style="font-size:0.8em">@color[#A8ff60](`WORKSPACE`)<br>@color[#A8ff60](`PACKAGES_PATH` )- <i>Optional</i><br></span><span style="font-size:0.7em">Multiple paths that will be searched when attempting to resolve the location of packages. </span></p>
+<p style="line-height:65%"><span style="font-size:0.7em; font-family:Consolas;">@color[#A8ff60](WORKSPACE)<br>@color[#A8ff60](PACKAGES_PATH )- <i>Optional</i><br></span>
+<p style="line-height:70%" align="left"><span style="font-size:0.75em">
+Multiple paths that will be searched when attempting to resolve the location of packages. 
+</span></p>
 @snapend
 
-
+ 
 @snap[north-east span-50 fragment]
 <br>
 <br>
 <br>
 <br>
 <br>
-<ul style="line-height:0.7;">
+<ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.7em">Highest search Priority / Build Directory  </span></li>
-  <li><span style="font-size:0.7em">Additional Paths in Priority order. Must be set before @color[#87E2A9](`edksetup`)  and @color[red](NOT) set by @color[#87E2A9](`edksetup`) </span></li>
+  <li><span style="font-size:0.7em">Additional Paths in Priority order. Must be set before @color[#87E2A9](<font face="Consolas">edksetup</font>)  and @color[red](NOT) set by @color[#87E2A9](<font face="Consolas">edksetup</font>) </span><br></li>
 </ul>
 @snapend 
 
-@snap[south-west span-75 fragment]
-<span style="font-size:0.8em">@color[yellow](Example:)</span>
-<pre>
-```
 
-bash$> set WORKSPACE=%CWD%/MyWorkspace
-bash$> set PACKAGES_PATH = %WORKSPACE%/edk2;%WORKSPACE%/Platform;\
-      %WORKSPACE%/Silicon
-
-```
-</pre>
+@snap[south-east span-97 fragment]
+<p style="line-height:47%" align="left"><span style="font-size:0.8em">@color[yellow](Example:)</span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:30%" align="left"><span style="font-size:0.47em; font-family:Consolas;">&nbsp;&nbsp;bash$ export WORKSPACE=$PWD<br>&nbsp;&nbsp;bash$ export PACKAGES_PATH=$WORKSPACE/edk2:$WORKSPACE/edk2-libc<br>&nbsp;</span></p>)
 <br>
 @snapend
 
-@snap[south-east span-30 fragment]
-![Package_Path](/assets/images/Package_Path_Max.png)
+
+@snap[south-east span-35 fragment]
+![PackagesPath](/assets/images/Packages_Path.png)
+<br>
 <br>
 <br>
 @snapend
+
 
 
 Note:
 
 Package_Path<br>
- 
+
 An update to the EDKII build tools now allows the setting of multiple paths that will be searched when attempting to resolve the location of packages. This new feature allows for more flexibility when designing a tree layout or combining sources from different sources. The new functionality is enabled through the addition of a new environment variable (PACKAGES_PATH).
 The PACKAGES_PATH variable is an ordered list of additional search paths using the default path separator of the host OS between each entry. The first path in the list has the highest priority and the last path has the lowest priority. The path specified by the WORKSPACE variable always has the highest search priority over any PACKAGE_PATH entries.
 To use this feature, the PACKAGES_PATH environment variable must be set prior to running the edksetup script. The reason for this is that the edksetup script determines the location of the Conf and BaseTools directory location based on the values of the WORKSPACE and PACKAGES_PATH environment variables.
@@ -905,74 +1091,47 @@ Why and when:
 In this case WORKSPACE is the container for two trees as well as the location of the Build directory. The example assumes the set of code packages for a given platform are contained in the platform directory. While the code packages from the open source repository are contained in the edk2 directory.
 
 When the build tools are run with this configuration the directories will be scanned in the following order to find packages listed in the DSC and FDF files.
+ 
 
-
-
-
----?image=/assets/images/slides/Slide86_1.JPG
-<!-- .slide: data-transition="none" -->	 
+---
 @title[Using target.txt]
-#### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Using <font face="Consolas">target.txt </font></b>)</span><span style="font-size:0.75em;" >  </span></p>
 
-Note:
+@snap[north-west span-100 ]
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#0070C0"><p style="line-height:10%"><span style="font-size:0.65em" >Tag&nbsp;</span></p></td>
+		<td bgcolor="#0070C0"><p style="line-height:10%"><span style="font-size:0.65em" >Description &nbsp;</span></p></td>
+	</tr>
+	<tr class="fragment">
+		<td align="left" bgcolor="#404040" height=".0025"><p style="line-height:010%"><span style="font-size:0.460em; font-family:Consolas; " >ACTIVE_PLATFORM</span></p></td>
+		<td align="left" bgcolor="#404040" height=".0025"><p style="line-height:010%"><span style="font-size:0.6em" >Pointer to DSC file being built</span></p></td>
+	</tr>
+	<tr class="fragment">
+		<td align="left" bgcolor="#404040" height=".0025"><p style="line-height:010%"><span style="font-size:0.460em; font-family:Consolas; " >TARGET</span></p></td>
+		<td align="left" bgcolor="#404040" height=".0025"><p style="line-height:010%"><span style="font-size:0.6em" >Build mode: DEBUG or RELEASE</span></p></td>
+	</tr>
+	<tr class="fragment">
+		<td align="left" bgcolor="#404040" height=".0025"><p style="line-height:010%"><span style="font-size:0.460em; font-family:Consolas; " >TARGET_ARCH</span></p></td>
+		<td align="left" bgcolor="#404040" height=".0025"><p style="line-height:010%"><span style="font-size:0.6em" >Build architecture (IA32, IPF, X64, EBC, ARM)</span></p></td>
+	</tr>
+	<tr class="fragment">
+		<td align="left" bgcolor="#404040" height=".0025"><p style="line-height:010%"><span style="font-size:0.460em; font-family:Consolas; " >@color[#FFC000](TOOL_CHAIN_TAG)</span></p></td>
+		<td align="left" bgcolor="#404040" height=".0025"><p style="line-height:010%"><span style="font-size:0.6em" >Compiler/tool set to use, based on definitions in tools_def.txt</span></p></td>
+	</tr>
+</table>
+<br>
+<br>
+@snapend
 
-Scroll to last slide
 
-+++?image=/assets/images/slides/Slide86_2.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->	 
-@title[Using target.txt 02]
-#### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
-
-Note:
-
-Scroll to last slide
-
-+++?image=/assets/images/slides/Slide87_1.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->	 
-@title[Using target.txt 03]
-#### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
-
-Note:
-
-Scroll to last slide
-
-+++?image=/assets/images/slides/Slide88_1.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->	 
-@title[Using target.txt 04]
-#### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
-
-Note:
-
-Scroll to last slide
-
-+++?image=/assets/images/slides/Slide89_1.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->	 
-@title[Using target.txt 05]
-#### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
-
-Note:
-
-Scroll to last slide
-
-+++?image=/assets/images/slides/Slide90_1.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->	 
-@title[Using target.txt 06]
-#### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
-
-Note:
-
-Scroll to last slide
-
-+++?image=/assets/images/slides/Slide91_1.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->	 
-@title[Using target.txt 07]
-#### <p align="right"><span class="gold" >Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>target.txt</b></font></span></font></span></p>
+@snap[south span-95 fragment ]
+<p style="line-height:50%" align="left"><span style="font-size:0.6em"> <font face="Consolas">MAX_CONCURRENT_THREAD_NUMBER</font> - defaults to Number of threads available to the build process (multi-threaded build) </span></p>
+<br>
+<br>
+@snapend
 
 Note:
 
@@ -996,9 +1155,10 @@ The next three are less commonly changed:<br>
 Six, is how many threads to use to do the build – so if you have a brand-new Core i7 processor to do the build you set this to the number of processors, and that’s how you can get the build down to less than 30 seconds<br>
 
 
+
 ---
 @title[Using Tools_Def.txt 03]
-#### <p align="right"> <span class="gold" >&nbsp;&nbsp;&nbsp;&nbsp;Using <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>Tools_Def.txt</b></font></span></font></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Using <font face="Consolas">tools_def.txt </font></b>)</span><span style="font-size:0.75em;" >  </span></p>
 
 @ul[no-bullet]
 - @fa[certificate gp-bullet-magenta]&nbsp;&nbsp;<span style="font-size:01.02em"><b>Paths for compilers, assemblers, and linkers</b></span><span style="font-size:0.80em"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;@color[#00ffff](Comes with definitions for all compilers ) </span><br><br>
@@ -1007,7 +1167,7 @@ Six, is how many threads to use to do the build – so if you have a brand-new C
 @ulend
 
 
-   
+
 
 Note:
 Paths for compilers, assemblers, and linkers <br>
@@ -1022,26 +1182,26 @@ Default values are set by edksetup script<br>
 
 ---
 @title[BaseTools]
-#### <p align="right"> <span class="gold" >&nbsp;&nbsp;&nbsp;&nbsp;First Make <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>BaseTools</b></font></span></font></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>First Make  </b>)</span><span style="font-size:0.95em;" ><font face="Consolas"><b>BaseTools</b></font>  </span></p>
 
 @snap[north span-35 ]
 @css[text-yellow]( <br>&nbsp;)
-@box[bg-royal text-white rounded my-box-pad2](<span style="font-size:01.2em" > @color[yellow](<b>`BaseTools`</b>) </span> )
+@box[bg-royal text-white rounded my-box-pad2](<span style="font-size:01.2em" > @color[yellow](<b><font face="Consolas">BaseTools</font></b>) </span> )
 @snapend
 <br>
-<p style="line-height:90%">The first step is to make / "`nmake`" the "`BaseTools`" with the host OS & compiler environment.</p>
+<p style="line-height:90%">The first step is to make / "<font face="Consolas">nmake</font>" the "<font face="Consolas">BaseTools</font>" with the host OS & compiler environment.</p>
 
 <p style="line-height:90%"><span style="font-size:0.8em" >For @fa[linux gp-bullet-gold] Linux GCC5 the command is: </span>
-@box[bg-grey-05 text-white rounded my-box-pad2](<p align="left"><span style="font-size:0.6em" >&nbsp;  `bash$> make -C BaseTools` </span></p>)
+@box[bg-grey-05 text-white rounded my-box-pad2](<p align="left"><span style="font-size:0.6em" >&nbsp;  <font face="Consolas">bash$ make -C BaseTools</font> </span></p>)
 <hr>
 <span style="font-size:0.8em" >For @fa[windows gp-bullet-cyan] Windows Visual Studio with  Python 3.7 the command is: </span>
 
-@box[bg-grey-05 text-white rounded my-box-pad2](<p align="left"><span style="font-size:0.6em" >&nbsp;    `> edksetup.bat Rebuild` </span></p>)
+@box[bg-grey-05 text-white rounded my-box-pad2](<p align="left"><span style="font-size:0.6em" >&nbsp;    <font face="Consolas">&gt; edksetup.bat Rebuild</font> </span></p>)
 <br>
    
 @snap[south-west span-100 ]
 <p style="line-height:90%" align="right"><span style="font-size:0.50em;  " >
-@color[white](Building `BaseTools` only needs to be done once )
+@color[white](Building &nbsp;<font face="Consolas">"BaseTools"</font> &nbsp;only needs to be done once )
 </span></p>
 @snapend
 
@@ -1060,22 +1220,15 @@ For Windows the command is:
 ## <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Build Process</span>
 <span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDK II Build Process and Build Text Files</span>
  
----?image=/assets/images/slides/Slide98_1.JPG
+---?image=/assets/images/slides/Slide35.JPG
 <!-- .slide: data-transition="none" -->	
 @title[Build Process Overview]
 #### <p align="right"><span class="gold" >Build Process Overview </span></p>
 
 Note:
 
-+++?image=/assets/images/slides/Slide99_1.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->	 
-@title[Build Process Overview 02]
-#### <p align="right"><span class="gold" >Build Process Overview </span></p>
 
-Note:
-
-+++?image=/assets/images/slides/Slide100_1.JPG
++++?image=/assets/images/slides/Slide36.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Build Process Overview 03]
@@ -1083,35 +1236,35 @@ Note:
 
 Note:
 
-+++?image=/assets/images/slides/Slide101_1.JPG
++++?image=/assets/images/slides/Slide37.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Build Process Overview 04]
 #### <p align="right"><span class="gold" >Build Process Overview </span></p>
 
 Note:
-+++?image=/assets/images/slides/Slide102_1.JPG
++++?image=/assets/images/slides/Slide38.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Build Process Overview 05]
 #### <p align="right"><span class="gold" >Build Process Overview </span></p>
 
 Note:
-+++?image=/assets/images/slides/Slide103_1.JPG
++++?image=/assets/images/slides/Slide39.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Build Process Overview 06]
 #### <p align="right"><span class="gold" >Build Process Overview </span></p>
 
 Note:
-+++?image=/assets/images/slides/Slide104_1.JPG
++++?image=/assets/images/slides/Slide40.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Build Process Overview 07]
 #### <p align="right"><span class="gold" >Build Process Overview </span></p>
 
 Note:
-+++?image=/assets/images/slides/Slide105_1.JPG
++++?image=/assets/images/slides/Slide41.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 @title[Build Process Overview 08]
@@ -1119,44 +1272,68 @@ Note:
 
 Note:
 
++++?image=/assets/images/slides/Slide42.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->	 
+@title[Build Process Overview 08]
+#### <p align="right"><span class="gold" >Build Process Overview </span></p>
+
+Note:
+
+
 ---
 @title[Basic Build Steps]
-#### <p align="right"><span class="gold" >Basic Build Steps </span></p>
-
+<p align="right"><span class="gold" >@size[1.1em](<b>Basic Build Steps  </b>)</span>
+<span style="font-size:0.75em;" >  </span></p>
 
 
 @snap[west span-45 ]
-@box[bg-royal text-white](<span style="font-size:01.125em" ><b>Platform</b></span>)
+@box[bg-royal text-white rounded](<span style="font-size:01.125em" ><b>Platform</b></span>)
 <span style="font-size:0.8em" >&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br&nbsp;><br>&nbsp;<br></span>  
 @snapend
 
 @snap[east span-45 ]
-@box[bg-brick text-white](<span style="font-size:01.125em" ><b>Module</b>)</span>    
+@box[bg-brick text-white rounded](<span style="font-size:01.125em" ><b>Module</b>)</span>    
 <span style="font-size:0.8em" >&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br&nbsp;><br>&nbsp;<br></span>  
 @snapend
 <span style="font-size:0.8em" ><br><br></span>
 
-<div class="left">
-<ul style="list-style-type:none" style="line-height:0.8;">
-  <li><span style="font-size:0.7em" >1.&nbsp;&nbsp; Navigate (CD) to root of EDK II workspace </span></li>
-  <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; Make the `BaseTools`  </span></li>
-  <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; Run @color[#87E2A9]('`edksetup`')  </span></li>
-  <li><span style="font-size:0.7em" >4.&nbsp;&nbsp; Run `build`  </span></li>
-  <li><span style="font-size:0.7em" >5.&nbsp;&nbsp; Output:  firmware image (FD) file under `Build` directory </span></li>
-</ul>
-</div>
+@snap[north-west span-50 ]
+<br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br><br><br><br>&nbsp;
+</span></p>
 
-<div class="right1">
-<ul style="list-style-type:none" style="line-height:0.8;">
-  <li><span style="font-size:0.7em" >1.&nbsp;&nbsp; Navigate (CD) to root of EDK II workspace </span></li>
-  <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; Make the `BaseTools`  </span></li>
-  <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; Run @color[#87E2A9]('`edksetup`')  </span></li>
-  <li><span style="font-size:0.7em" >4.&nbsp;&nbsp; @color[yellow](<b>Change to directory with desired `INF` file</b> ) </span></li>
-  <li><span style="font-size:0.7em" >5.&nbsp;&nbsp; Run `build`  </span></li>
-  <li><span style="font-size:0.7em" >6.&nbsp;&nbsp; Output:  `.EFI` file under `Build` directory </span></li>
+<ul style="list-style-type:none; line-height:0.7;">
+  <li><span style="font-size:0.7em" >1.&nbsp;&nbsp; Navigate (CD) to root of EDK II<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; workspace </span></li>
+  <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; Make the <font face="Consolas">BaseTools</font>  </span></li>
+  <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; Run @color[#87E2A9](<font face="Consolas">edksetup</font>)  </span></li>
+  <li><span style="font-size:0.7em" >4.&nbsp;&nbsp; Run <font face="Consolas">build</font>  </span></li>
+  <li><span style="font-size:0.7em" >5.&nbsp;&nbsp; @color[cyan](Output):&nbsp;   firmware image (FD)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; file under Build directory </span></li>
 </ul>
-<span style="font-size:0.5em" >Note: Module `.inf` must be in `.dsc` components </span>
-</div>
+@snapend
+
+@snap[north-east span-48 ]
+<br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br><br><br><br>&nbsp;
+</span></p>
+
+<ul style="list-style-type:none; line-height:0.7;">
+  <li><span style="font-size:0.7em" >1.&nbsp;&nbsp; Navigate (CD) to root of EDK II<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; workspace </span></li>
+  <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; Make the <font face="Consolas">BaseTools</font>  </span></li>
+  <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; Run @color[#87E2A9](<font face="Consolas">edksetup</font>)  </span></li>
+  <li><span style="font-size:0.7em" >4.&nbsp;&nbsp; @color[yellow](<b>Change to directory with<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; desired INF file</b> ) </span></li>
+  <li><span style="font-size:0.7em" >5.&nbsp;&nbsp; Run <font face="Consolas">build</font>  </span></li>
+  <li><span style="font-size:0.7em" >6.&nbsp;&nbsp; @color[cyan](Output):&nbsp;  <font face="Consolas">.EFI</font> file under Build<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; directory </span></li>
+</ul>
+
+@snapend
+
+
+@snap[south-west span-45 ]
+<span style="font-size:0.5em" >&nbsp;&nbsp;&nbsp;Note: Module .inf must be in .dsc components </span>
+<br>
+<br>
+@snapend
 
 Note:
 
@@ -1173,14 +1350,14 @@ SAME except - Change to a directory with the proper INF
 also NOTE the inf file MUST be a in the components section of the .DSC file
 
 
----?image=/assets/images/slides/Slide109.JPG
+---?image=/assets/images/slides/Slide44.JPG
 <!-- .slide: data-transition="none" -->	 
 @title[Build Output Location]
 #### <p align="right"><span class="gold" >Build Output Location</span></p>
 
 Note:
 
-+++?image=/assets/images/slides/Slide110.JPG
++++?image=/assets/images/slides/Slide45.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 
@@ -1189,7 +1366,7 @@ Note:
 
 Note:
 
-+++?image=/assets/images/slides/Slide111.JPG
++++?image=/assets/images/slides/Slide46.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 
@@ -1198,7 +1375,7 @@ Note:
 
 Note:
 
-+++?image=/assets/images/slides/Slide112.JPG
++++?image=/assets/images/slides/Slide47.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 
@@ -1207,7 +1384,7 @@ Note:
 
 Note:
 
-+++?image=/assets/images/slides/Slide113.JPG
++++?image=/assets/images/slides/Slide48.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 
@@ -1216,7 +1393,7 @@ Note:
 
 Note:
 
-+++?image=/assets/images/slides/Slide114.JPG
++++?image=/assets/images/slides/Slide49.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 
@@ -1225,7 +1402,7 @@ Note:
 
 Note:
 
-+++?image=/assets/images/slides/Slide115.JPG
++++?image=/assets/images/slides/Slide50.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 
@@ -1234,7 +1411,7 @@ Note:
 
 Note:
 
-+++?image=/assets/images/slides/Slide116.JPG
++++?image=/assets/images/slides/Slide51.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 
@@ -1243,7 +1420,7 @@ Note:
 
 Note:
 
-+++?image=/assets/images/slides/Slide117_1.jpg
++++?image=/assets/images/slides/Slide52.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 
@@ -1273,7 +1450,7 @@ Note:
 @snapend
 
 @snap[midpoint span-65 fragment]
-<p style="line-height:80%"><span style="font-size:0.8em" >Process source code files to create PE32/PE32+/COFF images processed to UEFI format using `$(MAKE)` tool </span></p>
+<p style="line-height:80%"><span style="font-size:0.8em" >Process source code files to create PE32/PE32+/COFF images processed to UEFI format using <font face="Consolas">$(MAKE)</font> tool </span></p>
 @snapend
 
 
@@ -1294,28 +1471,23 @@ Process source code files to create PE32/PE32+/COFF images processed to UEFI for
 Takes the UEFI format files, creates UEFI “FLASH” images, UEFI apps, or UEFI PCI option ROMs <Br>
 
 
----?image=/assets/images/slides/Slide123.JPG
-<!-- .slide: data-transition="none" -->	 
+---?image=/assets/images/slides/Slide54.JPG
+
 
 @title[EDK II Build AutoGen Stage]
 #### <p align="right"><span class="gold" >EDK II Build: AutoGen Stage</span></p>
 
-Note:
-Build –p OvmfPkg/OvmfX64Pkg.dsc<br>
-Parse – .DSC, .DEC, .FDF, .INF<br>
-DSC File … <br>
-Points to own .DEC & .FDF & .INF<br>
-Points to other packages (.DEC) and Modules (.INF)<br>
-
-ONE DSC per Build command<br>
-
-DSC points to all the components, Libraries, PCDs, etc needed to build a PACKAGE<br>
-
-+++?image=/assets/images/slides/Slide124.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->	 
-@title[EDK II Build AutoGen Stage 02]
-#### <p align="right"><span class="gold" >EDK II Build: AutoGen Stage</span></p>
+@snap[south-east span-90 ]
+<p style="line-height:30%" align="left" ><span style="font-size:0.57em;; font-family:Consolas;" >
+build -p OvmfPkg/OvmfX64Pkg.dsc
+<br>
+</span></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+@snapend
 
 Note:
 Build –p OvmfPkg/OvmfX64Pkg.dsc<br>
@@ -1327,18 +1499,20 @@ Points to other packages (.DEC) and Modules (.INF)<br>
 ONE DSC per Build command<br>
 
 DSC points to all the components, Libraries, PCDs, etc needed to build a PACKAGE<br>
+
 
 ---
 @title[EDK II Build Make Stage]
 #### <p align="right"><span class="gold" >EDK II Build: Make Stage</span></p>
 
 @snap[north span-65 ]
-@css[text-yellow](<br>&nbsp;)
-@box[ bg-green-pp text-white rounded](<span style="font-size:0.9em" >Uses assemblers/compilers/linkers to generate PE32/PE32+ COFF image file<br></span>)
+@css[text-yellow](<br><br>&nbsp;)
+@box[ bg-green-pp text-white rounded my-box-pad2 ](<span style="font-size:0.9em" >Uses assemblers/compilers/linkers to generate PE32/PE32+ COFF image file<br>&nbsp;</span>)
 @snapend
 
 @snap[midpoint span-90 ]
-@box[ bg-blue text-white rounded](<span style="font-size:0.9em" >Uses `ImageGen` tools to modify PE32/PE32+/COFF image file<br>Creates UEFI file &lpar;EFI_IMAGE_SECTION_HEADER structure&rpar;<br></span>)
+<br>
+@box[ bg-lt-blue-pp text-white rounded my-box-pad2 ](<span style="font-size:0.9em" >Uses <font face="Consolas">ImageGen</font> tools to modify PE32/PE32+/COFF image file<br>Creates UEFI file &lpar;EFI_IMAGE_SECTION_HEADER structure&rpar;<br>&nbsp;</span>)
 @snapend
 
 @snap[south-west span-20 ]
@@ -1356,12 +1530,12 @@ DSC points to all the components, Libraries, PCDs, etc needed to build a PACKAGE
 
 
 @snap[south-west span-25 ]
-@css[text-black](&nbsp;&nbsp; `GenFW`<br><br><br><br>)
+@css[text-black](&nbsp;&nbsp; <font face="Consolas">GenFW</font><br><br><br><br>)
 @snapend
 
 
 @snap[south span-25 ]
-@css[text-black](`GenFds`<br><br><br><br>)
+@css[text-black](<font face="Consolas">GenFds</font><br><br><br><br>)
 @snapend
 
 Note:
@@ -1383,7 +1557,7 @@ This last stage is also configurable.<BR>
 
 
 
----?image=/assets/images/slides/Slide98.jpg
+---?image=/assets/images/slides/Slide56.JPG
 
 @title[EDK II Build Image GEN Stage]
 #### <p align="center"><span class="gold" >EDK II Build: ImageGen Stage</span></p>
@@ -1411,7 +1585,7 @@ Example: how to combine a UEFI Driver & Legacy PCI OpROM into a single binary im
 third and final stage, the ImageGen stage, we take these UEFI formatted files and create the flash image, or leave them as UEFI applications, or perhaps make UEFI-compliant PCI option ROMs. <BR>
 This last stage is also configurable.<BR>
 
----?image=/assets/images/slides/Slide131_1.JPG
+---?image=/assets/images/slides/Slide57.JPG
 <!-- .slide: data-transition="none" -->	 
 @title[Build Flow For OpROM]
 #### <p align="right"><span class="gold" >Build Flow For OpROM</span></p>
@@ -1419,7 +1593,7 @@ This last stage is also configurable.<BR>
 Note:
 
 
-+++?image=/assets/images/slides/Slide132_1.JPG
++++?image=/assets/images/slides/Slide58.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
 
@@ -1433,14 +1607,16 @@ Note:
 ---
 @title[Build Command]
 <br>
-####  <p align="center"><span class="gold" >&nbsp;&nbsp;The Build Command</span></p>
-- Accepts command line arguments to support scripted builds <br>
-- Overrides most settings found in target.txt <br>|
-- Overrides DSC with a minimal INF build <br>|
-- Overrides some settings in DSC file (.FDF) <br>|
-- Choose settings from the FDF file (ROMIMAGE, FVIMAGE)<br> |
-- Choose $(make) options (silent, verbose, quiet) |
-
+<p align="center"><span class="gold" >@size[1.1em](<b>The <font face="Consolas">@color[white](build)</font> Command  </b>)</span><span style="font-size:0.75em;" >  </span></p>
+<br>
+<ul style="list-style-type:disc; line-height:0.85;">
+ <li class="fragment"><span style="font-size:0.85em;" >Accepts command line arguments to support scripted builds  </span> </li>
+ <li class="fragment"><span style="font-size:0.85em;" >Overrides most settings found in <font face="Consolas">target.txt</font> </span> </li>
+ <li class="fragment"><span style="font-size:0.85em;" >Overrides DSC with a minimal INF build  </span> </li>
+ <li class="fragment"><span style="font-size:0.85em;" >Overrides some settings in DSC file (.FDF)  </span> </li>
+ <li class="fragment"><span style="font-size:0.85em;" >Choose settings from the FDF file (ROMIMAGE, FVIMAGE) </span> </li>
+ <li class="fragment"><span style="font-size:0.85em;" >Choose <font face="Consolas">$(make)</font> options (silent, verbose, quiet) </span> </li>
+</ul>
 
 
 Note:
@@ -1461,28 +1637,44 @@ You can change the messaging output from the make settings for instance,  making
 Outside of changing the number of the threads used – if you are building the same code—unlike EDK, we don’t see a dramatic increase in the amount of time required.  For example, if you are letting it output to the screen, the text outputting does not have the same level of impact as an EDK text output.<br>
 In advanced build usage you can type build –h, or build –help, and it will give you this information. Although there are more options that you can list, they are used less frequently.<br>
 
----?image=/assets/images/slides/Slide135.JPG
+---?image=/assets/images/slides/Slide60.JPG
 <!-- .slide: data-transition="none" -->	 
 @title[Using EDK II build Command]
-#### <p align="right"><span class="gold"  >Using EDK II</span> <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>build</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Using EDK II <font face="Consolas">@color[white](build)</font> Command  </b>)</span><br>
+<span style="font-size:0.75em;" >  </span></p>
+
+@snap[south span-35 ]
+<p style="line-height:60%" align="left" ><span style="font-size:0.8em; font-family:Consolas;" >
+bash$ build -h
+</span></p>
+<br>
+@snapend
 
 Note:
 
 This is not the complete list … run build --help from the command prompt to see all of the build options
 
-+++?image=/assets/images/slides/Slide136.JPG
++++?image=/assets/images/slides/Slide61.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->	 
  
 @title[Using EDK II build Command 02]
-#### <p align="right"><span class="gold"  >Using EDK II</span> <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>build</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Using EDK II <font face="Consolas">@color[white](build)</font> Command  </b>)</span><br>
+<span style="font-size:0.75em;" >  </span></p>
+
+@snap[south span-35 ]
+<p style="line-height:60%" align="left" ><span style="font-size:0.8em; font-family:Consolas;" >
+bash$ build -h
+</span></p>
+<br>
+@snapend
 
 Note:
 
 This is not the complete list … run build --help from the command prompt to see all of the build options
 
 
-+++?code=sample/buildoutput.txt&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -h</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/buildoutput.txt&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -h</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
 
 @[1,5-25](options to overide .DSC, .INF and .FDF and Target.txt settings)
 @[60,65-74](Using the -Y and -y options for Reports)
@@ -1491,9 +1683,19 @@ Note:
 output from 
 Build -h command
 
----?image=/assets/images/slides/Slide138.JPG
+---?image=/assets/images/slides/Slide63.JPG
 @title[Using Build-Y Reports]
-#### <p align="right"><span class="gold"  >Using </span> <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>build -Y</b></font></span><span class="gold"  >&nbsp;&nbsp;for Reports </span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Using <font face="Consolas">@color[white](build -Y)</font> Reports  </b>)</span><span style="font-size:0.75em;" >  </span></p>
+
+
+@snap[south-west span-75 ]
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em; " >
+Example:<br>&nbsp;&nbsp;
+@size[.7em](<font face="Consolas">bash$ build  –Y  PCD –y pcd.log</font>)<br>
+For all reports:<br>&nbsp;&nbsp;
+@size[.7em](<font face="Consolas">bash$ build –y MyReport.log  </font>)<br>&nbsp;&nbsp;
+</span></p>
+@snapend
 
 Note:
 build  –Y  PCD,  LIBRARY, FLASH, DEPEX, BUILD_FLAGS, FIXED_ADDRESS <Br>
@@ -1509,45 +1711,48 @@ EXEC ORDER is  best done on the Host build machine
 
 +++
 @title[Using Build-Y Reports Example]
-#### <p align="right"><span class="gold"  >Using </span> <span style="color:white;">&nbsp;&nbsp;<font face="Courier New"><b>build -Y</b></font></span><span class="gold"  >&nbsp;&nbsp;for Reports </span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Using <font face="Consolas">@color[white](build -Y)</font> Reports  </b>)</span><span style="font-size:0.75em;" >  </span></p>
 
-- Scroll through examples of reports from the `Build -Y` commands
+- @size[.8em](Scroll through examples of reports from the <font face="Consolas">build -Y</font> commands)
 
 Note:
 TBD
 
 
-+++?code=sample/Reports/depex.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y DEPEX</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/Reports/depex.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -Y DEPEX</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
 
 Note:
 
-+++?code=sample/Reports/pcd.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y PCD</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/Reports/pcd.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -Y PCD</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
 
 Note:
 
 
-+++?code=sample/Reports/library.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y LIBRARY</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/Reports/library.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -Y LIBRARY</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
 
 Note:
 
-+++?code=sample/Reports/flash.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y FLASH</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/Reports/flash.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -Y FLASH</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
 
 Note:
 
-+++?code=sample/Reports/build_flag.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y BUILD_FLAGS</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/Reports/build_flag.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -Y BUILD_FLAGS</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
 
 Note:
 
-+++?code=sample/Reports/fixed_address.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y FIXED_ADDRESS</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/Reports/fixed_address.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -Y FIXED_ADDRESS</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
 
 Note:
 
-+++?code=sample/Reports/Log_DispatchOrder.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Courier New"><b>build -Y EXECUTION_ORDER</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/Reports/ExecOrder_EmulatorPkg.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -Y EXECUTION_ORDER</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
 <span style="font-size:0.75em" > Report.html is generated on the host build machine - pop up this in the Browser window.</span>
 
 Note:
 This is best done on the Host build machine
 
++++?code=sample/Reports/Emulator.report&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -y MyReport.log</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
+
+Note:
 
 
 
@@ -1558,24 +1763,24 @@ This is best done on the Host build machine
 
 <table id="recTable">
 	<tr>
-		<td bgcolor="#002060" height=".025"><p align="center" style="line-height:20%"><span style="font-size:0.85em" >&nbsp;<b>Utility</b></span></p></td>
-		<td bgcolor="#002060" height=".025"><p align="center" style="line-height:20%"><span style="font-size:0.85em" >&nbsp;<b>Description</b></span></p></td>
+		<td bgcolor="#002060" height=".0025"><p align="center" style="line-height:20%"><span style="font-size:0.85em" >&nbsp;<b>Utility</b></span></p></td>
+		<td bgcolor="#002060" height=".0025"><p align="center" style="line-height:20%"><span style="font-size:0.85em" >&nbsp;<b>Description</b></span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#00b0f0" height=".025"><p style="line-height:20%"><span style="font-size:0.75em" >`Build.exe`</span></p></td>
-		<td bgcolor="#00b0f0" height=".025"><p style="line-height:70%"><span style="font-size:0.65em" >Tool is written in Python and calls `AutoGen.exe`, then it calls `$(MAKE) –f  Makefile.out`, and finally, it calls `GenFds.exe`</span></p></td>
+		<td bgcolor="#00b0f0" height=".0025"><p style="line-height:20%"><span style="font-size:0.75em" ><font face="Consolas">Build.exe</font></span></p></td>
+		<td bgcolor="#00b0f0" height=".0025"><p style="line-height:60%"><span style="font-size:0.6em" >Tool is written in Python and calls <font face="Consolas">AutoGen.exe</font>, then it calls <font face="Consolas">$(MAKE) –f  Makefile.out</font>, and finally, it calls <font face="Consolas">GenFds.exe</font></span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#fdb813" height=".025"><p style="line-height:20%"><span style="font-size:0.75em" >`EfiRom.exe`&nbsp;</span></p></td>
-		<td bgcolor="#fdb813" height=".025"><p style="line-height:20%"><span style="font-size:0.65em" >used to build an option ROM image&nbsp;</span></p></td>
+		<td bgcolor="#fdb813" height=".0025"><p style="line-height:20%"><span style="font-size:0.75em" ><font face="Consolas">EfiRom.exe</font>&nbsp;</span></p></td>
+		<td bgcolor="#fdb813" height=".0025"><p style="line-height:20%"><span style="font-size:0.6em" >used to build an option ROM image&nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#00b0f0" height=".025"><p style="line-height:20%"><span style="font-size:0.75em" >`PatchModule.exe`&nbsp;</span></p></td>
-		<td bgcolor="#00b0f0" height=".025"><p style="line-height:70%"><span style="font-size:0.65em" >used to patch a binary module that has a PCD of type PATCHABLE_IN_MODULE&nbsp;</span></p></td>
+		<td bgcolor="#00b0f0" height=".0025"><p style="line-height:20%"><span style="font-size:0.75em" ><font face="Consolas">PatchModule.exe</font>&nbsp;</span></p></td>
+		<td bgcolor="#00b0f0" height=".0025"><p style="line-height:60%"><span style="font-size:0.6em" >used to patch a binary module that has a PCD of type PATCHABLE_IN_MODULE&nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#fdb813" height=".025"><p style="line-height:20%"><span style="font-size:0.75em" >`PatchPlatform.exe`&nbsp;</span></p></td>
-		<td bgcolor="#fdb813" height=".025"><p style="line-height:70%"><span style="font-size:0.65em" >used to modify either the PCD Database or the VPD settings in a flash device image&nbsp;</span></p></td>
+		<td bgcolor="#fdb813" height=".0025"><p style="line-height:20%"><span style="font-size:0.75em" ><font face="Consolas">PatchPlatform.exe</font>&nbsp;</span></p></td>
+		<td bgcolor="#fdb813" height=".0025"><p style="line-height:60%"><span style="font-size:0.6em" >used to modify either the PCD Database or the VPD settings in a flash device image&nbsp;</span></p></td>
 	</tr>
 
 </table>
