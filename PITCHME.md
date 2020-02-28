@@ -12,7 +12,7 @@
 Note:
   PITCHME.md for UEFI / EDK II Training EDK II Build Process
 
-  Copyright (c) 2019, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2020, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -1674,7 +1674,7 @@ Note:
 This is not the complete list … run build --help from the command prompt to see all of the build options
 
 
-+++?code=sample/buildoutput.txt&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -h</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/buildoutput.txt&lang=shell&title=<p align="right"><font face="Consolas" color="white"><b>build -h&nbsp;&nbsp;Command </b></font> </p>
 
 @[1,5-25](options to overide .DSC, .INF and .FDF and Target.txt settings)
 @[60,65-74](Using the -Y and -y options for Reports)
@@ -1719,38 +1719,38 @@ Note:
 TBD
 
 
-+++?code=sample/Reports/depex.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -Y DEPEX</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/Reports/depex.log&lang=shell&title=<p align="right"><font face="Consolas" color="white"><b>build -Y DEPEX</b></font><font color="#E49436">&nbsp;&nbsp;Command </font> </p>
 
 Note:
 
-+++?code=sample/Reports/pcd.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -Y PCD</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/Reports/pcd.log&lang=shell&title=<p align="right"><font face="Consolas" color="white"><b>build -Y PCD</b></font><font color="#E49436">&nbsp;&nbsp;Command </font> </p>
 
 Note:
 
 
-+++?code=sample/Reports/library.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -Y LIBRARY</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/Reports/library.log&lang=shell&title=<p align="right"><font face="Consolas" color="white"><b>build -Y LIBRARY</b></font><font color="#E49436">&nbsp;&nbsp;Command </font> </p>
 
 Note:
 
-+++?code=sample/Reports/flash.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -Y FLASH</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/Reports/flash.log&lang=shell&title=<p align="right"><font face="Consolas" color="white"><b>build -Y FLASH</b></font><font color="#E49436">&nbsp;&nbsp;Command </font> </p>
 
 Note:
 
-+++?code=sample/Reports/build_flag.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -Y BUILD_FLAGS</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/Reports/build_flag.log&lang=shell&title=<p align="right"><font face="Consolas" color="white"><b>build -Y BUILD_FLAGS</b></font><font color="#E49436">&nbsp;&nbsp;Command </font> </p>
 
 Note:
 
-+++?code=sample/Reports/fixed_address.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -Y FIXED_ADDRESS</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/Reports/fixed_address.log&lang=shell&title=<p align="right"><font face="Consolas" color="white"><b>build -Y FIXED_ADDRESS</b></font><font color="#E49436">&nbsp;&nbsp;Command </font> </p>
 
 Note:
 
-+++?code=sample/Reports/ExecOrder_EmulatorPkg.log&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -Y EXECUTION_ORDER</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
-<span style="font-size:0.75em" > Report.html is generated on the host build machine - pop up this in the Browser window.</span>
++++?code=sample/Reports/ExecOrder_EmulatorPkg.log&lang=shell&title=<p align="right"><font face="Consolas" color="white"><b>build -Y EXECUTION_ORDER</b></font><font color="#E49436">&nbsp;&nbsp;Command </font> </p>
+<p style="line-height:65%" align="left" ><span style="font-size:0.75em" > Report.html is generated on the host build machine - pop up this in the Browser window.</span></p>
 
 Note:
 This is best done on the Host build machine
 
-+++?code=sample/Reports/Emulator.report&lang=shell&title=<p align="right"><span style="color:white;"><font face="Consolas"><b>build -y MyReport.log</b></font></span><span class="gold"  >&nbsp;&nbsp;Command </span></p>
++++?code=sample/Reports/Emulator.report&lang=shell&title=<p align="right"><font face="Consolas" color="white"><b>build -y MyReport.log</b></font><font color="#E49436">&nbsp;&nbsp;Command </font> </p>
 
 Note:
 
@@ -1889,7 +1889,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWIS
 ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY 
 OF SUCH DAMAGE.
 
-Copyright (c) 2019, Intel Corporation. All rights reserved.
+Copyright (c) 2020, Intel Corporation. All rights reserved.
 **/
 
 ```
